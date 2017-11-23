@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the icon component.
+// -----------------------------------------------------------------------------
+
+.icon {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    fill: $gray;
+    color: transparent;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    @include rem(margin, -4px 0 -2px 0);
+}
+
+/**
+* Positioning
+*/
+.icon-prefix {
+    @include rem(margin-right, $space-s);
+}
+
+.icon-suffix {
+    @include rem(margin-left, $space-s);
+}
+
+/**
+* Colors
+*/
+@include all-colours(icon, fill);

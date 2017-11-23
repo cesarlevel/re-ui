@@ -1,0 +1,109 @@
+/**
+* Basic typography style for copy text
+*/
+html, .root {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-size: 62.5%;
+    @include rem(line-height, $line-height);
+}
+
+body, .article {
+    font-family: $primary-font-stack;
+    @include rem(font-size, $paragraph);
+    @include rem(line-height, $line-height);
+    font-weight: $regular;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+    font-weight: $regular;
+    font-family: $secondary-font-stack;
+}
+
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+    @include rem(line-height, $line-height);
+}
+
+h1,
+.h1 {
+    @include rem(font-size, $h1);
+    font-weight: $light;
+    @include rem(line-height, $h1-lh);
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+h2,
+.h2 {
+    @include rem(font-size, $h2);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h3,
+.h3 {
+    @include rem(font-size, $h3);
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+h4,
+.h4,
+h5,
+.h5 {
+    @include rem(font-size, $h3);
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+p, ul, ol, pre, table, blockquote {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Let's make sure all's aligned */
+hr {
+    border: 1px solid;
+    margin: -1px 0;
+}
+
+a, b, i, strong, em, small, code {
+    line-height: 0;
+}
+
+sub, sup {
+    @include rem(line-height, 0);
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}

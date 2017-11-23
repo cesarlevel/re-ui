@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the badge component.
+// -----------------------------------------------------------------------------
+
+.badge {
+    display: inline-block;
+    height: auto;
+    box-sizing: border-box;
+    text-transform: none;
+    text-align: center;
+    vertical-align: baseline;
+    color: $text;
+    border-radius: $line-height;
+    border: none;
+    @include rem(padding, $space-xxs $space-s);
+    font-family: $primary-font-stack;
+    font-weight: $regular;
+    @include rem(font-size, $paragraph);
+    @include rem(line-height, $line-height);
+    outline: none;
+    background: $faint-gray;
+}
+
+/**
+* Types
+*/
+.badge-positive {
+    background: $light-green;
+}
+
+.badge-negative {
+    background: $light-red;
+}
+
+.badge-warning {
+    background: $light-yellow;
+}
+
+.badge-info {
+    background: $light-blue;
+}

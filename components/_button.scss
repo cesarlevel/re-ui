@@ -1,0 +1,214 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn {
+    display: inline-block;
+    height: auto;
+    box-sizing: border-box;
+    text-transform: none;
+    text-align: center;
+    vertical-align: middle;
+    @include browser-prefix(user-select, none);
+    @include browser-prefix(appearance, none);
+    @include linear-gradient(#FFFFFF, $background);
+    box-shadow: 0 0 0 1px $light-gray inset, 0 1px 2px 0 rgba($gray, 0.3);
+    color: $text;
+    cursor: pointer;
+    border-radius: $border-radius;
+    border: none;
+    @include rem(padding, $space-s $space-m);
+    font-family: $primary-font-stack;
+    font-weight: $regular;
+    @include rem(font-size, $paragraph);
+    @include rem(line-height, $line-height);
+    outline: none;
+
+    &:hover {
+        background: $background;
+        text-decoration: none;
+    }
+
+    &:active {
+        background: $background;
+        box-shadow: 0 0 0 1px $light-gray inset, 0 1px 3px 1px $light-gray inset
+    }
+}
+
+/**
+* Types
+*/
+.btn-primary {
+    @include linear-gradient($blue, adjust-hue($blue, 30));
+    color: #FFFFFF;
+    box-shadow: 0 1px 2px 0 rgba($gray, 0.8);
+
+    &:hover {
+        background: adjust-hue($blue, 30);
+    }
+
+    &:active {
+        background: #3000D7;
+        box-shadow: 0 1px 3px 1px darken($blue, 10) inset
+    }
+}
+
+.btn-danger {
+    @include linear-gradient(saturate($red, 50), $red);
+    color: #FFFFFF;
+    box-shadow: 0 1px 2px 0 rgba($gray, 0.8);
+
+    &:hover {
+        background: darken($red, 5);
+    }
+
+    &:active {
+        background: darken($red, 10);
+        box-shadow: 0 1px 3px 1px darken($red, 20) inset;
+    }
+}
+
+.btn-link {
+    color: $blue;
+    vertical-align: baseline;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+
+    &:hover {
+        background: none;
+        text-decoration: underline;
+        box-shadow: none;
+    }
+
+    &:active {
+        background: none;
+    }
+}
+
+/**
+* Disabled State
+*/
+
+//Default
+.btn[disabled] {
+    opacity: 0.5;
+    cursor: auto;
+
+    &:hover {
+        @include linear-gradient(#FFFFFF, $background);
+    }
+
+    &:active {
+        box-shadow: 0 0 0 1px $light-gray inset, 0 1px 2px 0 rgba($gray, 0.3);
+    }
+}
+
+//Primary
+.btn.btn-primary[disabled] {
+    &:hover {
+        @include linear-gradient($blue, adjust-hue($blue, 30));
+    }
+
+    &:active {
+        @include linear-gradient($blue, adjust-hue($blue, 30));
+        box-shadow: 0 1px 2px 0 rgba($gray, 0.8);
+    }
+}
+
+//Danger
+.btn.btn-danger[disabled] {
+    &:hover {
+        @include linear-gradient(saturate($red, 50), $red);
+    }
+
+    &:active {
+        @include linear-gradient(saturate($red, 50), $red);
+        box-shadow: 0 1px 2px 0 rgba($gray, 0.8);
+    }
+}
+
+/**
+* Sizes
+*/
+.btn-s {
+    @include rem(padding, $space-xs $space-m);
+}
+
+.btn-l {
+    @include rem(padding, $space-m $space-l);
+}
+
+/**
+* Variations
+*/
+.btn-fluid {
+    width: 100%;
+}
+
+/**
+* Groups
+*/
+.btn-group {
+    @include display-flex;
+}
+
+.btn-group .btn {
+    @include rem(margin-left, -1px);
+}
+
+.btn-group .btn:not(:first-child):not(:last-child) {
+    border-radius: 0;
+}
+
+.btn-group .btn:first-child {
+    border-radius: $border-radius 0 0 $border-radius;
+}
+
+.btn-group .btn:last-child {
+    border-radius: 0 $border-radius $border-radius 0;
+}
+
+.btn-group.btn-group-fluid .btn {
+    @include flex(1 0 auto)
+}
+
+.btn-group .btn.is-active {
+    @include linear-gradient($blue, adjust-hue($blue, 30));
+    color: #FFFFFF;
+    box-shadow: 0 1px 2px 0 rgba($gray, 0.8);
+}
+
+/**
+* Icons
+*/
+.btn-icon {
+    @include rem(padding, $space-s);
+}
+
+.btn-icon.btn-l {
+    @include rem(padding, $space-m $space-l);
+}
+
+.btn-icon.btn-s {
+    @include rem(padding, $space-xs);
+}
+
+.btn-icon-left .icon {
+    @include rem(margin-right, $space-s);
+}
+
+.btn-icon-right .icon {
+    @include rem(margin-left, $space-s);
+}
+
+//Colors
+.btn-primary .icon,
+.btn-danger .icon,
+.btn-group .btn.is-active .icon {
+    fill: #FFFFFF;
+}
+
+.btn-link .icon {
+    fill: $blue;
+}

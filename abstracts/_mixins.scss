@@ -1,0 +1,119 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+
+// Conversion px to rem
+// @author Greg Rickaby
+@mixin rem($property, $values) {
+	$px : ();
+	$rem: ();
+
+	$root: $baseFontSize;
+
+	@each $value in $values {
+		@if $value == 0 or $value == auto {
+			$px : append($px , $value);
+			$rem: append($rem, $value);
+		}
+
+		@else if type-of($value) == number {
+			$unit: unit($value);
+			$val: parseInt($value);
+
+			@if $unit == "px" {
+				$px : append($px,  $value);
+				$rem: append($rem, ($val / $root + rem));
+			}
+
+			@if $unit == "rem" {
+				$px : append($px,  ($val * $root + px));
+				$rem: append($rem, $value);
+			}
+		}
+
+		@else {
+			$px : append($px,  $value);
+			$rem: append($rem, $value);
+		}
+	}
+
+	@if $px == $rem {
+		#{$property}: $px;
+	} @else {
+		#{$property}: $px;
+		#{$property}: $rem;
+	}
+}
+
+
+// Browser Prefix
+// @author Cesar Level
+// @param $property $args... - Use on CSS properties that requieres vendor prefixes http://shouldiprefix.com/
+@mixin browser-prefix($property, $args...) {
+    -webkit-#{$property}: $args;
+    -moz-#{$property}: $args;
+    -ms-#{$property}: $args;
+    #{$property}: $args;
+}
+
+// Flex
+@mixin display-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flex($args...) {
+    -webkit-box-flex: $args;
+    -webkit-flex: $args;
+    -ms-flex: $args;
+    flex: $args;
+}
+
+// Linear gradients
+// @param $top, $bottom
+@mixin linear-gradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+// All Colours
+// @author Cesar Level
+// @param $class $property $args...
+// Class should always be followed by '-' e.g. icon-
+@mixin all-colours($class, $property){
+    @each $value in $colours {
+        .#{$class}-#{nth($value, 1)} {
+            #{$property}: #{nth($value, 2)};
+        }
+    }
+}

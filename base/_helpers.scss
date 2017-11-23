@@ -1,0 +1,131 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/**
+* Clear inner floats
+*/
+.clearfix::after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+/**
+* floats
+*/
+.left { float: left; }
+.right { float: right; }
+
+/**
+* Main content containers
+* 1. Make the container full-width with a maximum width
+* 2. Center it in the viewport
+* 3. Leave some space on the edges, especially valuable on small screens
+*/
+.container {
+    max-width: $max-width; /* 1 */
+    margin-left: auto; /* 2 */
+    margin-right: auto; /* 2 */
+    padding-left: 20px; /* 3 */
+    padding-right: 20px; /* 3 */
+    width: 100%; /* 1 */
+}
+
+/**
+* Hide text while making it readable for screen readers
+* 1. Needed in WebKit-based browsers because of an implementation bug;
+*    See: https://code.google.com/p/chromium/issues/detail?id=457146
+*/
+.hide-text {
+    overflow: hidden;
+    padding: 0; /* 1 */
+    text-indent: 101%;
+    white-space: nowrap;
+}
+
+/**
+* Hide element while making it readable for screen readers
+* Shamelessly borrowed from HTML5Boilerplate:
+* https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+*/
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/**
+* Text variations
+*/
+.italic { font-style: italic; }
+.lowercase { text-transform: lowercase; }
+.titlecase { text-transform: capitalize; }
+.uppercase { text-transform: uppercase; }
+.overline { text-decoration: overline; }
+.line-through { text-decoration: line-through; }
+.underline { text-decoration: underline; }
+.no-decoration { text-decoration: none; }
+
+/**
+* Text wrapping / space
+*/
+.break-all { word-break: break-all; }
+.keep-all { word-break: keep-all; }
+.break-word { word-wrap: break-word; }
+.nowrap { white-space: nowrap; }
+.pre { white-space: pre; }
+.pre-wrap { white-space: pre-wrap; }
+.pre-line { white-space: pre-line; }
+
+/**
+* Spatial Helpers
+*/
+.inset-default { @include rem(padding, $inset-default) };
+.inset-xxs { @include rem(padding, $inset-xxs) };
+.inset-xs { @include rem(padding, $inset-xs) };
+.inset-s { @include rem(padding, $inset-s) };
+.inset-m { @include rem(padding, $inset-m) };
+.inset-l { @include rem(padding, $inset-l) };
+.inset-xl { @include rem(padding, $inset-xl) };
+.stack-default { @include rem(margin, $stack-default) };
+.stack-xxs { @include rem(margin, $stack-xxs) };
+.stack-xs { @include rem(margin, $stack-xs) };
+.stack-s { @include rem(margin, $stack-s) };
+.stack-m { @include rem(margin, $stack-m) };
+.stack-l { @include rem(margin, $stack-l) };
+.stack-xl { @include rem(margin, $stack-xl) };
+.inline-xxs { @include rem(margin, 0 $space-xxs 0 0) };
+.inline-xs { @include rem(margin, 0 $space-xs 0 0) };
+.inline-s { @include rem(margin, 0 $space-s 0 0) };
+.inline-m { @include rem(margin, 0 $space-m 0 0) };
+.inline-l { @include rem(margin, 0 $space-l 0 0) };
+.inline-xl { @include rem(margin, 0 $space-xl 0 0) };
+
+/**
+* Object Aligment
+* These classes force text alignment for desired element (and for its inner
+* elements) by assigning text-align CSS property.
+*/
+.align-left { text-align: left; }
+.align-right { text-align: right; }
+.align-center { text-align: center; }
+.align-justify { text-align: justify; }
+
+/**
+* Z-Index
+*/
+.z-90 { z-index: 90; }
+.z-80 { z-index: 80; }
+.z-70 { z-index: 70; }
+.z-60 { z-index: 60; }
+.z-50 { z-index: 50; }
+.z-40 { z-index: 40; }
+.z-30 { z-index: 30; }
+.z-20 { z-index: 20; }
+.z-10 { z-index: 10; }
