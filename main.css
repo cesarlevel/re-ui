@@ -805,11 +805,11 @@ sub {
 /**
 * Positioning
 */
-.icon-prefix {
+.icon-left {
   margin-right: 8px;
   margin-right: 0.8rem; }
 
-.icon-suffix {
+.icon-right {
   margin-left: 8px;
   margin-left: 0.8rem; }
 
@@ -1215,7 +1215,9 @@ sub {
 .badge-info {
   background: #DCE7FE; }
 
-.input-wrapper {
+.input-wrapper,
+.input-icon-right,
+.input-icon-left {
   position: relative; }
 
 .label {
@@ -1271,11 +1273,68 @@ sub {
   margin-top: 0.4rem; }
 
 /**
+* Input Icons
+*/
+.input-icon-right .icon {
+  position: absolute;
+  top: 12px;
+  right: 8px; }
+
+.input-icon-right .input {
+  padding: 8px 32px 8px 16px;
+  padding: 0.8rem 3.2rem 0.8rem 1.6rem; }
+
+.input-icon-left .icon {
+  position: absolute;
+  top: 12px;
+  left: 8px; }
+
+.input-icon-left .input {
+  padding: 8px 16px 8px 32px;
+  padding: 0.8rem 1.6rem 0.8rem 3.2rem; }
+
+.input-wrapper.is-error .input-icon-right .icon,
+.input-wrapper.is-error .input-icon-left .icon {
+  fill: #E53935; }
+
+/**
 * Textarea
 */
 textarea.input {
   resize: none; }
 
+/**
+* Select
+*/
+select.input {
+  min-height: 36px;
+  background: #FFFFFF;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #FFFFFF 0%, #F6F8F9 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(100%, #F6F8F9));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #FFFFFF 0%, #F6F8F9 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #FFFFFF 0%, #F6F8F9 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #FFFFFF 0%, #F6F8F9 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #FFFFFF 0%, #F6F8F9 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
+  box-shadow: 0 0 0 1px #C4CED8 inset, 0 1px 2px 0 rgba(161, 178, 193, 0.3);
+  padding: 8px 32px 8px 16px;
+  padding: 0.8rem 3.2rem 0.8rem 1.6rem; }
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000; }
+
+/**
+* Input Connected
+*/
 /**
 * Placeholders
 */

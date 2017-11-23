@@ -2,7 +2,9 @@
 // This file contains all styles related to the icon component.
 // -----------------------------------------------------------------------------
 
-.input-wrapper {
+.input-wrapper,
+.input-icon-right,
+.input-icon-left {
     position: relative;
 }
 
@@ -60,11 +62,59 @@
 }
 
 /**
+* Input Icons
+*/
+.input-icon-right .icon {
+    position: absolute;
+    top: 12px;
+    right: $space-s;
+}
+
+.input-icon-right .input {
+    @include rem(padding, $space-s $space-l $space-s $space-m);
+}
+
+.input-icon-left .icon {
+    position: absolute;
+    top: 12px;
+    left: $space-s;
+}
+
+.input-icon-left .input {
+    @include rem(padding, $space-s $space-m $space-s $space-l);
+}
+
+.input-wrapper.is-error .input-icon-right .icon,
+.input-wrapper.is-error .input-icon-left .icon {
+    fill: $red;
+}
+
+/**
 * Textarea
 */
 textarea.input {
     resize: none;
 }
+
+/**
+* Select
+*/
+select.input {
+    min-height: 36px;
+    @include linear-gradient(#FFFFFF, $background);
+    box-shadow: 0 0 0 1px $light-gray inset, 0 1px 2px 0 rgba($gray, 0.3);
+    @include rem(padding, $space-s $space-l $space-s $space-m);
+}
+
+// Removing Firefox dotted line
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+/**
+* Input Connected
+*/
 
 /**
 * Placeholders

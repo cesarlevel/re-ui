@@ -19,11 +19,11 @@
 /**
 * Positioning
 */
-.icon-prefix {
+.icon-left {
     @include rem(margin-right, $space-s);
 }
 
-.icon-suffix {
+.icon-right {
     @include rem(margin-left, $space-s);
 }
 
