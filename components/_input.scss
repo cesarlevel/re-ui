@@ -57,7 +57,7 @@
 
 .caption {
     display: block;
-    color: $gray;
+    color: $muted;
     @include rem(margin-top, $space-xs);
 }
 
@@ -96,6 +96,12 @@ textarea.input {
     resize: none;
 }
 
+@-moz-document url-prefix() {
+    textarea.input {
+        height: 36px;
+    }
+}
+
 /**
 * Select
 */
@@ -104,6 +110,15 @@ select.input {
     @include linear-gradient(#FFFFFF, $background);
     box-shadow: 0 0 0 1px $light-gray inset, 0 1px 2px 0 rgba($gray, 0.3);
     @include rem(padding, $space-s $space-l $space-s $space-m);
+}
+
+/**
+* Input label
+*/
+.input.input-label {
+    box-shadow: 0 0 0 1px $light-gray inset;
+    background: $light-background;
+    text-align: center;
 }
 
 // Removing Firefox dotted line
@@ -115,6 +130,44 @@ select:-moz-focusring {
 /**
 * Input Connected
 */
+.input-connected {
+    @include display-flex;
+}
+
+.input-connected > * {
+    width: auto;
+    @include flex(1 0 auto);
+    @include rem(margin-left, -1px);
+}
+
+.input-connected > *.no-flex {
+    width: auto;
+    @include flex(0 0 auto);
+}
+
+.input-connected > *:not(:first-child):not(:last-child),
+.input-connected > *:not(:first-child):not(:last-child) .input {
+    border-radius: 0;
+    z-index: 90;
+}
+
+.input-connected > *:first-child,
+.input-connected > *:first-child .input {
+    border-radius: $border-radius 0 0 $border-radius;
+}
+
+.input-connected > *:last-child,
+.input-connected > *:last-child .input {
+    border-radius: 0 $border-radius $border-radius 0;
+}
+
+/**
+* Input Disabled
+*/
+.input[disabled] {
+    background: $light-background;
+    box-shadow: 0 0 0 1px $light-gray inset;
+}
 
 /**
 * Placeholders

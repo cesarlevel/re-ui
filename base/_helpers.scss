@@ -108,6 +108,11 @@
 .inline-xl { @include rem(margin, 0 $space-xl 0 0) };
 
 /**
+* Flex Helpers
+*/
+.no-flex { @include flex(0 0 auto); }
+
+/**
 * Object Aligment
 * These classes force text alignment for desired element (and for its inner
 * elements) by assigning text-align CSS property.
