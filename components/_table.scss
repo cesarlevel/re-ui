@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the table component.
+// -----------------------------------------------------------------------------
+
+.table-wrapper {
+    width: 10px;
+    max-width: 100%;
+    min-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th {
+    font-weight: $medium;
+    text-align: left;
+}
+
+td,
+th {
+    @include rem(padding, $space-s $space-s);
+    border-bottom: 1px solid $faint-gray;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/**
+* States
+*/
+
+//Negative
+tr.is-negative td {
+    color: $red;
+}
+
+//Numeric
+td.is-numeric {
+    font-family: $code-font-stack;
+}
+
+/**
+* Types
+*/
+
+//Hover
+.table.is-hoverable tr:hover td {
+    background: $background;
+}
+
+//Collapsing
+.table.is-collapsed {
+    width: auto;
+}
+
+
+//Sortable
+.table th:hover.is-sortable {
+    color: $blue;
+    cursor: pointer;
+}

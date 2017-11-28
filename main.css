@@ -646,7 +646,7 @@ sub {
 .break-word {
   word-wrap: break-word; }
 
-.nowrap {
+.no-wrap {
   white-space: nowrap; }
 
 .pre {
@@ -657,6 +657,21 @@ sub {
 
 .pre-line {
   white-space: pre-line; }
+
+/**
+* Text aligment
+*/
+.text-right {
+  text-align: right; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
 
 /**
 * Spatial Helpers
@@ -740,15 +755,6 @@ sub {
 .inline-xl {
   margin: 0 64px 0 0;
   margin: 0 6.4rem 0 0; }
-
-/**
-* Flex Helpers
-*/
-.no-flex {
-  -webkit-box-flex: 0 0 auto;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto; }
 
 /**
 * Object Aligment
@@ -882,7 +888,7 @@ sub {
   box-sizing: border-box;
   text-transform: none;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: baseline;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1131,7 +1137,7 @@ sub {
 .btn-group .btn:last-child {
   border-radius: 0 4px 4px 0; }
 
-.btn-group.btn-group-fluid .btn {
+.btn-group.btn-group-fluid > .btn {
   -webkit-box-flex: 1 0 auto;
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
@@ -1420,12 +1426,14 @@ select:-moz-focusring {
 .label-toggle {
   display: inline-block;
   position: relative;
-  padding-left: 32px;
+  padding-left: 28px;
+  padding-left: 2.8rem;
   margin: 0;
   cursor: pointer; }
 
 .caption-toggle {
-  padding-left: 32px; }
+  padding-left: 32px;
+  padding-left: 3.2rem; }
 
 /**
 * Checkbox
@@ -1440,9 +1448,7 @@ input.checkbox[type=checkbox] {
   box-sizing: border-box;
   z-index: 10;
   cursor: pointer; }
-  input.checkbox[type=checkbox]:checked ~ .checkbox-style {
-    box-shadow: 0 0 0 1px #0044D4 inset; }
-  input.checkbox[type=checkbox]:focus ~ .checkbox-style {
+  input.checkbox[type=checkbox]:checked ~ .checkbox-style, input.checkbox[type=checkbox]:focus ~ .checkbox-style {
     box-shadow: 0 0 0 1px #0044D4 inset, 0 0 0 1px #0044D4; }
   input.checkbox[type=checkbox]:checked ~ .checkbox-style .icon {
     fill: #0044D4;
@@ -1478,9 +1484,7 @@ input.radio[type=radio] {
   box-sizing: border-box;
   z-index: 10;
   cursor: pointer; }
-  input.radio[type=radio]:checked ~ .radio-style {
-    box-shadow: 0 0 0 1px #0044D4 inset; }
-  input.radio[type=radio]:focus ~ .radio-style {
+  input.radio[type=radio]:checked ~ .radio-style, input.radio[type=radio]:focus ~ .radio-style {
     box-shadow: 0 0 0 1px #0044D4 inset, 0 0 0 1px #0044D4; }
   input.radio[type=radio]:checked ~ .radio-style .icon {
     fill: #0044D4;
@@ -1558,5 +1562,100 @@ input.switch[type=checkbox] {
   -moz-transition: 0.2s;
   -ms-transition: 0.2s;
   transition: 0.2s; }
+
+.table-wrapper {
+  width: 10px;
+  max-width: 100%;
+  min-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; }
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0; }
+
+th {
+  font-weight: 500;
+  text-align: left; }
+
+td,
+th {
+  padding: 8px 8px;
+  padding: 0.8rem 0.8rem;
+  border-bottom: 1px solid #E1E7EA; }
+
+tr:last-child td {
+  border-bottom: none; }
+
+/**
+* States
+*/
+tr.is-negative td {
+  color: #E53935; }
+
+td.is-numeric {
+  font-family: "Roboto Mono", monospace; }
+
+/**
+* Types
+*/
+.table.is-hoverable tr:hover td {
+  background: #F6F8F9; }
+
+.table.is-collapsed {
+  width: auto; }
+
+.table th:hover.is-sortable {
+  color: #0044D4;
+  cursor: pointer; }
+
+ul, ol {
+  margin: 0; }
+
+.list {
+  padding-left: 0;
+  list-style: none; }
+
+.list-item {
+  position: relative;
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
+  padding-left: 16px;
+  padding-left: 1.6rem; }
+
+.list-item::before {
+  content: '\2022';
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #A1B2C1; }
+
+/**
+* Types
+*/
+.list.list-icon .list-item {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.list.list-icon .list-item::before {
+  display: none; }
+
+.list.list-icon .list-item .icon {
+  -webkit-box-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: 0 8px 0 0;
+  margin: 0 0.8rem 0 0; }
+
+.list.list-icon .list-item-content {
+  -webkit-box-flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto; }
 
 /*# sourceMappingURL=main.css.map */

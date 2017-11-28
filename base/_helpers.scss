@@ -78,10 +78,18 @@
 .break-all { word-break: break-all; }
 .keep-all { word-break: keep-all; }
 .break-word { word-wrap: break-word; }
-.nowrap { white-space: nowrap; }
+.no-wrap { white-space: nowrap; }
 .pre { white-space: pre; }
 .pre-wrap { white-space: pre-wrap; }
 .pre-line { white-space: pre-line; }
+
+/**
+* Text aligment
+*/
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
 
 /**
 * Spatial Helpers
@@ -106,11 +114,6 @@
 .inline-m { @include rem(margin, 0 $space-m 0 0) };
 .inline-l { @include rem(margin, 0 $space-l 0 0) };
 .inline-xl { @include rem(margin, 0 $space-xl 0 0) };
-
-/**
-* Flex Helpers
-*/
-.no-flex { @include flex(0 0 auto); }
 
 /**
 * Object Aligment

@@ -8,7 +8,7 @@
     box-sizing: border-box;
     text-transform: none;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: baseline;
     @include browser-prefix(user-select, none);
     @include browser-prefix(appearance, none);
     @include linear-gradient(#FFFFFF, $background);
@@ -169,8 +169,8 @@
     border-radius: 0 $border-radius $border-radius 0;
 }
 
-.btn-group.btn-group-fluid .btn {
-    @include flex(1 0 auto)
+.btn-group.btn-group-fluid > .btn {
+    @include flex(1 0 auto);
 }
 
 .btn-group .btn.is-active {

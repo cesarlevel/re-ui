@@ -1,0 +1,48 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the list component.
+// -----------------------------------------------------------------------------
+
+ul, ol { margin: 0; }
+
+.list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list-item {
+    position: relative;
+    @include rem(margin-bottom, $space-s);
+    @include rem(padding-left, $space-m);
+}
+
+.list-item::before {
+    content: '\2022';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $gray;
+}
+
+/**
+* Types
+*/
+
+// List icon
+.list.list-icon .list-item {
+    padding: 0;
+    @include display-flex;
+}
+
+.list.list-icon .list-item::before {
+    display: none;
+}
+
+.list.list-icon .list-item .icon {
+    @include flex(0 0 auto);
+    @include rem(margin, 0 $space-s 0 0);
+    
+}
+
+.list.list-icon .list-item-content {
+    @include flex(1 0 auto);
+}

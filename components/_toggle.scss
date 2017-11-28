@@ -6,13 +6,13 @@
 .label-toggle {
     display: inline-block;
     position: relative;
-    padding-left: $space-l;
+    @include rem(padding-left, 20px + $space-s);
     margin: 0;
     cursor: pointer;
 }
 
 .caption-toggle {
-    padding-left: $space-l;
+    @include rem(padding-left, $space-l);
 }
 
 /**
@@ -29,10 +29,7 @@ input.checkbox[type=checkbox] {
     z-index: 10;
     cursor: pointer;
 
-    &:checked ~ .checkbox-style {
-        box-shadow: 0 0 0 1px $blue inset;
-    }
-
+    &:checked ~ .checkbox-style,
     &:focus ~ .checkbox-style {
         box-shadow: 0 0 0 1px $blue inset, 0 0 0 1px $blue;
     }
@@ -76,10 +73,7 @@ input.radio[type=radio] {
     z-index: 10;
     cursor: pointer;
 
-    &:checked ~ .radio-style {
-        box-shadow: 0 0 0 1px $blue inset;
-    }
-
+    &:checked ~ .radio-style,
     &:focus ~ .radio-style {
         box-shadow: 0 0 0 1px $blue inset, 0 0 0 1px $blue;
     }
