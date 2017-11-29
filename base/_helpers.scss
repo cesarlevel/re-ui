@@ -14,8 +14,8 @@
 /**
 * floats
 */
-.left { float: left; }
-.right { float: right; }
+.left { float: left!important; }
+.right { float: right!important; }
 
 /**
 * Main content containers
@@ -63,77 +63,85 @@
 /**
 * Text variations
 */
-.italic { font-style: italic; }
-.lowercase { text-transform: lowercase; }
-.titlecase { text-transform: capitalize; }
-.uppercase { text-transform: uppercase; }
-.overline { text-decoration: overline; }
-.line-through { text-decoration: line-through; }
-.underline { text-decoration: underline; }
-.no-decoration { text-decoration: none; }
+.italic { font-style: italic!important; }
+.lowercase { text-transform: lowercase!important; }
+.titlecase { text-transform: capitalize!important; }
+.uppercase { text-transform: uppercase!important; }
+.overline { text-decoration: overline!important; }
+.line-through { text-decoration: line-through!important; }
+.underline { text-decoration: underline!important; }
+.no-decoration { text-decoration: none!important; }
 
 /**
 * Text wrapping / space
 */
-.break-all { word-break: break-all; }
-.keep-all { word-break: keep-all; }
-.break-word { word-wrap: break-word; }
-.no-wrap { white-space: nowrap; }
-.pre { white-space: pre; }
-.pre-wrap { white-space: pre-wrap; }
-.pre-line { white-space: pre-line; }
+.break-all { word-break: break-all!important; }
+.keep-all { word-break: keep-all!important; }
+.break-word { word-wrap: break-word!important; }
+.no-wrap { white-space: nowrap!important; }
+.pre { white-space: pre!important; }
+.pre-wrap { white-space: pre-wrap!important; }
+.pre-line { white-space: pre-line!important; }
 
 /**
 * Text aligment
 */
-.text-right { text-align: right; }
-.text-left { text-align: left; }
-.text-center { text-align: center; }
-.text-justify { text-align: justify; }
+.text-right { text-align: right!important; }
+.text-left { text-align: left!important; }
+.text-center { text-align: center!important; }
+.text-justify { text-align: justify!important; }
 
 /**
 * Spatial Helpers
 */
-.inset-default { @include rem(padding, $inset-default) };
-.inset-xxs { @include rem(padding, $inset-xxs) };
-.inset-xs { @include rem(padding, $inset-xs) };
-.inset-s { @include rem(padding, $inset-s) };
-.inset-m { @include rem(padding, $inset-m) };
-.inset-l { @include rem(padding, $inset-l) };
-.inset-xl { @include rem(padding, $inset-xl) };
-.stack-default { @include rem(margin, $stack-default) };
-.stack-xxs { @include rem(margin, $stack-xxs) };
-.stack-xs { @include rem(margin, $stack-xs) };
-.stack-s { @include rem(margin, $stack-s) };
-.stack-m { @include rem(margin, $stack-m) };
-.stack-l { @include rem(margin, $stack-l) };
-.stack-xl { @include rem(margin, $stack-xl) };
-.inline-xxs { @include rem(margin, 0 $space-xxs 0 0) };
-.inline-xs { @include rem(margin, 0 $space-xs 0 0) };
-.inline-s { @include rem(margin, 0 $space-s 0 0) };
-.inline-m { @include rem(margin, 0 $space-m 0 0) };
-.inline-l { @include rem(margin, 0 $space-l 0 0) };
-.inline-xl { @include rem(margin, 0 $space-xl 0 0) };
+.inset-default { @include rem(padding, $inset-default!important) };
+.inset-xxs { @include rem(padding, $inset-xxs!important) };
+.inset-xs { @include rem(padding, $inset-xs!important) };
+.inset-s { @include rem(padding, $inset-s!important) };
+.inset-m { @include rem(padding, $inset-m!important) };
+.inset-l { @include rem(padding, $inset-l!important) };
+.inset-xl { @include rem(padding, $inset-xl!important) };
+.stack-default { @include rem(margin, $stack-default!important) };
+.stack-xxs { @include rem(margin, $stack-xxs!important) };
+.stack-xs { @include rem(margin, $stack-xs!important) };
+.stack-s { @include rem(margin, $stack-s!important) };
+.stack-m { @include rem(margin, $stack-m!important) };
+.stack-l { @include rem(margin, $stack-l!important) };
+.stack-xl { @include rem(margin, $stack-xl!important) };
+.inline-xxs { @include rem(margin, 0 $space-xxs 0 0!important) };
+.inline-xs { @include rem(margin, 0 $space-xs 0 0!important) };
+.inline-s { @include rem(margin, 0 $space-s 0 0!important) };
+.inline-m { @include rem(margin, 0 $space-m 0 0!important) };
+.inline-l { @include rem(margin, 0 $space-l 0 0!important) };
+.inline-xl { @include rem(margin, 0 $space-xl 0 0!important) };
+
+/**
+* Flex Helpers
+*/
+.no-flex {
+    width: auto;
+    @include flex(0 0 auto!important);
+}
 
 /**
 * Object Aligment
 * These classes force text alignment for desired element (and for its inner
 * elements) by assigning text-align CSS property.
 */
-.align-left { text-align: left; }
-.align-right { text-align: right; }
-.align-center { text-align: center; }
-.align-justify { text-align: justify; }
+.align-left { text-align: left!important; }
+.align-right { text-align: right!important; }
+.align-center { text-align: center!important; }
+.align-justify { text-align: justify!important; }
 
 /**
 * Z-Index
 */
-.z-90 { z-index: 90; }
-.z-80 { z-index: 80; }
-.z-70 { z-index: 70; }
-.z-60 { z-index: 60; }
-.z-50 { z-index: 50; }
-.z-40 { z-index: 40; }
-.z-30 { z-index: 30; }
-.z-20 { z-index: 20; }
-.z-10 { z-index: 10; }
+.z-90 { z-index: 90!important; }
+.z-80 { z-index: 80!important; }
+.z-70 { z-index: 70!important; }
+.z-60 { z-index: 60!important; }
+.z-50 { z-index: 50!important; }
+.z-40 { z-index: 40!important; }
+.z-30 { z-index: 30!important; }
+.z-20 { z-index: 20!important; }
+.z-10 { z-index: 10!important; }

@@ -182,23 +182,23 @@
 /**
 * Icons
 */
-.btn-icon {
+.btn.has-icon {
     @include rem(padding, $space-s);
 }
 
-.btn-icon.btn-l {
+.btn.has-icon.btn-l {
     @include rem(padding, $space-m $space-l);
 }
 
-.btn-icon.btn-s {
+.btn.has-icon.btn-s {
     @include rem(padding, $space-xs);
 }
 
-.btn-icon-left .icon {
+.btn.has-icon-left .icon.is-left {
     @include rem(margin-right, $space-s);
 }
 
-.btn-icon-right .icon {
+.btn.has-icon-right .icon.is-right {
     @include rem(margin-left, $space-s);
 }
 

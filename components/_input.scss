@@ -2,20 +2,18 @@
 // This file contains all styles related to the icon component.
 // -----------------------------------------------------------------------------
 
-.input-wrapper,
-.input-icon-right,
-.input-icon-left {
+.field-control {
     position: relative;
 }
 
-.label {
+.field-label {
     display: block;
     font-family: $primary-font-stack;
     color: $text;
     @include rem(margin-bottom, $space-xs);
 }
 
-.input {
+.field-input {
     min-width: 70px;
     width: 100%;
     height: auto;
@@ -41,11 +39,11 @@
     }
 }
 
-.input-wrapper.is-error .label {
+.field.is-error .field-label {
     color: $red;
 }
 
-.input-wrapper.is-error .input {
+.field.is-error .field-input {
     color: $red;
     box-shadow: 0 0 0 1px $red inset;
     background: rgba($light-red, 0.6);
@@ -55,7 +53,7 @@
     }
 }
 
-.caption {
+.field-caption {
     display: block;
     color: $muted;
     @include rem(margin-top, $space-xs);
@@ -64,40 +62,40 @@
 /**
 * Input Icons
 */
-.input-icon-right .icon {
+.field-control.has-icon-right .icon.is-right {
     position: absolute;
     top: 12px;
     right: $space-s;
 }
 
-.input-icon-right .input {
+.field-control.has-icon-right .field-input {
     @include rem(padding, $space-s $space-l $space-s $space-m);
 }
 
-.input-icon-left .icon {
+.field-control.has-icon-left .icon.is-left {
     position: absolute;
     top: 12px;
     left: $space-s;
 }
 
-.input-icon-left .input {
+.field-control.has-icon-left .field-input {
     @include rem(padding, $space-s $space-m $space-s $space-l);
 }
 
-.input-wrapper.is-error .input-icon-right .icon,
-.input-wrapper.is-error .input-icon-left .icon {
+.field.is-error .field-control.has-icon-right .icon,
+.field.is-error .field-control.has-icon-left .icon {
     fill: $red;
 }
 
 /**
 * Textarea
 */
-textarea.input {
+textarea.field-input {
     resize: none;
 }
 
 @-moz-document url-prefix() {
-    textarea.input {
+    textarea.field-input {
         height: 36px;
     }
 }
@@ -105,7 +103,7 @@ textarea.input {
 /**
 * Select
 */
-select.input {
+select.field-input {
     min-height: 36px;
     @include linear-gradient(#FFFFFF, $background);
     box-shadow: 0 0 0 1px $light-gray inset, 0 1px 2px 0 rgba($gray, 0.3);
@@ -130,34 +128,29 @@ select:-moz-focusring {
 /**
 * Input Connected
 */
-.input-connected {
+.field-control.field-control-connected {
     @include display-flex;
 }
 
-.input-connected > * {
+.field-control.field-control-connected > * {
     width: auto;
     @include flex(1 0 auto);
     @include rem(margin-left, -1px);
 }
 
-.input-connected > *.no-flex {
-    width: auto;
-    @include flex(0 0 auto);
-}
-
-.input-connected > *:not(:first-child):not(:last-child),
-.input-connected > *:not(:first-child):not(:last-child) .input {
+.field-control.field-control-connected > *:not(:first-child):not(:last-child),
+.field-control.field-control-connected > *:not(:first-child):not(:last-child) .input {
     border-radius: 0;
     z-index: 90;
 }
 
-.input-connected > *:first-child,
-.input-connected > *:first-child .input {
+.field-control.field-control-connected > *:first-child,
+.field-control.field-control-connected > *:first-child .input {
     border-radius: $border-radius 0 0 $border-radius;
 }
 
-.input-connected > *:last-child,
-.input-connected > *:last-child .input {
+.field-control.field-control-connected > *:last-child,
+.field-control.field-control-connected > *:last-child .input {
     border-radius: 0 $border-radius $border-radius 0;
 }
 
