@@ -2,6 +2,7 @@
 // This file contains all styles related to the icon component.
 // -----------------------------------------------------------------------------
 
+.field,
 .field-control {
     position: relative;
 }
@@ -26,16 +27,17 @@
     margin: 0;
     border-style: inset;
     border: none;
-    box-shadow: 0 0 0 1px $light-gray inset, 0 1px 2px 0 rgba($gray, 0.5) inset;
+    box-shadow: 0 0 0 1px $light-gray inset, 0 1px 2px 0 rgba($gray, 0.5) inset, 0 0 0 0 $blue;
     text-transform: initial;
     letter-spacing: initial;
     font-family: $primary-font-stack;
     font-weight: $regular;
     @include rem(font-size, $paragraph);
     @include rem(line-height, $line-height);
+    @include transition(box-shadow .15s ease);
 
     &:focus {
-        box-shadow: 0 0 0 1px $blue inset, 0 0 0 1px rgba($blue, 1);
+        box-shadow: 0 0 0 1px $blue inset, 0 0 0 0 rgba($gray, 0.5) inset, 0 0 0 1px $blue;
     }
 }
 
@@ -62,7 +64,7 @@
 /**
 * Input Icons
 */
-.field-control.has-icon-right .icon.is-right {
+.field-control.has-icon-right .icon:last-child {
     position: absolute;
     top: 12px;
     right: $space-s;
@@ -72,7 +74,7 @@
     @include rem(padding, $space-s $space-l $space-s $space-m);
 }
 
-.field-control.has-icon-left .icon.is-left {
+.field-control.has-icon-left .icon:first-child {
     position: absolute;
     top: 12px;
     left: $space-s;
@@ -113,7 +115,7 @@ select.field-input {
 /**
 * Input label
 */
-.input.input-label {
+.field-input-label {
     box-shadow: 0 0 0 1px $light-gray inset;
     background: $light-background;
     text-align: center;
@@ -139,25 +141,25 @@ select:-moz-focusring {
 }
 
 .field-control.field-control-connected > *:not(:first-child):not(:last-child),
-.field-control.field-control-connected > *:not(:first-child):not(:last-child) .input {
+.field-control.field-control-connected > *:not(:first-child):not(:last-child) .field-input {
     border-radius: 0;
     z-index: 90;
 }
 
 .field-control.field-control-connected > *:first-child,
-.field-control.field-control-connected > *:first-child .input {
+.field-control.field-control-connected > *:first-child .field-input {
     border-radius: $border-radius 0 0 $border-radius;
 }
 
 .field-control.field-control-connected > *:last-child,
-.field-control.field-control-connected > *:last-child .input {
+.field-control.field-control-connected > *:last-child .field-input {
     border-radius: 0 $border-radius $border-radius 0;
 }
 
 /**
 * Input Disabled
 */
-.input[disabled] {
+.field-input[disabled] {
     background: $light-background;
     box-shadow: 0 0 0 1px $light-gray inset;
 }

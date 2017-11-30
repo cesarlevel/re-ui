@@ -2,7 +2,7 @@
 // This file contains all styles related to the table component.
 // -----------------------------------------------------------------------------
 
-.table-wrapper {
+.table-control {
     width: 10px;
     max-width: 100%;
     min-width: 100%;
@@ -16,18 +16,18 @@
     border-spacing: 0;
 }
 
-th {
+.table th {
     font-weight: $medium;
     text-align: left;
 }
 
-td,
-th {
+.table td,
+.table th {
     @include rem(padding, $space-s $space-s);
     border-bottom: 1px solid $faint-gray;
 }
 
-tr:last-child td {
+.table tr:last-child td {
     border-bottom: none;
 }
 
@@ -36,12 +36,12 @@ tr:last-child td {
 */
 
 //Negative
-tr.is-negative td {
+.table tr.is-negative td {
     color: $red;
 }
 
 //Numeric
-td.is-numeric {
+.table td.is-numeric {
     font-family: $code-font-stack;
 }
 
@@ -50,18 +50,18 @@ td.is-numeric {
 */
 
 //Hover
-.table.is-hoverable tr:hover td {
+.table.table-hoverable tr:hover td {
     background: $background;
 }
 
 //Collapsing
-.table.is-collapsed {
+.table.table-collapsed {
     width: auto;
 }
 
 
 //Sortable
-.table th:hover.is-sortable {
+.table.table th:hover.is-sortable {
     color: $blue;
     cursor: pointer;
 }

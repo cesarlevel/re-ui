@@ -3,7 +3,7 @@
 // (Checkbox, Radio and more...)
 // -----------------------------------------------------------------------------
 
-.label-toggle {
+.field-label-toggle {
     display: inline-block;
     position: relative;
     @include rem(padding-left, 20px + $space-s);
@@ -11,14 +11,14 @@
     cursor: pointer;
 }
 
-.caption-toggle {
+.field-caption-toggle {
     @include rem(padding-left, $space-l);
 }
 
 /**
 * Checkbox
 */
-input.checkbox[type=checkbox] {
+input.field-checkbox[type=checkbox] {
     opacity: 0;
     position: absolute;
     left: 0;
@@ -29,18 +29,18 @@ input.checkbox[type=checkbox] {
     z-index: 10;
     cursor: pointer;
 
-    &:checked ~ .checkbox-style,
-    &:focus ~ .checkbox-style {
-        box-shadow: 0 0 0 1px $blue inset, 0 0 0 1px $blue;
+    &:checked ~ .field-checkbox-style,
+    &:focus ~ .field-checkbox-style {
+        box-shadow: 0 0 0 1px $blue inset, 0 0 0 0 rgba($gray, 0.5) inset, 0 0 0 1px $blue;
     }
 
-    &:checked ~ .checkbox-style .icon {
+    &:checked ~ .field-checkbox-style .icon {
         fill: $blue;
         opacity: 1;
     }
 }
 
-.checkbox-style {
+.field-checkbox-style {
     cursor: pointer;
     box-sizing: border-box;
     width: 16px;
@@ -49,10 +49,11 @@ input.checkbox[type=checkbox] {
     top: $space-xxs;
     left: $space-xxs;
     border-radius: $border-radius - 2;
-    box-shadow: 0 0 0 1px $light-gray inset, 0 1px 2px 0 rgba($gray, 0.5) inset;
+    box-shadow: 0 0 0 1px $light-gray inset, 0 1px 2px 0 rgba($gray, 0.5) inset, 0 0 0 0 $blue;
+    @include transition(box-shadow .1s ease);
 }
 
-.checkbox-style .icon {
+.field-checkbox-style .icon {
     position: absolute;
     top: $space-xxs;
     right: -$space-xxs;
@@ -62,7 +63,7 @@ input.checkbox[type=checkbox] {
 /**
 * Radio
 */
-input.radio[type=radio] {
+input.field-radio[type=radio] {
     opacity: 0;
     position: absolute;
     left: 0;
@@ -73,18 +74,18 @@ input.radio[type=radio] {
     z-index: 10;
     cursor: pointer;
 
-    &:checked ~ .radio-style,
-    &:focus ~ .radio-style {
-        box-shadow: 0 0 0 1px $blue inset, 0 0 0 1px $blue;
+    &:checked ~ .field-radio-style,
+    &:focus ~ .field-radio-style {
+        box-shadow: 0 0 0 1px $blue inset, 0 0 0 0 rgba($gray, 0.5) inset, 0 0 0 1px $blue;
     }
 
-    &:checked ~ .radio-style .icon {
+    &:checked ~ .field-radio-style .icon {
         fill: $blue;
         opacity: 1;
     }
 }
 
-.radio-style {
+.field-radio-style {
     cursor: pointer;
     box-sizing: border-box;
     width: 16px;
@@ -93,10 +94,11 @@ input.radio[type=radio] {
     position: absolute;
     top: $space-xxs;
     left: $space-xxs;
-    box-shadow: 0 0 0 1px $light-gray inset, 0 1px 2px 0 rgba($gray, 0.5) inset;
+    box-shadow: 0 0 0 1px $light-gray inset, 0 1px 2px 0 rgba($gray, 0.5) inset, 0 0 0 0 $blue;
+    @include transition(box-shadow .1s ease);
 }
 
-.radio-style .icon {
+.field-radio-style .icon {
     position: absolute;
     top: $space-xxs;
     right: -$space-xxs;
@@ -106,8 +108,8 @@ input.radio[type=radio] {
 /**
 * Switch
 */
-.switch-body {
-    display: inline-block;
+.field-switch-body {
+    @include display-flex;
     height: 20px;
     width: 36px;
     border-radius: 36px;
@@ -116,7 +118,7 @@ input.radio[type=radio] {
     cursor: pointer;
 }
 
-input.switch[type=checkbox] {
+input.field-switch[type=checkbox] {
     opacity: 0;
     position: absolute;
     left: 0;
@@ -125,16 +127,16 @@ input.switch[type=checkbox] {
     width: 20px;
     box-sizing: border-box;
 
-    &:checked + .switch-handle {
+    &:checked + .field-switch-handle {
         background-color: $blue;
     }
 
-    &:checked + .switch-handle:before {
+    &:checked + .field-switch-handle:before {
         @include browser-prefix(transform, translateX(16px));
     }
 }
 
-.switch-handle {
+.field-switch-handle {
     position: absolute;
     border-radius: 20px;
     cursor: pointer;
@@ -146,7 +148,7 @@ input.switch[type=checkbox] {
     @include browser-prefix(transition, .4s);
 }
 
-.switch-handle:before {
+.field-switch-handle:before {
   position: absolute;
   content: "";
   height: 16px;

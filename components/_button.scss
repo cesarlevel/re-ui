@@ -22,6 +22,7 @@
     font-weight: $regular;
     @include rem(font-size, $paragraph);
     @include rem(line-height, $line-height);
+    @include transition(box-shadow .15s ease);
     outline: none;
 
     &:hover {
@@ -29,9 +30,13 @@
         text-decoration: none;
     }
 
+    &:focus {
+        box-shadow: 0 0 0 1px $blue inset, 0 0 0 1px $blue;
+    }
+
     &:active {
         background: $background;
-        box-shadow: 0 0 0 1px $light-gray inset, 0 1px 3px 1px $light-gray inset
+        box-shadow: 0 0 0 1px $light-gray inset, 0 1px 3px 1px $light-gray inset;
     }
 }
 
@@ -47,9 +52,13 @@
         background: adjust-hue($blue, 30);
     }
 
+    &:focus {
+        box-shadow: 0 0 0 1px darken($blue, 20) inset, 0 0 0 1px darken($blue, 20);
+    }
+
     &:active {
         background: #3000D7;
-        box-shadow: 0 1px 3px 1px darken($blue, 10) inset
+        box-shadow: 0 1px 3px 1px darken($blue, 10) inset;
     }
 }
 
@@ -60,6 +69,10 @@
 
     &:hover {
         background: darken($red, 5);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 1px darken($red, 20) inset, 0 0 0 1px darken($red, 20);
     }
 
     &:active {
@@ -78,6 +91,10 @@
     &:hover {
         background: none;
         text-decoration: underline;
+        box-shadow: none;
+    }
+
+    &:focus {
         box-shadow: none;
     }
 
@@ -194,11 +211,11 @@
     @include rem(padding, $space-xs);
 }
 
-.btn.has-icon-left .icon.is-left {
+.btn.has-icon-left .icon {
     @include rem(margin-right, $space-s);
 }
 
-.btn.has-icon-right .icon.is-right {
+.btn.has-icon-right .icon {
     @include rem(margin-left, $space-s);
 }
 

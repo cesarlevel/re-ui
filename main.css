@@ -925,10 +925,17 @@ sub {
   font-size: 1.4rem;
   line-height: 20px;
   line-height: 2rem;
+  -webkit-transition: box-shadow 0.15s ease;
+  -moz-transition: box-shadow 0.15s ease;
+  -ms-transition: box-shadow 0.15s ease;
+  -o-transition: box-shadow 0.15s ease;
+  transition: box-shadow 0.15s ease;
   outline: none; }
   .btn:hover {
     background: #F6F8F9;
     text-decoration: none; }
+  .btn:focus {
+    box-shadow: 0 0 0 1px #0044D4 inset, 0 0 0 1px #0044D4; }
   .btn:active {
     background: #F6F8F9;
     box-shadow: 0 0 0 1px #C4CED8 inset, 0 1px 3px 1px #C4CED8 inset; }
@@ -957,6 +964,8 @@ sub {
   box-shadow: 0 1px 2px 0 rgba(161, 178, 193, 0.8); }
   .btn-primary:hover {
     background: #2600d4; }
+  .btn-primary:focus {
+    box-shadow: 0 0 0 1px #00236e inset, 0 0 0 1px #00236e; }
   .btn-primary:active {
     background: #3000D7;
     box-shadow: 0 1px 3px 1px #0034a1 inset; }
@@ -982,6 +991,8 @@ sub {
   box-shadow: 0 1px 2px 0 rgba(161, 178, 193, 0.8); }
   .btn-danger:hover {
     background: #e2231e; }
+  .btn-danger:focus {
+    box-shadow: 0 0 0 1px #9f1815 inset, 0 0 0 1px #9f1815; }
   .btn-danger:active {
     background: #cd1e1a;
     box-shadow: 0 1px 3px 1px #9f1815 inset; }
@@ -995,6 +1006,8 @@ sub {
   .btn-link:hover {
     background: none;
     text-decoration: underline;
+    box-shadow: none; }
+  .btn-link:focus {
     box-shadow: none; }
   .btn-link:active {
     background: none; }
@@ -1177,11 +1190,11 @@ sub {
   padding: 4px;
   padding: 0.4rem; }
 
-.btn.has-icon-left .icon.is-left {
+.btn.has-icon-left .icon {
   margin-right: 8px;
   margin-right: 0.8rem; }
 
-.btn.has-icon-right .icon.is-right {
+.btn.has-icon-right .icon {
   margin-left: 8px;
   margin-left: 0.8rem; }
 
@@ -1229,6 +1242,7 @@ sub {
 .badge-info {
   background: #DCE7FE; }
 
+.field,
 .field-control {
   position: relative; }
 
@@ -1256,7 +1270,7 @@ sub {
   margin: 0;
   border-style: inset;
   border: none;
-  box-shadow: 0 0 0 1px #C4CED8 inset, 0 1px 2px 0 rgba(161, 178, 193, 0.5) inset;
+  box-shadow: 0 0 0 1px #C4CED8 inset, 0 1px 2px 0 rgba(161, 178, 193, 0.5) inset, 0 0 0 0 #0044D4;
   text-transform: initial;
   letter-spacing: initial;
   font-family: "Roboto", sans-serif;
@@ -1264,9 +1278,14 @@ sub {
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 20px;
-  line-height: 2rem; }
+  line-height: 2rem;
+  -webkit-transition: box-shadow 0.15s ease;
+  -moz-transition: box-shadow 0.15s ease;
+  -ms-transition: box-shadow 0.15s ease;
+  -o-transition: box-shadow 0.15s ease;
+  transition: box-shadow 0.15s ease; }
   .field-input:focus {
-    box-shadow: 0 0 0 1px #0044D4 inset, 0 0 0 1px #0044d4; }
+    box-shadow: 0 0 0 1px #0044D4 inset, 0 0 0 0 rgba(161, 178, 193, 0.5) inset, 0 0 0 1px #0044D4; }
 
 .field.is-error .field-label {
   color: #E53935; }
@@ -1287,7 +1306,7 @@ sub {
 /**
 * Input Icons
 */
-.field-control.has-icon-right .icon.is-right {
+.field-control.has-icon-right .icon:last-child {
   position: absolute;
   top: 12px;
   right: 8px; }
@@ -1296,7 +1315,7 @@ sub {
   padding: 8px 32px 8px 16px;
   padding: 0.8rem 3.2rem 0.8rem 1.6rem; }
 
-.field-control.has-icon-left .icon.is-left {
+.field-control.has-icon-left .icon:first-child {
   position: absolute;
   top: 12px;
   left: 8px; }
@@ -1346,7 +1365,7 @@ select.field-input {
 /**
 * Input label
 */
-.input.input-label {
+.field-input-label {
   box-shadow: 0 0 0 1px #C4CED8 inset;
   background: #F9FAFB;
   text-align: center; }
@@ -1374,22 +1393,22 @@ select:-moz-focusring {
   margin-left: -0.1rem; }
 
 .field-control.field-control-connected > *:not(:first-child):not(:last-child),
-.field-control.field-control-connected > *:not(:first-child):not(:last-child) .input {
+.field-control.field-control-connected > *:not(:first-child):not(:last-child) .field-input {
   border-radius: 0;
   z-index: 90; }
 
 .field-control.field-control-connected > *:first-child,
-.field-control.field-control-connected > *:first-child .input {
+.field-control.field-control-connected > *:first-child .field-input {
   border-radius: 4px 0 0 4px; }
 
 .field-control.field-control-connected > *:last-child,
-.field-control.field-control-connected > *:last-child .input {
+.field-control.field-control-connected > *:last-child .field-input {
   border-radius: 0 4px 4px 0; }
 
 /**
 * Input Disabled
 */
-.input[disabled] {
+.field-input[disabled] {
   background: #F9FAFB;
   box-shadow: 0 0 0 1px #C4CED8 inset; }
 
@@ -1413,7 +1432,7 @@ select:-moz-focusring {
   /* Firefox 18- */
   color: #A1B2C1; }
 
-.label-toggle {
+.field-label-toggle {
   display: inline-block;
   position: relative;
   padding-left: 28px;
@@ -1421,14 +1440,14 @@ select:-moz-focusring {
   margin: 0;
   cursor: pointer; }
 
-.caption-toggle {
+.field-caption-toggle {
   padding-left: 32px;
   padding-left: 3.2rem; }
 
 /**
 * Checkbox
 */
-input.checkbox[type=checkbox] {
+input.field-checkbox[type=checkbox] {
   opacity: 0;
   position: absolute;
   left: 0;
@@ -1438,13 +1457,13 @@ input.checkbox[type=checkbox] {
   box-sizing: border-box;
   z-index: 10;
   cursor: pointer; }
-  input.checkbox[type=checkbox]:checked ~ .checkbox-style, input.checkbox[type=checkbox]:focus ~ .checkbox-style {
-    box-shadow: 0 0 0 1px #0044D4 inset, 0 0 0 1px #0044D4; }
-  input.checkbox[type=checkbox]:checked ~ .checkbox-style .icon {
+  input.field-checkbox[type=checkbox]:checked ~ .field-checkbox-style, input.field-checkbox[type=checkbox]:focus ~ .field-checkbox-style {
+    box-shadow: 0 0 0 1px #0044D4 inset, 0 0 0 0 rgba(161, 178, 193, 0.5) inset, 0 0 0 1px #0044D4; }
+  input.field-checkbox[type=checkbox]:checked ~ .field-checkbox-style .icon {
     fill: #0044D4;
     opacity: 1; }
 
-.checkbox-style {
+.field-checkbox-style {
   cursor: pointer;
   box-sizing: border-box;
   width: 16px;
@@ -1453,9 +1472,14 @@ input.checkbox[type=checkbox] {
   top: 2px;
   left: 2px;
   border-radius: 2px;
-  box-shadow: 0 0 0 1px #C4CED8 inset, 0 1px 2px 0 rgba(161, 178, 193, 0.5) inset; }
+  box-shadow: 0 0 0 1px #C4CED8 inset, 0 1px 2px 0 rgba(161, 178, 193, 0.5) inset, 0 0 0 0 #0044D4;
+  -webkit-transition: box-shadow 0.1s ease;
+  -moz-transition: box-shadow 0.1s ease;
+  -ms-transition: box-shadow 0.1s ease;
+  -o-transition: box-shadow 0.1s ease;
+  transition: box-shadow 0.1s ease; }
 
-.checkbox-style .icon {
+.field-checkbox-style .icon {
   position: absolute;
   top: 2px;
   right: -2px;
@@ -1464,7 +1488,7 @@ input.checkbox[type=checkbox] {
 /**
 * Radio
 */
-input.radio[type=radio] {
+input.field-radio[type=radio] {
   opacity: 0;
   position: absolute;
   left: 0;
@@ -1474,13 +1498,13 @@ input.radio[type=radio] {
   box-sizing: border-box;
   z-index: 10;
   cursor: pointer; }
-  input.radio[type=radio]:checked ~ .radio-style, input.radio[type=radio]:focus ~ .radio-style {
-    box-shadow: 0 0 0 1px #0044D4 inset, 0 0 0 1px #0044D4; }
-  input.radio[type=radio]:checked ~ .radio-style .icon {
+  input.field-radio[type=radio]:checked ~ .field-radio-style, input.field-radio[type=radio]:focus ~ .field-radio-style {
+    box-shadow: 0 0 0 1px #0044D4 inset, 0 0 0 0 rgba(161, 178, 193, 0.5) inset, 0 0 0 1px #0044D4; }
+  input.field-radio[type=radio]:checked ~ .field-radio-style .icon {
     fill: #0044D4;
     opacity: 1; }
 
-.radio-style {
+.field-radio-style {
   cursor: pointer;
   box-sizing: border-box;
   width: 16px;
@@ -1489,9 +1513,14 @@ input.radio[type=radio] {
   position: absolute;
   top: 2px;
   left: 2px;
-  box-shadow: 0 0 0 1px #C4CED8 inset, 0 1px 2px 0 rgba(161, 178, 193, 0.5) inset; }
+  box-shadow: 0 0 0 1px #C4CED8 inset, 0 1px 2px 0 rgba(161, 178, 193, 0.5) inset, 0 0 0 0 #0044D4;
+  -webkit-transition: box-shadow 0.1s ease;
+  -moz-transition: box-shadow 0.1s ease;
+  -ms-transition: box-shadow 0.1s ease;
+  -o-transition: box-shadow 0.1s ease;
+  transition: box-shadow 0.1s ease; }
 
-.radio-style .icon {
+.field-radio-style .icon {
   position: absolute;
   top: 2px;
   right: -2px;
@@ -1500,8 +1529,11 @@ input.radio[type=radio] {
 /**
 * Switch
 */
-.switch-body {
-  display: inline-block;
+.field-switch-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   height: 20px;
   width: 36px;
   border-radius: 36px;
@@ -1509,7 +1541,7 @@ input.radio[type=radio] {
   vertical-align: baseline;
   cursor: pointer; }
 
-input.switch[type=checkbox] {
+input.field-switch[type=checkbox] {
   opacity: 0;
   position: absolute;
   left: 0;
@@ -1517,15 +1549,15 @@ input.switch[type=checkbox] {
   height: 20px;
   width: 20px;
   box-sizing: border-box; }
-  input.switch[type=checkbox]:checked + .switch-handle {
+  input.field-switch[type=checkbox]:checked + .field-switch-handle {
     background-color: #0044D4; }
-  input.switch[type=checkbox]:checked + .switch-handle:before {
+  input.field-switch[type=checkbox]:checked + .field-switch-handle:before {
     -webkit-transform: translateX(16px);
     -moz-transform: translateX(16px);
     -ms-transform: translateX(16px);
     transform: translateX(16px); }
 
-.switch-handle {
+.field-switch-handle {
   position: absolute;
   border-radius: 20px;
   cursor: pointer;
@@ -1539,7 +1571,7 @@ input.switch[type=checkbox] {
   -ms-transition: 0.4s;
   transition: 0.4s; }
 
-.switch-handle:before {
+.field-switch-handle:before {
   position: absolute;
   content: "";
   height: 16px;
@@ -1553,7 +1585,7 @@ input.switch[type=checkbox] {
   -ms-transition: 0.2s;
   transition: 0.2s; }
 
-.table-wrapper {
+.table-control {
   width: 10px;
   max-width: 100%;
   min-width: 100%;
@@ -1565,38 +1597,38 @@ input.switch[type=checkbox] {
   border-collapse: separate;
   border-spacing: 0; }
 
-th {
+.table th {
   font-weight: 500;
   text-align: left; }
 
-td,
-th {
+.table td,
+.table th {
   padding: 8px 8px;
   padding: 0.8rem 0.8rem;
   border-bottom: 1px solid #E1E7EA; }
 
-tr:last-child td {
+.table tr:last-child td {
   border-bottom: none; }
 
 /**
 * States
 */
-tr.is-negative td {
+.table tr.is-negative td {
   color: #E53935; }
 
-td.is-numeric {
+.table td.is-numeric {
   font-family: "Roboto Mono", monospace; }
 
 /**
 * Types
 */
-.table.is-hoverable tr:hover td {
+.table.table-hoverable tr:hover td {
   background: #F6F8F9; }
 
-.table.is-collapsed {
+.table.table-collapsed {
   width: auto; }
 
-.table th:hover.is-sortable {
+.table.table th:hover.is-sortable {
   color: #0044D4;
   cursor: pointer; }
 
@@ -1609,6 +1641,10 @@ ul, ol {
 
 .list-item {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   margin-bottom: 8px;
   margin-bottom: 0.8rem;
   padding-left: 16px;
@@ -1625,11 +1661,7 @@ ul, ol {
 * Types
 */
 .list.list-icon .list-item {
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; }
+  padding: 0; }
 
 .list.list-icon .list-item::before {
   display: none; }
@@ -1642,7 +1674,7 @@ ul, ol {
   margin: 0 8px 0 0;
   margin: 0 0.8rem 0 0; }
 
-.list.list-icon .list-item-content {
+.list.list-icon .list-item > * {
   -webkit-box-flex: 1 0 auto;
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
