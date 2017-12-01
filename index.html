@@ -292,7 +292,7 @@
                     <option value="mercedes">Mercedes</option>
                     <option value="audi">Audi</option>
                 </select>
-                <svg class="icon icon-20 is-right">
+                <svg class="icon icon-20">
                     <use xlink:href="#icon-heart"></use>
                 </svg>
             </div>
@@ -384,10 +384,10 @@
         </xmp>
     </div>
     <div class="stack-m">
-        <h2>Input Connected</h2>
+        <h2>Input Group</h2>
         <div class="field">
             <label class="field-label">Label</label>
-            <div class="field-control field-control-connected">
+            <div class="field-control field-group">
                 <input class="field-input" placeholder="Placeholder"/>
                 <div class="field-control has-icon-right no-flex">
                     <select class="field-input">
@@ -415,7 +415,7 @@
     <xmp>
         <div class="field">
             <label class="field-label">Label</label>
-            <div class="field-control field-control-connected">
+            <div class="field-control field-group">
                 <input class="field-input" placeholder="Placeholder"/>
                 <div class="field-control has-icon-right no-flex">
                     <select class="field-input">...</select>
@@ -432,13 +432,13 @@
         </div>
     </xmp>
     <div class="stack-m">
-        <h2>Input Label</h2>
+        <h2>Input Addon</h2>
         <div class="field">
             <label class="field-label">Label</label>
-            <div class="field-control field-control-connected">
-                <div class="field-input field-input-label no-flex">Label</div>
+            <div class="field-control field-group">
+                <div class="field-addon no-flex">Label</div>
                 <input class="field-input" placeholder="Placeholder"/>
-                <div class="field-input field-input-label no-flex">Label</div>
+                <div class="field-addon no-flex">Label</div>
             </div>
             <span class="field-caption">This is a help text</span>
         </div>
@@ -446,10 +446,10 @@
     <xmp>
         <div class="field">
             <label class="field-label">Label</label>
-            <div class="field-control field-control-connected">
-                <div class="field-input field-input-label no-flex">Label</div>
+            <div class="field-control field-group">
+                <div class="field-addon no-flex">Label</div>
                 <input class="field-input" placeholder="Placeholder"/>
-                <div class="field-input field-input-label no-flex">Label</div>
+                <div class="field-addon no-flex">Label</div>
             </div>
             <span class="field-caption">This is a help text</span>
         </div>
@@ -798,7 +798,7 @@
     </div>
     <h1>Lists</h1>
     <div class="stack-l">
-        <ul class="list">
+        <ul class="list list-divided">
             <li class="list-item">item</li>
             <li class="list-item">item</li>
             <li class="list-item">item</li>
@@ -828,17 +828,17 @@
             </li>
         </ul>
         <xmp>
-            <ul class="list list-icon">
+            <ul class="list list-group">
                 <li class="list-item">
-                    <svg class="icon icon-20">...</svg>
+                    <svg class="icon icon-20 no-flex inline-s">...</svg>
                     <span class="list-item-content">item</span>
                 </li>
                 <li class="list-item">
-                    <svg class="icon icon-20">...</use></svg>
+                    <svg class="icon icon-20 no-flex inline-s">...</svg>
                     <span class="list-item-content">item</span>
                 </li>
                 <li class="list-item">
-                    <svg class="icon icon-20">...</use></svg>
+                    <svg class="icon icon-20 no-flex inline-s">...</svg>
                     <span class="list-item-content">item</span>
                 </li>
             </ul>

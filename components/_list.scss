@@ -24,6 +24,28 @@ ul, ol { margin: 0; }
     color: $gray;
 }
 
+// Divided
+.list.list-divided .list-item {
+    @include rem(padding, $space-s 0 $space-s $space-m);
+    margin-bottom: 0;
+}
+
+.list.list-divided .list-item {
+    border-bottom: 1px solid $faint-gray;
+}
+
+.list.list-divided .list-item:last-child {
+    border-bottom: none;
+}
+
+.list-item.list-divided:before {
+    content: '\2022';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: $gray;
+}
+
 /**
 * List Group
 */
@@ -38,18 +60,4 @@ ul, ol { margin: 0; }
 
 .list.list-group .list-item > * {
     @include flex(1 1 auto);
-}
-
-// Divided
-.list.list-divided .list-item {
-    @include rem(padding, $space-s 0);
-    margin-bottom: 0;
-}
-
-.list.list-divided .list-item {
-    border-bottom: 1px solid $faint-gray;
-}
-
-.list.list-divided .list-item:last-child {
-    border-bottom: none;
 }

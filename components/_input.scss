@@ -113,9 +113,10 @@ select.field-input {
 }
 
 /**
-* Input label
+* Input Addon
 */
-.field-input-label {
+.field-addon {
+    @extend .field-input;
     box-shadow: 0 0 0 1px $light-gray inset;
     background: $light-background;
     text-align: center;
@@ -128,31 +129,31 @@ select:-moz-focusring {
 }
 
 /**
-* Input Connected
+* Input Group
 */
-.field-control.field-control-connected {
+.field-control.field-group {
     @include display-flex;
 }
 
-.field-control.field-control-connected > * {
+.field-control.field-group > * {
     width: auto;
     @include flex(1 1 auto);
     @include rem(margin-left, -1px);
 }
 
-.field-control.field-control-connected > *:not(:first-child):not(:last-child),
-.field-control.field-control-connected > *:not(:first-child):not(:last-child) .field-input {
+.field-control.field-group > *:not(:first-child):not(:last-child),
+.field-control.field-group > *:not(:first-child):not(:last-child) .field-input {
     border-radius: 0;
     z-index: 90;
 }
 
-.field-control.field-control-connected > *:first-child,
-.field-control.field-control-connected > *:first-child .field-input {
+.field-control.field-group > *:first-child,
+.field-control.field-group > *:first-child .field-input {
     border-radius: $border-radius 0 0 $border-radius;
 }
 
-.field-control.field-control-connected > *:last-child,
-.field-control.field-control-connected > *:last-child .field-input {
+.field-control.field-group > *:last-child,
+.field-control.field-group > *:last-child .field-input {
     border-radius: 0 $border-radius $border-radius 0;
 }
 
