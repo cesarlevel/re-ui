@@ -62,7 +62,7 @@
             </svg><span>Button icon left</span>
         </button>
         <button class="btn has-icon-right inline-s">
-            <span>Button icon left</span>
+            <span>Button icon right</span>
             <svg class="icon icon-20">
                 <use xlink:href="#icon-heart"></use>
             </svg>
@@ -126,17 +126,17 @@
     <div class="stack-l">
         <h2>Icon Position</h2>
         <p>
-            Some text and then an icon<svg class="icon icon-20 is-right"><use xlink:href="#icon-heart"></use></svg>
+            <span class="inline-s">Some text and then an icon</span><svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg>
         </p>
         <p>
-            <svg class="icon icon-20 is-left"><use xlink:href="#icon-heart"></use></svg>And then some text
+            <svg class="icon icon-20 inline-s"><use xlink:href="#icon-heart"></use></svg><span>And then some text</span>
         </p>
         <xmp>
             <p>
-                Some text and then an icon<svg class="icon icon-20 is-right"><use xlink:href="#icon-heart"></use></svg>
+                <span class="inline-s">Some text and then an icon</span><svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg>
             </p>
             <p>
-                <svg class="icon icon-20 is-left"><use xlink:href="#icon-heart"></use></svg>And then some text
+                <svg class="icon icon-20 inline-s"><use xlink:href="#icon-heart"></use></svg><span>And then some text</span>
             </p>
         </xmp>
     </div>
@@ -678,10 +678,10 @@
                 <thead>
                     <tr>
                         <th class="is-sortable">
-                            Header<svg class="icon icon-20 is-right"><use xlink:href="#icon-heart"></use></svg>
+                            Header<svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg>
                         </th>
                         <th class="is-sortable">
-                            Header<svg class="icon icon-20 is-right"><use xlink:href="#icon-heart"></use></svg>
+                            Header<svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg>
                         </th>
                     </tr>
                 </thead>
@@ -703,7 +703,7 @@
                     <thead>
                         <tr>
                             <th class="is-sortable">
-                                Header<svg class="icon icon-20 is-right">...</svg>
+                                Header<svg class="icon icon-20">...</svg>
                             </th>
                             <th class="is-sortable">...</th>
                         </tr>
@@ -812,18 +812,18 @@
         </xmp>
     </div>
     <div class="stack-l">
-        <h2>Icon List</h2>
-        <ul class="list list-icon">
+        <h2>List Group</h2>
+        <ul class="list list-group">
             <li class="list-item">
-                <svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg>
+                <svg class="icon icon-20 no-flex inline-s"><use xlink:href="#icon-heart"></use></svg>
                 <span class="list-item-content">item</span>
             </li>
             <li class="list-item">
-                <svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg>
+                <svg class="icon icon-20 no-flex inline-s"><use xlink:href="#icon-heart"></use></svg>
                 <span class="list-item-content">item</span>
             </li>
             <li class="list-item">
-                <svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg>
+                <svg class="icon icon-20 no-flex inline-s"><use xlink:href="#icon-heart"></use></svg>
                 <span class="list-item-content">item</span>
             </li>
         </ul>
@@ -845,34 +845,62 @@
         </xmp>
     </div>
     <div class="stack-l">
-        <h2>Divided List</h2>
-        <ul class="list list-icon">
+        <h2>Divided List Group</h2>
+        <ul class="list list-group list-divided">
             <li class="list-item">
-                <svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg>
-                <span class="list-item-content">item</span>
+                <svg class="icon icon-20 no-flex inline-s"><use xlink:href="#icon-heart"></use></svg>
+                <span class="list-item-content inline-l"><button class="btn btn-link">Link</button></span>
+                <span class="list-item-content inline-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum magna, rhoncus sit amet vulputate sit amet, posuere id felis. Etiam augue ex, molestie sed malesuada in, scelerisque ut dui.</span>
+                <span class="list-item-content no-flex">
+                    <div class="field">
+                        <label class="field-switch-body" for="field-switch-list">
+                            <input type="checkbox" id="field-switch-list" class="field-switch">
+                            <span class="field-switch-handle"></span>
+                        </label>
+                    </div>
+                </span>
             </li>
             <li class="list-item">
-                <svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg>
-                <span class="list-item-content">item</span>
-            </li>
-            <li class="list-item">
-                <svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg>
-                <span class="list-item-content">item</span>
+                <svg class="icon icon-20 no-flex inline-s"><use xlink:href="#icon-heart"></use></svg>
+                <span class="list-item-content inline-l"><button class="btn btn-link">Link</button></span>
+                <span class="list-item-content inline-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum magna, rhoncus sit amet vulputate sit amet, posuere id felis. Etiam augue ex, molestie sed malesuada in, scelerisque ut dui.</span>
+                <span class="list-item-content no-flex">
+                    <div class="field">
+                        <label class="field-switch-body" for="field-switch-list-2">
+                            <input type="checkbox" id="field-switch-list-2" class="field-switch">
+                            <span class="field-switch-handle"></span>
+                        </label>
+                    </div>
+                </span>
             </li>
         </ul>
         <xmp>
-            <ul class="list list-icon">
+            <ul class="list list-group list-divided">
                 <li class="list-item">
-                    <svg class="icon icon-20">...</svg>
-                    <span class="list-item-content">item</span>
+                    <svg class="icon icon-20 no-flex inline-s">...</svg>
+                    <span class="list-item-content inline-l"><button class="btn btn-link">Link</button></span>
+                    <span class="list-item-content inline-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum magna, rhoncus sit amet vulputate sit amet, posuere id felis. Etiam augue ex, molestie sed malesuada in, scelerisque ut dui.</span>
+                    <span class="list-item-content no-flex">
+                        <div class="field">
+                            <label class="field-switch-body" for="field-switch-list">
+                                <input type="checkbox" id="field-switch-list" class="field-switch">
+                                <span class="field-switch-handle"></span>
+                            </label>
+                        </div>
+                    </span>
                 </li>
                 <li class="list-item">
-                    <svg class="icon icon-20">...</use></svg>
-                    <span class="list-item-content">item</span>
-                </li>
-                <li class="list-item">
-                    <svg class="icon icon-20">...</use></svg>
-                    <span class="list-item-content">item</span>
+                    <svg class="icon icon-20 no-flex inline-s">...</svg>
+                    <span class="list-item-content inline-l"><button class="btn btn-link">Link</button></span>
+                    <span class="list-item-content inline-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum magna, rhoncus sit amet vulputate sit amet, posuere id felis. Etiam augue ex, molestie sed malesuada in, scelerisque ut dui.</span>
+                    <span class="list-item-content no-flex">
+                        <div class="field">
+                            <label class="field-switch-body" for="field-switch-list-2">
+                                <input type="checkbox" id="field-switch-list-2" class="field-switch">
+                                <span class="field-switch-handle"></span>
+                            </label>
+                        </div>
+                    </span>
                 </li>
             </ul>
         </xmp>

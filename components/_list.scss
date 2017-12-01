@@ -25,24 +25,31 @@ ul, ol { margin: 0; }
 }
 
 /**
-* Types
+* List Group
 */
 
-// List icon
-.list.list-icon .list-item {
+.list.list-group .list-item {
     padding: 0;
 }
 
-.list.list-icon .list-item::before {
+.list.list-group .list-item::before {
     display: none;
 }
 
-.list.list-icon .list-item .icon {
-    @include flex(0 0 auto);
-    @include rem(margin, 0 $space-s 0 0);
-
+.list.list-group .list-item > * {
+    @include flex(1 1 auto);
 }
 
-.list.list-icon .list-item > * {
-    @include flex(1 0 auto);
+// Divided
+.list.list-divided .list-item {
+    @include rem(padding, $space-s 0);
+    margin-bottom: 0;
+}
+
+.list.list-divided .list-item {
+    border-bottom: 1px solid $faint-gray;
+}
+
+.list.list-divided .list-item:last-child {
+    border-bottom: none;
 }

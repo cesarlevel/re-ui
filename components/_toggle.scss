@@ -55,7 +55,7 @@ input.field-checkbox[type=checkbox] {
 
 .field-checkbox-style .icon {
     position: absolute;
-    top: $space-xxs;
+    top: -$space-xxs;
     right: -$space-xxs;
     opacity: 0;
 }
@@ -100,7 +100,7 @@ input.field-radio[type=radio] {
 
 .field-radio-style .icon {
     position: absolute;
-    top: $space-xxs;
+    top: -$space-xxs;
     right: -$space-xxs;
     opacity: 0;
 }

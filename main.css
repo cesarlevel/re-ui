@@ -814,18 +814,9 @@ sub {
 
 .icon-20 {
   width: 20px;
-  height: 20px; }
-
-/**
-* Positioning
-*/
-.icon.is-left {
-  margin-right: 8px;
-  margin-right: 0.8rem; }
-
-.icon.is-right {
-  margin-left: 8px;
-  margin-left: 0.8rem; }
+  height: 20px;
+  vertical-align: top;
+  margin: 0; }
 
 /**
 * Colors
@@ -1308,7 +1299,7 @@ sub {
 */
 .field-control.has-icon-right .icon:last-child {
   position: absolute;
-  top: 12px;
+  top: 8px;
   right: 8px; }
 
 .field-control.has-icon-right .field-input {
@@ -1317,7 +1308,7 @@ sub {
 
 .field-control.has-icon-left .icon:first-child {
   position: absolute;
-  top: 12px;
+  top: 8px;
   left: 8px; }
 
 .field-control.has-icon-left .field-input {
@@ -1385,10 +1376,10 @@ select:-moz-focusring {
 
 .field-control.field-control-connected > * {
   width: auto;
-  -webkit-box-flex: 1 0 auto;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  -webkit-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   margin-left: -1px;
   margin-left: -0.1rem; }
 
@@ -1481,7 +1472,7 @@ input.field-checkbox[type=checkbox] {
 
 .field-checkbox-style .icon {
   position: absolute;
-  top: 2px;
+  top: -2px;
   right: -2px;
   opacity: 0; }
 
@@ -1522,7 +1513,7 @@ input.field-radio[type=radio] {
 
 .field-radio-style .icon {
   position: absolute;
-  top: 2px;
+  top: -2px;
   right: -2px;
   opacity: 0; }
 
@@ -1632,6 +1623,9 @@ input.field-switch[type=checkbox] {
   color: #0044D4;
   cursor: pointer; }
 
+.table.table th.is-sortable .icon {
+  margin-left: 8px; }
+
 ul, ol {
   margin: 0; }
 
@@ -1658,26 +1652,29 @@ ul, ol {
   color: #A1B2C1; }
 
 /**
-* Types
+* List Group
 */
-.list.list-icon .list-item {
+.list.list-group .list-item {
   padding: 0; }
 
-.list.list-icon .list-item::before {
+.list.list-group .list-item::before {
   display: none; }
 
-.list.list-icon .list-item .icon {
-  -webkit-box-flex: 0 0 auto;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  margin: 0 8px 0 0;
-  margin: 0 0.8rem 0 0; }
+.list.list-group .list-item > * {
+  -webkit-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto; }
 
-.list.list-icon .list-item > * {
-  -webkit-box-flex: 1 0 auto;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto; }
+.list.list-divided .list-item {
+  padding: 8px 0;
+  padding: 0.8rem 0;
+  margin-bottom: 0; }
+
+.list.list-divided .list-item {
+  border-bottom: 1px solid #E1E7EA; }
+
+.list.list-divided .list-item:last-child {
+  border-bottom: none; }
 
 /*# sourceMappingURL=main.css.map */

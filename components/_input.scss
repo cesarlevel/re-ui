@@ -66,7 +66,7 @@
 */
 .field-control.has-icon-right .icon:last-child {
     position: absolute;
-    top: 12px;
+    top: $space-s;
     right: $space-s;
 }
 
@@ -76,7 +76,7 @@
 
 .field-control.has-icon-left .icon:first-child {
     position: absolute;
-    top: 12px;
+    top: $space-s;
     left: $space-s;
 }
 
@@ -136,7 +136,7 @@ select:-moz-focusring {
 
 .field-control.field-control-connected > * {
     width: auto;
-    @include flex(1 0 auto);
+    @include flex(1 1 auto);
     @include rem(margin-left, -1px);
 }
 

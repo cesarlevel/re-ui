@@ -65,3 +65,7 @@
     color: $blue;
     cursor: pointer;
 }
+
+.table.table th.is-sortable .icon {
+    margin-left: $space-s;
+}
