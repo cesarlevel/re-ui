@@ -131,29 +131,29 @@ select:-moz-focusring {
 /**
 * Input Group
 */
-.field-control.field-group {
+.field-group {
     @include display-flex;
 }
 
-.field-control.field-group > * {
+.field-group > * {
     width: auto;
     @include flex(1 1 auto);
     @include rem(margin-left, -1px);
 }
 
-.field-control.field-group > *:not(:first-child):not(:last-child),
-.field-control.field-group > *:not(:first-child):not(:last-child) .field-input {
+.field-group > *:not(:first-child):not(:last-child),
+.field-group > *:not(:first-child):not(:last-child) .field-input {
     border-radius: 0;
     z-index: 90;
 }
 
-.field-control.field-group > *:first-child,
-.field-control.field-group > *:first-child .field-input {
+.field-group > *:first-child,
+.field-group > *:first-child .field-input {
     border-radius: $border-radius 0 0 $border-radius;
 }
 
-.field-control.field-group > *:last-child,
-.field-control.field-group > *:last-child .field-input {
+.field-group > *:last-child,
+.field-group > *:last-child .field-input {
     border-radius: 0 $border-radius $border-radius 0;
 }
 
@@ -172,7 +172,7 @@ select:-moz-focusring {
     color: $gray;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-    opacity: 1;
+    @include opacity(1);
     color: $gray;
 }
 :-ms-input-placeholder { /* IE 10+ */

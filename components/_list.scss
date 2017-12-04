@@ -13,20 +13,17 @@ ul, ol { margin: 0; }
     position: relative;
     @include display-flex;
     @include rem(margin-bottom, $space-s);
-    @include rem(padding-left, $space-m);
 }
 
 .list-item::before {
     content: '\2022';
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include rem(margin-right, $space-s);
     color: $gray;
 }
 
 // Divided
 .list.list-divided .list-item {
-    @include rem(padding, $space-s 0 $space-s $space-m);
+    @include rem(padding, $space-s 0);
     margin-bottom: 0;
 }
 
@@ -38,22 +35,10 @@ ul, ol { margin: 0; }
     border-bottom: none;
 }
 
-.list-item.list-divided:before {
-    content: '\2022';
-    position: absolute;
-    top: 10px;
-    left: 0;
-    color: $gray;
-}
 
 /**
 * List Group
 */
-
-.list.list-group .list-item {
-    padding: 0;
-}
-
 .list.list-group .list-item::before {
     display: none;
 }

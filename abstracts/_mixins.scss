@@ -165,3 +165,12 @@
   -o-animation: #{$str};
   animation: #{$str};
 }
+
+// Opacity
+// @include opacity(0);
+@mixin opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}

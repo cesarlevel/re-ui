@@ -387,7 +387,7 @@
         <h2>Input Group</h2>
         <div class="field">
             <label class="field-label">Label</label>
-            <div class="field-control field-group">
+            <div class="field-group">
                 <input class="field-input" placeholder="Placeholder"/>
                 <div class="field-control has-icon-right no-flex">
                     <select class="field-input">
@@ -415,7 +415,7 @@
     <xmp>
         <div class="field">
             <label class="field-label">Label</label>
-            <div class="field-control field-group">
+            <div class="field-group">
                 <input class="field-input" placeholder="Placeholder"/>
                 <div class="field-control has-icon-right no-flex">
                     <select class="field-input">...</select>
@@ -435,7 +435,7 @@
         <h2>Input Addon</h2>
         <div class="field">
             <label class="field-label">Label</label>
-            <div class="field-control field-group">
+            <div class="field-group">
                 <div class="field-addon no-flex">Label</div>
                 <input class="field-input" placeholder="Placeholder"/>
                 <div class="field-addon no-flex">Label</div>
@@ -446,7 +446,7 @@
     <xmp>
         <div class="field">
             <label class="field-label">Label</label>
-            <div class="field-control field-group">
+            <div class="field-group">
                 <div class="field-addon no-flex">Label</div>
                 <input class="field-input" placeholder="Placeholder"/>
                 <div class="field-addon no-flex">Label</div>
@@ -798,13 +798,28 @@
     </div>
     <h1>Lists</h1>
     <div class="stack-l">
-        <ul class="list list-divided">
+        <ul class="list">
             <li class="list-item">item</li>
             <li class="list-item">item</li>
             <li class="list-item">item</li>
         </ul>
         <xmp>
             <ul class="list">
+                <li class="list-item">item</li>
+                <li class="list-item">item</li>
+                <li class="list-item">item</li>
+            </ul>
+        </xmp>
+    </div>
+    <div class="stack-l">
+        <h2>Divided List</h2>
+        <ul class="list list-divided">
+            <li class="list-item">item</li>
+            <li class="list-item">item</li>
+            <li class="list-item">item</li>
+        </ul>
+        <xmp>
+            <ul class="list list-divided">
                 <li class="list-item">item</li>
                 <li class="list-item">item</li>
                 <li class="list-item">item</li>
@@ -903,6 +918,42 @@
                     </span>
                 </li>
             </ul>
+        </xmp>
+    </div>
+    <h1>Loading</h1>
+    <div class="stack-l">
+        <div class="loading is-loading">
+            <div class="mr-re"></div>
+            <div class="mr-bil"></div>
+            <div class="mr-ly"></div>
+        </div>
+        <xmp>
+            <div class="loading is-loading">
+                <div class="mr-re"></div>
+                <div class="mr-bil"></div>
+                <div class="mr-ly"></div>
+            </div>
+        </xmp>
+    </div>
+    <h1>Tooltips</h1>
+    <div class="stack-l">
+        <h2>Simple CSS Tooltips</h2>
+        <span>This is a <a class="btn btn-link has-tooltip" data-tooltip="I'm a tooltip">tooltip</a></span>
+        <xmp>
+            <span>This is a <a class="btn btn-link has-tooltip" data-tooltip="I'm a tooltip">tooltip</a></span>
+        </xmp>
+    </div>
+    <div class="stack-l">
+        <h2>Simple CSS Tooltips Positioning</h2>
+        <span class="inline-l">Tooltip position top <a class="btn btn-link has-tooltip-top" data-tooltip="I'm a tooltip">Check</a></span>
+        <span class="inline-l">Tooltip position right <a class="btn btn-link has-tooltip-right" data-tooltip="I'm a tooltip">Check</a></span>
+        <span class="inline-l">Tooltip position bottom <a class="btn btn-link has-tooltip-bottom" data-tooltip="I'm a tooltip">Check</a></span>
+        <span class="inline-l">Tooltip position left <a class="btn btn-link has-tooltip-left" data-tooltip="I'm a tooltip">Check</a></span>
+        <xmp>
+            <span>Tooltip position top <a class="btn btn-link has-tooltip-top" data-tooltip="I'm a tooltip">Check</a></span>
+            <span>Tooltip position right <a class="btn btn-link has-tooltip-right" data-tooltip="I'm a tooltip">Check</a></span>
+            <span>Tooltip position bottom <a class="btn btn-link has-tooltip-bottom" data-tooltip="I'm a tooltip">Check</a></span>
+            <span>Tooltip position left <a class="btn btn-link has-tooltip-left" data-tooltip="I'm a tooltip">Check</a></span>
         </xmp>
     </div>
     <!-- <h1>Kitsch retro</h1>

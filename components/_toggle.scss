@@ -19,7 +19,7 @@
 * Checkbox
 */
 input.field-checkbox[type=checkbox] {
-    opacity: 0;
+    @include opacity(0);
     position: absolute;
     left: 0;
     top: 0;
@@ -36,7 +36,7 @@ input.field-checkbox[type=checkbox] {
 
     &:checked ~ .field-checkbox-style .icon {
         fill: $blue;
-        opacity: 1;
+        @include opacity(1);
     }
 }
 
@@ -57,14 +57,14 @@ input.field-checkbox[type=checkbox] {
     position: absolute;
     top: -$space-xxs;
     right: -$space-xxs;
-    opacity: 0;
+    @include opacity(0);
 }
 
 /**
 * Radio
 */
 input.field-radio[type=radio] {
-    opacity: 0;
+    @include opacity(0);
     position: absolute;
     left: 0;
     top: 0;
@@ -81,7 +81,7 @@ input.field-radio[type=radio] {
 
     &:checked ~ .field-radio-style .icon {
         fill: $blue;
-        opacity: 1;
+        @include opacity(1);
     }
 }
 
@@ -102,7 +102,7 @@ input.field-radio[type=radio] {
     position: absolute;
     top: -$space-xxs;
     right: -$space-xxs;
-    opacity: 0;
+    @include opacity(0);
 }
 
 /**
@@ -119,7 +119,7 @@ input.field-radio[type=radio] {
 }
 
 input.field-switch[type=checkbox] {
-    opacity: 0;
+    @include opacity(0);
     position: absolute;
     left: 0;
     top: 0;

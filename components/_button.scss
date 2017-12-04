@@ -109,7 +109,7 @@
 
 //Default
 .btn[disabled] {
-    opacity: 0.5;
+    @include opacity(0.5);
     cursor: auto;
 
     &:hover {
