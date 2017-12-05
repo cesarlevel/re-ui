@@ -39,3 +39,36 @@
 .badge-info {
     background: $light-blue;
 }
+
+//Status badge
+.has-badge {
+    position: relative;
+}
+
+.has-badge::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 6px;
+    width: 6px;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #ffffff;
+}
+
+.has-badge.is-positive::after {
+    background: $green;
+}
+
+.has-badge.is-negative::after {
+    background: $red;
+}
+
+.has-badge.is-warning::after {
+    background: $yellow;
+}
+
+.has-badge.is-info::after {
+    background: $blue;
+}

@@ -14,23 +14,9 @@
 /**
 * floats
 */
-.left { float: left!important; }
-.right { float: right!important; }
-
-/**
-* Main content containers
-* 1. Make the container full-width with a maximum width
-* 2. Center it in the viewport
-* 3. Leave some space on the edges, especially valuable on small screens
-*/
-.container {
-    max-width: $max-width; /* 1 */
-    margin-left: auto; /* 2 */
-    margin-right: auto; /* 2 */
-    padding-left: 20px; /* 3 */
-    padding-right: 20px; /* 3 */
-    width: 100%; /* 1 */
-}
+.float-left { float: left!important; }
+.float-right { float: right!important; }
+.float-none { float: none!important; }
 
 /**
 * Hide text while making it readable for screen readers
@@ -118,6 +104,14 @@
 /**
 * Flex Helpers
 */
+.display-flex {
+    @include display-flex($important: true);
+}
+
+.display-inline-flex {
+    @include display-inline-flex($important: true);
+}
+
 .no-flex {
     width: auto;
     @include flex(0 0 auto!important);

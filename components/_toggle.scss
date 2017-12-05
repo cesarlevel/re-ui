@@ -131,7 +131,7 @@ input.field-switch[type=checkbox] {
         background-color: $blue;
     }
 
-    &:checked + .field-switch-handle:before {
+    &:checked + .field-switch-handle::before {
         @include browser-prefix(transform, translateX(16px));
     }
 }
@@ -148,7 +148,7 @@ input.field-switch[type=checkbox] {
     @include browser-prefix(transition, .4s);
 }
 
-.field-switch-handle:before {
+.field-switch-handle::before {
   position: absolute;
   content: "";
   height: 16px;
