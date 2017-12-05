@@ -2,29 +2,47 @@
 // This file contains all styles related to the grid system.
 // -----------------------------------------------------------------------------
 
-/**
-* Main content containers
-* 1. Make the container full-width with a maximum width
-* 2. Center it in the viewport
-* 3. Leave some space on the edges, especially valuable on small screens
-*/
 .container {
     box-sizing: border-box;
-    margin-left: auto; /* 2 */
-    margin-right: auto; /* 2 */
-    padding-left: 20px; /* 3 */
-    padding-right: 20px; /* 3 */
-    width: 100%; /* 1 */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
     @include media-query-breakpoint('large-desktop') {
         max-width: $max-width;
     }
 }
 
-.row {
+.container-fluid {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 100%;
-    @include display-flex;
 }
 
-.row > * {
+.sections {
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    margin: -$inset-default / 2;
+}
+
+.sections + .sections {
+    margin-top: $inset-default / 2;
+}
+
+.sections .section-item {
     @include flex(1 0 auto);
+    padding: $inset-default / 2;
+}
+
+.section-item.section-item-primary {
+    @include flex(2 1 48rem);
+}
+
+.section-item.section-item-secondary  {
+    @include flex(1 0 24rem);
 }

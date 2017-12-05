@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the card component.
+// -----------------------------------------------------------------------------
+
+.card {
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 1px rgba($muted, 0.03), 0 1px 2px 0 rgba($muted, 0.24), 0 4px 4px 0 rgba($muted, 0.05);
+    border-radius: $border-radius;
+}
+
+.card-title {
+    padding: $inset-default $inset-default 0 $inset-default;
+    @include display-flex;
+    border-top: 1px solid $faint-gray;
+}
+
+.card-title:first-child {
+    border-top: none;
+}
+
+.card-title > *,
+.card-subtitle > * {
+    margin: 0;
+    @include flex(1 0 50%);
+    min-width: 0;
+}
+
+.card-title h2,
+.card-title h3 {
+    padding-right: $inset-default;
+}
+
+.card-content {
+    padding: $inset-default;
+}
+
+.card-content > * {
+    margin: 0;
+}
+
+.card-content + .card-content {
+    border-top: 1px solid $faint-gray;
+}
