@@ -8,8 +8,8 @@
 <body class="inset-l">
     <div class="container">
         <button class="btn btn-fluid stack-m">Fluid</button>
-        <div class="sections">
-            <div class="section-item section-item-primary">
+        <div class="grid">
+            <div class="grid-item grid-item-primary">
                 <div class="card">
                     <div class="card-content">
                         <div class="field">
@@ -18,14 +18,34 @@
                         </div>
                     </div>
                     <div class="card-content">
-                        <div class="sections">
-                            <div class="section-item">
+                        <div class="grid-content">
+                            <div class="grid-item">
                                 <div class="field">
                                     <label class="field-label">Label</label>
                                     <input class="field-input" />
                                 </div>
                             </div>
-                            <div class="section-item">
+                            <div class="grid-item">
+                                <div class="field">
+                                    <label class="field-label">Label</label>
+                                    <input class="field-input" />
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class="field">
+                                    <label class="field-label">Label</label>
+                                    <input class="field-input" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-content">
+                            <div class="grid-item">
+                                <div class="field">
+                                    <label class="field-label">Label</label>
+                                    <input class="field-input" />
+                                </div>
+                            </div>
+                            <div class="grid-item">
                                 <div class="field">
                                     <label class="field-label">Label</label>
                                     <input class="field-input" />
@@ -39,42 +59,26 @@
                                 <svg class="icon icon-20 no-flex inline-s"><use xlink:href="#icon-heart"></use></svg>
                                 <span class="list-item-content inline-l"><button class="btn btn-link">Link</button></span>
                                 <span class="list-item-content inline-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum magna, rhoncus sit amet vulputate sit amet, posuere id felis. Etiam augue ex, molestie sed malesuada in, scelerisque ut dui.</span>
-                                <span class="list-item-content no-flex">
-                                    <div class="field">
-                                        <label class="field-switch-body" for="field-switch-list">
-                                            <input type="checkbox" id="field-switch-list" class="field-switch">
-                                            <span class="field-switch-handle"></span>
-                                        </label>
-                                    </div>
-                                </span>
                             </li>
                             <li class="list-item">
                                 <svg class="icon icon-20 no-flex inline-s"><use xlink:href="#icon-heart"></use></svg>
                                 <span class="list-item-content inline-l"><button class="btn btn-link">Link</button></span>
                                 <span class="list-item-content inline-l">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum magna, rhoncus sit amet vulputate sit amet, posuere id felis. Etiam augue ex, molestie sed malesuada in, scelerisque ut dui.</span>
-                                <span class="list-item-content no-flex">
-                                    <div class="field">
-                                        <label class="field-switch-body" for="field-switch-list-2">
-                                            <input type="checkbox" id="field-switch-list-2" class="field-switch">
-                                            <span class="field-switch-handle"></span>
-                                        </label>
-                                    </div>
-                                </span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="section-item section-item-secondary">
-                <div class="sections">
-                    <div class="section-item">
+            <div class="grid-item grid-item-secondary">
+                <div class="grid">
+                    <div class="grid-item">
                         <div class="card">
                             <br />
                         </div>
                     </div>
                 </div>
-                <div class="sections">
-                    <div class="section-item">
+                <div class="grid">
+                    <div class="grid-item">
                         <div class="card">
                             <br />
                         </div>
@@ -1068,13 +1072,136 @@
                         <button class="btn btn-link">Item</button>
                     </span>
                 </div>
+                <div class="card-content">
+                    <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex.</p>
+                </div>
                 <div class="card-content text-right">
                     <button class="btn inline-m">Default</button><button class="btn btn-primary">Primary</button>
                 </div>
             </div>
         </div>
         <xmp>
-            <span>This is a <a class="btn btn-link has-tooltip" data-tooltip="I'm a tooltip">tooltip</a></span>
+            <div class="card">
+                <div class="card-title">
+                    <h2>Title</h2>
+                    <span class="card-title-action no-flex">
+                        <button class="btn btn-link">
+                            <svg class="icon icon-20 no-flex">...</svg>
+                        </button>
+                    </span>
+                </div>
+                <div class="card-content">
+                    <p class="stack-m">...</p>
+                    <p>...</p>
+                </div>
+                <div class="card-title">
+                    <h3>Subtitle</h3>
+                    <span class="card-title-action no-flex">
+                        <button class="btn btn-link">Item</button>
+                    </span>
+                </div>
+                <div class="card-content">
+                    <p>...</p>
+                </div>
+                <div class="card-content text-right">
+                    <button class="btn inline-m">Default</button><button class="btn btn-primary">Primary</button>
+                </div>
+            </div>
+        </xmp>
+    </div>
+    <h1>Grid</h1>
+    <div class="stack-l">
+        <div class="container stack-m">
+            <div class="card">
+                <div class="card-content text-center">
+                    <p>Container - 1100px</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-content text-center">
+                    <p>Container</p>
+                </div>
+            </div>
+        </div>
+        <xmp>
+            <div class="container ">
+                <div>...</div>
+            </div>
+            <div class="container-fluid">
+                <div>...</div>
+            </div>
+        </xmp>
+    </div>
+    <div class="stack-l">
+        <h2>Grid</h2>
+        <p class="stack-l">
+            Grid comes in two flavors .grid and .grid-content the latter is used when using the grid inside other elements
+        </p>
+        <div class="container">
+            <div class="grid">
+                <div class="grid-item">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="grid-content">
+                                <div class="grid-item">
+                                    <div class="card card-secondary">
+                                        <div class="card-content"></div>
+                                    </div>
+                                </div>
+                                <div class="grid-item">
+                                    <div class="card card-secondary">
+                                        <div class="card-content"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-item">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-item">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <xmp>
+            <div class="container ">
+                <div>...</div>
+            </div>
+            <div class="container-fluid">
+                <div>...</div>
+            </div>
         </xmp>
     </div>
     <!-- <h1>Kitsch retro</h1>

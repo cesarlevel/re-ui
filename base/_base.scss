@@ -45,3 +45,9 @@ a {
  *:focus {
     outline: none;
 }
+
+/**
+ * Text Selection
+ */
+*::-moz-selection { background: $light-blue }
+*::selection { background: $light-blue; }

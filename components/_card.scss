@@ -12,7 +12,7 @@
 .card-title {
     padding: $inset-default $inset-default 0 $inset-default;
     @include display-flex;
-    border-top: 1px solid $faint-gray;
+    //border-top: 1px solid $faint-gray;
 }
 
 .card-title:first-child {
@@ -35,10 +35,24 @@
     padding: $inset-default;
 }
 
-.card-content > * {
+.card-content > *:not(.grid-content) {
     margin: 0;
 }
 
-.card-content + .card-content {
-    border-top: 1px solid $faint-gray;
+.card-content {
+    border-bottom: 1px solid $faint-gray;
+}
+
+.card-content:last-child {
+    border: none;
+}
+
+/**
+* Types
+*/
+
+//Secondary
+.card.card-secondary {
+    background: $light-background;
+    box-shadow: 0 0 0 1px $faint-gray inset;
 }

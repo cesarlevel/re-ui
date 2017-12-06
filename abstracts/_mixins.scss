@@ -237,3 +237,12 @@
         }
     }
 }
+
+// Truncate a string, need to ad a max-width to the parent element
+// @include truncate(0);
+@mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
