@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the tab component.
+// -----------------------------------------------------------------------------
+
+.tab {
+    padding-left: 0;
+    list-style: none;
+    position: relative;
+    @include display-flex;
+    @include flex-wrap(nowrap);
+    background: #FFFFFF;
+}
+
+.tab-item {
+    @include display-flex;
+    @include flex(0 0 auto);
+}
+
+.tab-item .tab-link {
+    line-height: $line-height;
+    @include rem(padding, $space-m 0);
+    @include rem(margin, 0 $space-m);
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

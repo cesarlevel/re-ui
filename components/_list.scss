@@ -12,6 +12,7 @@ ul, ol { margin: 0; }
 .list-item {
     position: relative;
     @include display-flex;
+    @include flex-wrap(nowrap);
     @include rem(margin-bottom, $space-s);
 }
 

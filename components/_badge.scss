@@ -40,7 +40,7 @@
     background: $light-blue;
 }
 
-//Status badge
+//Status Badge
 .has-badge {
     position: relative;
 }
@@ -71,4 +71,11 @@
 
 .has-badge.is-info::after {
     background: $blue;
+}
+
+//Tag Badge {
+.badge.badge-tag {
+    @include rem(padding, $space-xs $space-s);
+    color: $muted;
+    border-radius: $border-radius;
 }

@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the chip component.
+// -----------------------------------------------------------------------------
+
+.chip {
+    display: inline-block;
+    height: auto;
+    box-sizing: border-box;
+    text-transform: none;
+    text-align: center;
+    vertical-align: baseline;
+    @include browser-prefix(user-select, none);
+    @include browser-prefix(appearance, none);
+    background: $faint-gray;
+    color: $text;
+    border-radius: $border-radius;
+    border: none;
+    @include rem(padding, $space-s $space-m);
+    font-family: $primary-font-stack;
+    font-weight: $regular;
+    @include rem(font-size, $paragraph);
+    @include rem(line-height, $line-height);
+}
+
+.chip.has-delete .btn.btn-link .icon {
+    fill: $muted;
+    margin-left: $space-s;
+}
