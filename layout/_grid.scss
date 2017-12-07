@@ -28,6 +28,10 @@
     @include flex-wrap(wrap);
     @include justify-content(center);
     @include rem(margin, -$inset-default / 2);
+    @include rem(max-width, $max-width);
+    @include media-query-breakpoint('desktop', $type: max) {
+        display: block;
+    }
 }
 
 .grid + .grid {
@@ -37,9 +41,6 @@
 .grid .grid-item {
     @include flex(1 0 auto);
     padding: $inset-default / 2;
-    @include media-query-breakpoint('desktop', $type: max) {
-        width: 100%;
-    }
     @include media-query-breakpoint('phone', $type: max) {
         width: 100%;
     }
@@ -57,6 +58,12 @@
 .grid-content {
     @extend .grid;
     @include rem(margin, -$space-s);
+    @include media-query-breakpoint('desktop', $type: max) {
+        @include display-flex;
+    }
+    @include media-query-breakpoint('tablet', $type: max) {
+        display: block;
+    }
 }
 
 .grid-content + .grid-content {
@@ -64,9 +71,29 @@
 }
 
 .grid-content .grid-item {
-    @include flex(1 0 auto);
     padding: $space-s;
     @include media-query-breakpoint('phone', $type: max) {
         width: 100%;
+    }
+}
+
+//Grid No-Padding
+.grid-content-no-padding {
+    @extend .grid-content;
+    @include flex-wrap(nowrap);
+    margin: 0;
+    @include media-query-breakpoint('tablet', $type: max) {
+        @include display-flex;
+    }
+}
+
+.grid-content-no-padding + .grid-content.grid-content-no-padding {
+    margin-top: 0;
+}
+
+.grid-content-no-padding .grid-item {
+    padding: 0;
+    @include media-query-breakpoint('phone', $type: max) {
+        width: auto;
     }
 }
