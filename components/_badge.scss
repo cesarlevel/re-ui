@@ -79,3 +79,8 @@
     color: $muted;
     border-radius: $border-radius;
 }
+
+.badge.badge-tag.has-delete .btn.btn-link .icon {
+    fill: $muted;
+    margin-left: $space-s;
+}

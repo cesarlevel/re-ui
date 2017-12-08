@@ -8,7 +8,7 @@
     position: relative;
     @include display-flex;
     @include flex-wrap(nowrap);
-    background: #FFFFFF;
+    border-bottom: 1px solid $faint-gray;
 }
 
 .tab-item {
@@ -17,12 +17,26 @@
 }
 
 .tab-item .tab-link {
-    line-height: $line-height;
+    line-height: 1;
+    position: relative;
+    color: $muted;
+    border-bottom: 3px solid transparent;
     @include rem(padding, $space-m 0);
-    @include rem(margin, 0 $space-m);
+    @include rem(margin, 0 $space-s);
     cursor: pointer;
 
     &:hover {
         text-decoration: none;
+        color: $text;
+        border-bottom: 3px solid $gray;
     }
+
+    &.is-active {
+        color: $blue;
+        border-bottom: 3px solid $blue;
+    }
+}
+
+.tab-item:first-child .tab-link {
+    @include rem(margin-left, $space-m);
 }

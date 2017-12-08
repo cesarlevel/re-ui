@@ -248,11 +248,15 @@
     <div class="stack-l">
         <h2>Tag Badges</h2>
         <span class="badge badge-tag inline-xs">Tag 1</span>
-        <span class="badge badge-tag inline-xs">Tag 2</span>
+        <span class="badge badge-tag has-delete inline-xs">
+            Tag 2<button class="btn btn-link"><svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg></button>
+        </span>
 
         <xmp>
             <span class="badge badge-tag inline-xs">Tag 1</span>
-            <span class="badge badge-tag">Tag 2</span>
+            <span class="badge badge-tag has-delete inline-xs">
+                Tag 2<button class="btn btn-link"><svg class="icon icon-20">...</svg></button>
+            </span>
         </xmp>
     </div>
     <h1>Inputs</h1>
@@ -1067,9 +1071,9 @@
     <div class="stack-l">
         <h2>Grid</h2>
         <p class="stack-xl">
-            Grid comes in three flavors .grid, .grid-content and .grid-content-no-padding.
+            Grid comes in three flavors .grid, .grid-content and .grid-no-padding.
             <br>.grid-content is used when using the grid inside other elements
-            <br>.grid-content-no-padding is used when the elements are not meant to be wrapped and most of the separations comes from the spatial helpers
+            <br>.grid-no-padding is used when the elements are not meant to be wrapped and most of the separations comes from the spatial helpers
         </p>
         <div class="container">
             <div class="grid">
@@ -1085,7 +1089,7 @@
                                 <div class="grid-item">
                                     <div class="card card-secondary">
                                         <div class="card-content">
-                                            <div class="grid-content-no-padding">
+                                            <div class="grid-no-padding">
                                                 <div class="grid-item">
                                                     <span style="border: 1px solid #fff;display:inline-block;width:100%;height:36px;background:#eceff0;text-align:center;line-height:36px;">No padding grid</span>
                                                 </div>
@@ -1203,7 +1207,7 @@
                                 <div class="grid-item">
                                     <div class="card card-secondary">
                                         <div class="card-content">
-                                            <div class="grid-content-no-padding">
+                                            <div class="grid-no-padding">
                                                 <div class="grid-item">
                                                     Element
                                                 </div>
@@ -1245,21 +1249,35 @@
     </div>
     <h1>Tabs</h1>
     <div class="stack-l">
-        <ul class="tab">
+        <ul class="tab stack-l">
             <li class="tab-item">
-                <a class="tab-link">Tab Item</a>
+                <a class="tab-link">First Tab</a>
             </li>
             <li class="tab-item">
-                <a class="tab-link">Tab Item</a>
+                <a class="tab-link">Second Tab</a>
+            </li>
+            <li class="tab-item">
+                <a class="tab-link">Third Tab</a>
+            </li>
+            <li class="tab-item">
+                <a class="tab-link is-active">Fourth Tab is Active</a>
             </li>
         </ul>
         <xmp>
-            <div class="chip">
-                <span>Hello</span>
-            </div>
-            <div class="chip has-delete">
-                <span>Hello</span><button class="btn btn-link"><svg class="icon icon-20">...</svg></button>
-            </div>
+            <ul class="tab">
+                <li class="tab-item">
+                    <a class="tab-link">First Tab</a>
+                </li>
+                <li class="tab-item">
+                    <a class="tab-link">Second Tab</a>
+                </li>
+                <li class="tab-item">
+                    <a class="tab-link">Third Tab</a>
+                </li>
+                <li class="tab-item">
+                    <a class="tab-link is-active">Fourth Tab is Active</a>
+                </li>
+            </ul>
         </xmp>
     </div>
     <!-- <h1>Kitsch retro</h1>

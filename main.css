@@ -824,7 +824,7 @@ sub {
   padding-right: 20px;
   width: 100%; }
 
-.grid, .grid-content, .grid-content-no-padding {
+.grid, .grid-content, .grid-no-padding {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -841,20 +841,20 @@ sub {
   max-width: 1140px;
   max-width: 114rem; }
   @media screen and (max-width: 1099px) {
-    .grid, .grid-content, .grid-content-no-padding {
+    .grid, .grid-content, .grid-no-padding {
       display: block; } }
 
-.grid + .grid, .grid-content + .grid, .grid-content-no-padding + .grid, .grid + .grid-content, .grid-content + .grid-content, .grid-content-no-padding + .grid-content, .grid + .grid-content-no-padding, .grid-content + .grid-content-no-padding, .grid-content-no-padding + .grid-content-no-padding {
+.grid + .grid, .grid-content + .grid, .grid-no-padding + .grid, .grid + .grid-content, .grid-content + .grid-content, .grid-no-padding + .grid-content, .grid + .grid-no-padding, .grid-content + .grid-no-padding, .grid-no-padding + .grid-no-padding {
   margin-top: 10px; }
 
-.grid .grid-item, .grid-content .grid-item, .grid-content-no-padding .grid-item {
+.grid .grid-item, .grid-content .grid-item, .grid-no-padding .grid-item {
   -webkit-box-flex: 1 0 auto;
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   padding: 10px; }
   @media screen and (max-width: 575px) {
-    .grid .grid-item, .grid-content .grid-item, .grid-content-no-padding .grid-item {
+    .grid .grid-item, .grid-content .grid-item, .grid-no-padding .grid-item {
       width: 100%; } }
 
 .grid-item.grid-item-primary {
@@ -869,47 +869,47 @@ sub {
   -ms-flex: 1 0 24rem;
   flex: 1 0 24rem; }
 
-.grid-content, .grid-content-no-padding {
+.grid-content, .grid-no-padding {
   margin: -8px;
   margin: -0.8rem; }
   @media screen and (max-width: 1099px) {
-    .grid-content, .grid-content-no-padding {
+    .grid-content, .grid-no-padding {
       display: -webkit-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex; } }
   @media screen and (max-width: 767px) {
-    .grid-content, .grid-content-no-padding {
+    .grid-content, .grid-no-padding {
       display: block; } }
 
-.grid-content + .grid-content, .grid-content-no-padding + .grid-content, .grid-content + .grid-content-no-padding, .grid-content-no-padding + .grid-content-no-padding {
+.grid-content + .grid-content, .grid-no-padding + .grid-content, .grid-content + .grid-no-padding, .grid-no-padding + .grid-no-padding {
   margin-top: 8px; }
 
-.grid-content .grid-item, .grid-content-no-padding .grid-item {
+.grid-content .grid-item, .grid-no-padding .grid-item {
   padding: 8px; }
   @media screen and (max-width: 575px) {
-    .grid-content .grid-item, .grid-content-no-padding .grid-item {
+    .grid-content .grid-item, .grid-no-padding .grid-item {
       width: 100%; } }
 
-.grid-content-no-padding {
+.grid-no-padding {
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   margin: 0; }
   @media screen and (max-width: 767px) {
-    .grid-content-no-padding {
+    .grid-no-padding {
       display: -webkit-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex; } }
 
-.grid-content-no-padding + .grid-content.grid-content-no-padding, .grid-content-no-padding + .grid-content-no-padding {
+.grid-no-padding + .grid-content.grid-no-padding, .grid-no-padding + .grid-no-padding {
   margin-top: 0; }
 
-.grid-content-no-padding .grid-item {
+.grid-no-padding .grid-item {
   padding: 0; }
   @media screen and (max-width: 575px) {
-    .grid-content-no-padding .grid-item {
+    .grid-no-padding .grid-item {
       width: auto; } }
 
 .icon {
@@ -1378,6 +1378,10 @@ sub {
   padding: 0.4rem 0.8rem;
   color: #6B7384;
   border-radius: 4px; }
+
+.badge.badge-tag.has-delete .btn.btn-link .icon {
+  fill: #6B7384;
+  margin-left: 8px; }
 
 .field,
 .field-control {
@@ -2223,7 +2227,7 @@ ul, ol {
 .card-content {
   padding: 20px; }
 
-.card-content > *:not(.grid-content):not(.grid-content-no-padding) {
+.card-content > *:not(.grid-content):not(.grid-no-padding) {
   margin: 0; }
 
 .card-content {
@@ -2282,7 +2286,7 @@ ul, ol {
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  background: #FFFFFF; }
+  border-bottom: 1px solid #E1E7EA; }
 
 .tab-item {
   display: -webkit-box;
@@ -2295,13 +2299,25 @@ ul, ol {
   flex: 0 0 auto; }
 
 .tab-item .tab-link {
-  line-height: 20px;
+  line-height: 1;
+  position: relative;
+  color: #6B7384;
+  border-bottom: 3px solid transparent;
   padding: 16px 0;
   padding: 1.6rem 0;
-  margin: 0 16px;
-  margin: 0 1.6rem;
+  margin: 0 8px;
+  margin: 0 0.8rem;
   cursor: pointer; }
   .tab-item .tab-link:hover {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #0D2B3E;
+    border-bottom: 3px solid #A1B2C1; }
+  .tab-item .tab-link.is-active {
+    color: #0044D4;
+    border-bottom: 3px solid #0044D4; }
+
+.tab-item:first-child .tab-link {
+  margin-left: 16px;
+  margin-left: 1.6rem; }
 
 /*# sourceMappingURL=main.css.map */

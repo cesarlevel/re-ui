@@ -78,7 +78,7 @@
 }
 
 //Grid No-Padding
-.grid-content-no-padding {
+.grid-no-padding {
     @extend .grid-content;
     @include flex-wrap(nowrap);
     margin: 0;
@@ -87,11 +87,11 @@
     }
 }
 
-.grid-content-no-padding + .grid-content.grid-content-no-padding {
+.grid-no-padding + .grid-content.grid-no-padding {
     margin-top: 0;
 }
 
-.grid-content-no-padding .grid-item {
+.grid-no-padding .grid-item {
     padding: 0;
     @include media-query-breakpoint('phone', $type: max) {
         width: auto;
