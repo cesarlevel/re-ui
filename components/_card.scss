@@ -12,7 +12,6 @@
 .card-title {
     padding: $inset-default $inset-default 0 $inset-default;
     @include display-flex;
-    //border-top: 1px solid $faint-gray;
 }
 
 .card-title:first-child {

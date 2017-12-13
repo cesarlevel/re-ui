@@ -24,6 +24,8 @@
     @include rem(padding, $space-m 0);
     @include rem(margin, 0 $space-s);
     cursor: pointer;
+    @include transition(all .1s ease);
+    text-decoration: none;
 
     &:hover {
         text-decoration: none;
@@ -39,4 +41,25 @@
 
 .tab-item:first-child .tab-link {
     @include rem(margin-left, $space-m);
+}
+
+.tab-content {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.tab-content.is-active {
+    clip: auto;
+    height: auto;
+    margin: auto;
+    overflow: auto;
+    padding: initial;
+    position: relative;
+    width: auto;
 }

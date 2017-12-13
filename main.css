@@ -2307,7 +2307,13 @@ ul, ol {
   padding: 1.6rem 0;
   margin: 0 8px;
   margin: 0 0.8rem;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  text-decoration: none; }
   .tab-item .tab-link:hover {
     text-decoration: none;
     color: #0D2B3E;
@@ -2319,5 +2325,50 @@ ul, ol {
 .tab-item:first-child .tab-link {
   margin-left: 16px;
   margin-left: 1.6rem; }
+
+.tab-content {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.tab-content.is-active {
+  clip: auto;
+  height: auto;
+  margin: auto;
+  overflow: auto;
+  padding: initial;
+  position: relative;
+  width: auto; }
+
+.popover {
+  box-sizing: border-box;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 1px rgba(107, 115, 132, 0.03), 0 1px 2px 0 rgba(107, 115, 132, 0.24), 0 4px 4px 0 rgba(107, 115, 132, 0.05);
+  border-radius: 4px; }
+
+.popover-title {
+  padding: 16px 16px 16px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.popover-title > *,
+.popover-subtitle > * {
+  margin: 0;
+  -webkit-box-flex: 1 0 50%;
+  -webkit-flex: 1 0 50%;
+  -ms-flex: 1 0 50%;
+  flex: 1 0 50%;
+  min-width: 0; }
+
+.popover-title h2,
+.popover-title h3 {
+  padding-right: 20px; }
 
 /*# sourceMappingURL=main.css.map */

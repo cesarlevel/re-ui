@@ -1263,41 +1263,77 @@
                 <a class="tab-link" href="#content-4">Fourth Tab</a>
             </li>
         </ul>
-        <div class="tab-content" id="content-1">
-            <p>
-                Content on tab 1
-            </p>
+        <div class="tab-content is-active" id="content-1">
+            <p>Content on Tab 1</p>
         </div>
         <div class="tab-content" id="content-2">
-            <p>
-                Content on tab 2
-            </p>
+            <p>Content on Tab 2</p>
         </div>
         <div class="tab-content" id="content-3">
-            <p>
-                Content on tab 3
-            </p>
+            <p>Content on Tab 3</p>
         </div>
         <div class="tab-content" id="content-4">
-            <p>
-                Content on tab 4
-            </p>
+            <p>Content on Tab 4</p>
         </div>
         <xmp>
             <ul class="tab">
                 <li class="tab-item">
-                    <a class="tab-link" href="#content-1">First Tab</a>
+                    <a class="tab-link is-active" href="#content-1">Tab</a>
                 </li>
                 <li class="tab-item">
-                    <a class="tab-link" href="#content-2">Second Tab</a>
+                    <a class="tab-link" href="#content-2">Tab</a>
                 </li>
                 <li class="tab-item">
-                    <a class="tab-link" href="#content-3">Third Tab</a>
+                    <a class="tab-link" href="#content-3">Tab</a>
                 </li>
                 <li class="tab-item">
-                    <a class="tab-link is-active" href="#content-4">Fourth Tab is Active</a>
+                    <a class="tab-link" href="#content-4">Tab</a>
                 </li>
             </ul>
+            <div class="tab-content is-active" id="content-1">...</div>
+            <div class="tab-content" id="content-2">...</div>
+            <div class="tab-content" id="content-3">...</div>
+            <div class="tab-content" id="content-4">...</div>
+        </xmp>
+    </div>
+    <h1>Popover</h1>
+    <div class="stack-l">
+        <div class="popover">
+            <div class="popover-tooltip"></div>
+            <div class="popover-title">
+                <h2>Title</h2>
+                <span class="card-title-action no-flex">
+                    <button class="btn btn-link">
+                        <svg class="icon icon-20 no-flex"><use xlink:href="#icon-heart"></use></svg>
+                    </button>
+                </span>
+            </div>
+            <div class="popover-content">
+                <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats</p>
+            </div>
+            <div class="popover-title">
+                <h3>Sub Title</h3>
+                <span class="card-title-action no-flex">
+                   <button class="btn btn-link">Item</button>
+               </span>
+            </div>
+            <div class="popover-content">
+                <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats</p>
+            </div>
+        </div>
+        <div class="chip inline-s">
+            <span>Hello</span>
+        </div>
+        <div class="chip has-delete">
+            <span>Hello</span><button class="btn btn-link"><svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg></button>
+        </div>
+        <xmp>
+            <div class="chip">
+                <span>Hello</span>
+            </div>
+            <div class="chip has-delete">
+                <span>Hello</span><button class="btn btn-link"><svg class="icon icon-20">...</svg></button>
+            </div>
         </xmp>
     </div>
     <!-- <h1>Kitsch retro</h1>
@@ -1353,6 +1389,6 @@
             </symbol>
         </svg>
     </div>
-    <script src="main.js"></script>
 </body>
+<script src="main.js"></script>
 </html>
