@@ -9,8 +9,9 @@
     border-radius: $border-radius;
 }
 
-.card-title {
-    padding: $inset-default $inset-default 0 $inset-default;
+.card-title,
+.card-subtitle {
+    padding: $space-default $space-default 0 $space-default;
     @include display-flex;
 }
 
@@ -27,11 +28,11 @@
 
 .card-title h2,
 .card-title h3 {
-    padding-right: $inset-default;
+    padding-right: $space-default;
 }
 
 .card-content {
-    padding: $inset-default;
+    padding: $space-default;
 }
 
 .card-content > *:not(.grid-content) {

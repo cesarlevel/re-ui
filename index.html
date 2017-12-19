@@ -989,21 +989,17 @@
             <div class="card">
                 <div class="card-title">
                     <h2>Title</h2>
-                    <span class="card-title-action no-flex">
-                        <button class="btn btn-link">
-                            <svg class="icon icon-20 no-flex"><use xlink:href="#icon-heart"></use></svg>
-                        </button>
-                    </span>
+                    <button class="btn btn-link no-flex">
+                        <svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg>
+                    </button>
                 </div>
                 <div class="card-content">
                     <p class="stack-m">Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats McSweeney's minim PBR vegan Tumblr irony. Kogi eu Thundercats, sed scenester before they sold out et aesthetic. Elit cred Vice ethical pickled sartorial. Stumptown roof party freegan High Life vero, ea sed minim meggings.</p>
                     <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex.</p>
                 </div>
-                <div class="card-title">
+                <div class="card-subtitle">
                     <h3>Subtitle</h3>
-                    <span class="card-title-action no-flex">
-                        <button class="btn btn-link">Item</button>
-                    </span>
+                    <button class="btn btn-link no-flex">Item</button>
                 </div>
                 <div class="card-content">
                     <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex.</p>
@@ -1017,11 +1013,9 @@
             <div class="card">
                 <div class="card-title">
                     <h2>Title</h2>
-                    <span class="card-title-action no-flex">
-                        <button class="btn btn-link">
-                            <svg class="icon icon-20 no-flex">...</svg>
-                        </button>
-                    </span>
+                    <button class="btn btn-link no-flex">
+                        <svg class="icon icon-20">...</svg>
+                    </button>
                 </div>
                 <div class="card-content">
                     <p class="stack-m">...</p>
@@ -1029,9 +1023,7 @@
                 </div>
                 <div class="card-title">
                     <h3>Subtitle</h3>
-                    <span class="card-title-action no-flex">
-                        <button class="btn btn-link">Item</button>
-                    </span>
+                    <button class="btn btn-link no-flex">Item</button>
                 </div>
                 <div class="card-content">
                     <p>...</p>
@@ -1296,43 +1288,46 @@
             <div class="tab-content" id="content-4">...</div>
         </xmp>
     </div>
-    <h1>Popover</h1>
+    <h1 id="test">Popover</h1>
     <div class="stack-l">
-        <div class="popover">
-            <div class="popover-tooltip"></div>
+        <div class="popover" style="width: 280px">
+            <div class="popover-arrow"></div>
             <div class="popover-title">
                 <h2>Title</h2>
-                <span class="card-title-action no-flex">
-                    <button class="btn btn-link">
-                        <svg class="icon icon-20 no-flex"><use xlink:href="#icon-heart"></use></svg>
-                    </button>
-                </span>
+                <button class="btn btn-link no-flex">Item</button>
             </div>
-            <div class="popover-content">
-                <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats</p>
+            <div class="popover-control">
+                <div class="popover-content">
+                    <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats</p>
+                </div>
+                <div class="popover-subtitle">
+                    <h3>Sub Title</h3>
+                   <button class="btn btn-link no-flex">Item</button>
+                </div>
+                <div class="popover-content">
+                    <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats</p>
+                </div>
             </div>
-            <div class="popover-title">
-                <h3>Sub Title</h3>
-                <span class="card-title-action no-flex">
-                   <button class="btn btn-link">Item</button>
-               </span>
-            </div>
-            <div class="popover-content">
-                <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats</p>
-            </div>
-        </div>
-        <div class="chip inline-s">
-            <span>Hello</span>
-        </div>
-        <div class="chip has-delete">
-            <span>Hello</span><button class="btn btn-link"><svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg></button>
         </div>
         <xmp>
-            <div class="chip">
-                <span>Hello</span>
-            </div>
-            <div class="chip has-delete">
-                <span>Hello</span><button class="btn btn-link"><svg class="icon icon-20">...</svg></button>
+            <div class="popover" style="width: 280px">
+                <div class="popover-arrow"></div>
+                <div class="popover-title">
+                    <h2>Title</h2>
+                    <button class="btn btn-link no-flex">Item</button>
+                </div>
+                <div class="popover-control">
+                    <div class="popover-content">
+                        <p>...</p>
+                    </div>
+                    <div class="popover-subtitle">
+                        <h3>Sub Title</h3>
+                       <button class="btn btn-link no-flex">Item</button>
+                    </div>
+                    <div class="popover-content">
+                        <p>...</p>
+                    </div>
+                </div>
             </div>
         </xmp>
     </div>
@@ -1390,5 +1385,7 @@
         </svg>
     </div>
 </body>
+<script src="https://unpkg.com/popper.js"></script>
+
 <script src="main.js"></script>
 </html>

@@ -691,9 +691,6 @@ sub {
 .inset-xl {
   padding: 64px 64px 64px 64px !important; }
 
-.stack-default {
-  margin: 0 0 16px 0 !important; }
-
 .stack-xxs {
   margin: 0 0 2px 0 !important; }
 
@@ -2201,7 +2198,8 @@ ul, ol {
   box-shadow: 0 0 0 1px rgba(107, 115, 132, 0.03), 0 1px 2px 0 rgba(107, 115, 132, 0.24), 0 4px 4px 0 rgba(107, 115, 132, 0.05);
   border-radius: 4px; }
 
-.card-title {
+.card-title,
+.card-subtitle {
   padding: 20px 20px 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2347,16 +2345,52 @@ ul, ol {
 
 .popover {
   box-sizing: border-box;
+  min-width: 280px;
+  max-width: 600px;
+  position: relative;
   background: #FFFFFF;
-  box-shadow: 0 0 0 1px rgba(107, 115, 132, 0.03), 0 1px 2px 0 rgba(107, 115, 132, 0.24), 0 4px 4px 0 rgba(107, 115, 132, 0.05);
-  border-radius: 4px; }
+  box-shadow: 0 0 0 1px rgba(107, 115, 132, 0.09), 0 7px 14px 0 rgba(107, 115, 132, 0.15), 0 3px 6px 0 rgba(107, 115, 132, 0.07);
+  border-radius: 4px;
+  z-index: 90; }
 
-.popover-title {
+.popover-arrow {
+  overflow: hidden;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  margin-left: -10px;
+  background: transparent;
+  top: -20px;
+  z-index: 80; }
+
+.popover-arrow::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 50%;
+  margin-left: -8px;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 1px rgba(107, 115, 132, 0.09), 0 1px 2px 0 rgba(107, 115, 132, 0.24), 4px 0 4px 0 rgba(107, 115, 132, 0.05);
+  top: 14px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.popover-title,
+.popover-subtitle {
   padding: 16px 16px 16px 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex; }
+  display: flex;
+  border-bottom: 1px solid #E1E7EA; }
+
+.popover-subtitle {
+  padding: 16px 16px 0 16px;
+  border-bottom: none; }
 
 .popover-title > *,
 .popover-subtitle > * {
@@ -2370,5 +2404,21 @@ ul, ol {
 .popover-title h2,
 .popover-title h3 {
   padding-right: 20px; }
+
+.popover-control {
+  overflow: hidden;
+  max-height: 600px; }
+
+.popover-control.is-scrollable {
+  overflow-y: scroll; }
+
+.popover-content {
+  padding: 16px 16px 16px 16px; }
+
+.popover-content > *:not(.grid-content):not(.grid-no-padding) {
+  margin: 0; }
+
+.popover-content {
+  border-bottom: 1px solid #E1E7EA; }
 
 /*# sourceMappingURL=main.css.map */

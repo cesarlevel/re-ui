@@ -4,14 +4,50 @@
 
 .popover {
     box-sizing: border-box;
+    min-width: 280px;
+    max-width: 600px;
+    position: relative;
     background: #FFFFFF;
-    box-shadow: 0 0 0 1px rgba($muted, 0.03), 0 1px 2px 0 rgba($muted, 0.24), 0 4px 4px 0 rgba($muted, 0.05);
+    box-shadow: 0 0 0 1px rgba($muted, 0.09), 0 7px 14px 0 rgba($muted, 0.15), 0 3px 6px 0 rgba($muted, 0.07);
     border-radius: $border-radius;
+    z-index: $z-90;
 }
 
-.popover-title {
+.popover-arrow {
+    overflow: hidden;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    margin-left: -10px;
+    background: transparent;
+    top: -20px;
+    z-index: $z-80;
+}
+
+.popover-arrow::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 50%;
+    margin-left: -8px;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 1px rgba($muted, 0.09), 0 1px 2px 0 rgba($muted, 0.24), 4px 0 4px 0 rgba($muted, 0.05);
+    top: 14px;
+    @include browser-prefix(transform, rotate(45deg));
+}
+
+.popover-title,
+.popover-subtitle {
     padding: $inset-m;
     @include display-flex;
+    border-bottom: 1px solid $faint-gray;
+}
+
+.popover-subtitle {
+    padding: $space-m $space-m 0 $space-m;
+    border-bottom: none;
 }
 
 .popover-title > *,
@@ -23,5 +59,26 @@
 
 .popover-title h2,
 .popover-title h3 {
-    padding-right: $inset-default;
+    padding-right: $space-default;
+}
+
+.popover-control {
+    overflow: hidden;
+    max-height: 600px;
+}
+
+.popover-control.is-scrollable {
+    overflow-y: scroll;
+}
+
+.popover-content {
+    padding: $inset-m;
+}
+
+.popover-content > *:not(.grid-content) {
+    margin: 0;
+}
+
+.popover-content {
+    border-bottom: 1px solid $faint-gray;
 }

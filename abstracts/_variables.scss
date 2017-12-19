@@ -88,13 +88,13 @@ $inset-s: 8px 8px 8px 8px;
 $inset-m: 16px 16px 16px 16px;
 $inset-l: 32px 32px 32px 32px;
 $inset-xl: 64px 64px 64px 64px;
-$stack-default: 0 0 16px 0;
 $stack-xxs: 0 0 2px 0;
 $stack-xs: 0 0 4px 0;
 $stack-s: 0 0 8px 0;
 $stack-m: 0 0 16px 0;
 $stack-l: 0 0 32px 0;
 $stack-xl: 0 0 64px 0;
+$space-default: 20px;
 $space-xxs: 2px;
 $space-xs: 4px;
 $space-s: 8px;
@@ -110,6 +110,16 @@ $border-radius: 4px;
 /// @type Length
 $max-width: 1140px !default;
 
+//Z-Index
+$z-90: 90;
+$z-80: 80;
+$z-70: 70;
+$z-60: 60;
+$z-50: 50;
+$z-40: 40;
+$z-30: 30;
+$z-20: 20;
+$z-10: 10;
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length

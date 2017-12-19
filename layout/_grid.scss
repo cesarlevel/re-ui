@@ -27,7 +27,7 @@
     @include display-flex;
     @include flex-wrap(wrap);
     @include justify-content(center);
-    @include rem(margin, -$inset-default / 2);
+    @include rem(margin, -$space-default / 2);
     @include rem(max-width, $max-width);
     @include media-query-breakpoint('desktop', $type: max) {
         display: block;
@@ -35,12 +35,12 @@
 }
 
 .grid + .grid {
-    margin-top: $inset-default / 2;
+    margin-top: $space-default / 2;
 }
 
 .grid .grid-item {
     @include flex(1 0 auto);
-    padding: $inset-default / 2;
+    padding: $space-default / 2;
     @include media-query-breakpoint('phone', $type: max) {
         width: 100%;
     }
