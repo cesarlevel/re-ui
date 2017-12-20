@@ -972,6 +972,9 @@ sub {
 .icon-light-red {
   fill: #FFD4D3; }
 
+.icon-accent {
+  fill: #00CCC4; }
+
 .icon-background {
   fill: #F6F8F9; }
 
