@@ -11,7 +11,9 @@ let clearTabs = () => {
 }
 
 let tabs = (event) => {
+    event.preventDefault();
     clearTabs();
+
 
     let target = event.target,
         content = document.querySelector(target.getAttribute("href"));
