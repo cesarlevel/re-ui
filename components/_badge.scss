@@ -82,5 +82,5 @@
 
 .badge.badge-tag.has-delete .btn.btn-link .icon {
     fill: $muted;
-    margin-left: $space-s;
+    @include rem(margin-left, $space-s);
 }

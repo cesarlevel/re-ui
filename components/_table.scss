@@ -67,5 +67,5 @@
 }
 
 .table.table th.is-sortable .icon {
-    margin-left: $space-s;
+    @include rem(margin-left, $space-s);
 }

@@ -49,7 +49,7 @@
 .has-tooltip:after,
 [data-tooltip]:after {
     z-index: 1000;
-    padding: 8px;
+    @include rem(padding, $inset-s);
     width: 160px;
     background-color: $dark-background;
     color: #fff;
@@ -75,8 +75,8 @@
 [data-tooltip]:before,
 .has-tooltip:before,
 .has-tooltip-top:before {
-    margin-left: -6px;
-    margin-bottom: -12px;
+    @include rem(margin-left, -6px);
+    @include rem(margin-bottom, -12px);
     border-top-color: $dark-background;
 }
 
@@ -84,7 +84,7 @@
 [data-tooltip]:after,
 .has-tooltip:after,
 .has-tooltip-top:after {
-    margin-left: -80px;
+    @include rem(margin-left, -80px);
 }
 
 [data-tooltip]:hover:before,
@@ -111,8 +111,8 @@
 }
 
 .has-tooltip-left:before {
+    @include rem(margin-left, -12px);
     margin-left: 0;
-    margin-right: -12px;
     margin-bottom: 0;
     border-top-color: transparent;
     border-left-color: $dark-background;
@@ -157,7 +157,7 @@
 
 .has-tooltip-right:before {
     margin-bottom: 0;
-    margin-left: -12px;
+    @include rem(margin-left, -12px);
     border-top-color: transparent;
     border-right-color: $dark-background;
 }
@@ -179,5 +179,5 @@
 .has-tooltip-left:after,
 .has-tooltip-right:after {
     margin-left: 0;
-    margin-bottom: -16px;
+    @include rem(margin-bottom, -16px);
 }

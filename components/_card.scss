@@ -9,9 +9,13 @@
     border-radius: $border-radius;
 }
 
-.card-title,
+.card-title {
+    @include rem(padding, $space-default $space-default 0 $space-default);
+    @include display-flex;
+}
+
 .card-subtitle {
-    padding: $space-default $space-default 0 $space-default;
+    @include rem(padding-bottom, $space-default);
     @include display-flex;
 }
 
@@ -28,11 +32,11 @@
 
 .card-title h2,
 .card-title h3 {
-    padding-right: $space-default;
+    @include rem(padding-right, $space-default);
 }
 
 .card-content {
-    padding: $space-default;
+    @include rem(padding, $space-default);
 }
 
 .card-content > *:not(.grid-content) {
@@ -55,4 +59,8 @@
 .card.card-secondary {
     background: $light-background;
     box-shadow: 0 0 0 1px $faint-gray inset;
+}
+
+.card-content.card-content-secondary {
+    background: $light-background;
 }
