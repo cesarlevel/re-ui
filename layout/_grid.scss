@@ -6,8 +6,8 @@
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    @include rem(padding-left, $space-default);
+    @include rem(padding-right, $space-default);
     width: 100%;
     @include media-query-breakpoint('large-desktop') {
         max-width: $max-width;
@@ -18,8 +18,8 @@
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    @include rem(padding-left, $space-default);
+    @include rem(padding-right, $space-default);
     width: 100%;
 }
 
@@ -35,12 +35,12 @@
 }
 
 .grid + .grid {
-    margin-top: $space-default / 2;
+    @include rem(margin-top, $space-default / 2);
 }
 
 .grid .grid-item {
     @include flex(1 0 auto);
-    padding: $space-default / 2;
+    @include rem(padding, $space-default / 2);
     @include media-query-breakpoint('phone', $type: max) {
         width: 100%;
     }
@@ -67,7 +67,7 @@
 }
 
 .grid-content + .grid-content {
-    margin-top: $space-s;
+    @include rem(margin-top, $space-s);
 }
 
 .grid-content .grid-item {

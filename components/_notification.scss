@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the notification component.
+// -----------------------------------------------------------------------------
+
+.notification {
+    box-sizing: border-box;
+    position: relative;
+    height: auto;
+    box-shadow: 0 0 0 1px rgba($muted, 0.09), 0 7px 14px 0 rgba($muted, 0.15), 0 3px 6px 0 rgba($muted, 0.07);
+    border-radius: $border-radius;
+    background: $faint-gray;
+    border-left: 4px solid $muted;
+}
+
+.notification .notification-title h2 {
+    margin: 0;
+}
+
+.notification .notification-title {
+    @include rem(padding, $space-default $space-default 0 $space-default);
+}
+
+.notification .notification-content > * {
+    margin: 0;
+}
+
+.notification .notification-content {
+    @include rem(padding, $inset-default);
+}
+
+.notification.has-delete .btn.btn-link {
+    position: absolute;
+    top: $space-default;
+    right: $space-default;
+}
+
+.notification.has-delete .btn.btn-link .icon {
+    fill: $muted;
+}
+
+/**
+* Types
+*/
+.notification.notification-positive {
+    background: $light-green;
+    border-left-color: $green;
+    box-shadow: 0 0 0 1px rgba($green, 0.09), 0 7px 14px 0 rgba($muted, 0.15), 0 3px 6px 0 rgba($muted, 0.07);
+}
+
+.notification.notification-negative {
+    background: $light-red;
+    border-left-color: $red;
+    box-shadow: 0 0 0 1px rgba($red, 0.09), 0 7px 14px 0 rgba($muted, 0.15), 0 3px 6px 0 rgba($muted, 0.07);
+}
+
+.notification.notification-warning {
+    background: $light-yellow;
+    border-left-color: $yellow;
+    box-shadow: 0 0 0 1px rgba($yellow, 0.09), 0 7px 14px 0 rgba($muted, 0.15), 0 3px 6px 0 rgba($muted, 0.07);
+}
+
+.notification.notification-info {
+    background: $light-blue;
+    border-left-color: $blue;
+    box-shadow: 0 0 0 1px rgba($blue, 0.09), 0 7px 14px 0 rgba($muted, 0.15), 0 3px 6px 0 rgba($muted, 0.07);
+}

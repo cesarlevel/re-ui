@@ -22,6 +22,10 @@ ul, ol { margin: 0; }
     color: $gray;
 }
 
+.list-item:last-child {
+    margin-bottom: 0;
+}
+
 // Divided
 .list.list-divided .list-item {
     @include rem(padding, $space-s 0);
