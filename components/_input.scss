@@ -129,6 +129,16 @@ select:-moz-focusring {
 }
 
 /**
+* Input Size Variations
+*/
+.field.field-auto-width {
+    display: inline-block;
+    @include media-query-breakpoint('tablet', $type: max) {
+        display: block;
+    }
+}
+
+/**
 * Input Group
 */
 .field-group {
@@ -155,6 +165,13 @@ select:-moz-focusring {
 .field-group > *:last-child,
 .field-group > *:last-child .field-input {
     border-radius: 0 $border-radius $border-radius 0;
+}
+
+.field-group > *:only-child,
+.field-group > *:only-child .field-input,
+.field-group > *:first-child:last-child,
+.field-group > *:first-child:last-child .field-input  {
+    border-radius: $border-radius;
 }
 
 /**

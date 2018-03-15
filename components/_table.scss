@@ -14,11 +14,13 @@
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
+    margin: 0;
 }
 
 .table th {
     font-weight: $medium;
     text-align: left;
+    text-transform: capitalize;
 }
 
 .table td,
@@ -40,6 +42,11 @@
     color: $red;
 }
 
+//Positive
+.table tr.is-positive td {
+    color: $green;
+}
+
 //Numeric
 .table td.is-numeric {
     font-family: $code-font-stack;
@@ -59,13 +66,29 @@
     width: auto;
 }
 
-
 //Sortable
-.table.table th:hover.is-sortable {
+.table th:hover.is-sortable {
     color: $blue;
     cursor: pointer;
 }
 
-.table.table th.is-sortable .icon {
+.table th.is-sortable .icon {
     @include rem(margin-left, $space-s);
+}
+
+//External
+.table td .is-external .icon {
+    @include transition(all .1s ease);
+    @include rem(margin-left, $space-s);
+    @include opacity(0);
+    cursor: pointer;
+}
+
+.table tr:hover td .is-external .icon {
+    visibility: visible;
+    @include opacity(1);
+}
+
+.table tr td:hover .is-external .icon {
+    fill: $blue;
 }

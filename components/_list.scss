@@ -40,6 +40,10 @@ ul, ol { margin: 0; }
     border-bottom: none;
 }
 
+// Hoverable
+.list.list-hoverable .list-item:hover {
+    background: $background;
+}
 
 /**
 * List Group
@@ -49,5 +53,9 @@ ul, ol { margin: 0; }
 }
 
 .list.list-group .list-item > * {
-    @include flex(1 1 auto);
+    @include flex(1 0);
+}
+
+.list.list-group .list-item > *.list-item-content-primary {
+    @include flex(2 0);
 }

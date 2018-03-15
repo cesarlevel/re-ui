@@ -11,6 +11,10 @@
     cursor: pointer;
 }
 
+.field-label-toggle.is-disabled {
+    color: $muted;
+}
+
 .field-caption-toggle {
     @include rem(padding-left, $space-l);
 }
@@ -37,6 +41,10 @@ input.field-checkbox[type=checkbox] {
     &:checked ~ .field-checkbox-style .icon {
         fill: $blue;
         @include opacity(1);
+    }
+
+    &[disabled] ~ .field-checkbox-style {
+        background: $background;
     }
 }
 
@@ -82,6 +90,10 @@ input.field-radio[type=radio] {
     &:checked ~ .field-radio-style .icon {
         fill: $blue;
         @include opacity(1);
+    }
+
+    &[disabled] ~ .field-radio-style {
+        background: $background;
     }
 }
 

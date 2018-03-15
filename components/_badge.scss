@@ -19,6 +19,7 @@
     @include rem(line-height, $line-height);
     outline: none;
     background: $faint-gray;
+    white-space: nowrap;
 }
 
 /**
@@ -73,7 +74,7 @@
     background: $blue;
 }
 
-//Tag Badge {
+//Tag Badge
 .badge.badge-tag {
     @include rem(padding, $space-xs $space-s);
     color: $muted;
@@ -82,5 +83,22 @@
 
 .badge.badge-tag.has-delete .btn.btn-link .icon {
     fill: $muted;
+    @include rem(margin-left, $space-s);
+}
+
+//Tag Badge Input
+.badge.badge-tag-input {
+    @include rem(padding, $space-xxs $space-s $space-xxs $space-s);
+    @include rem(margin, 0 $space-xs $space-s 0);
+    color: $muted;
+    line-height: $line-height-s;
+    border-radius: $border-radius;
+}
+
+.badge.badge-tag-input.has-delete .icon {
+    fill: $muted;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
     @include rem(margin-left, $space-s);
 }

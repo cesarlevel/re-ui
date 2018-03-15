@@ -6,6 +6,9 @@ html, .root {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     font-size: 62.5%;
     @include rem(line-height, $line-height);
 }
@@ -39,13 +42,14 @@ h4,
 .h4,
 h5,
 .h5 {
+    font-weight: $medium;
     @include rem(line-height, $line-height);
 }
 
 h1,
 .h1 {
     @include rem(font-size, $h1);
-    font-weight: $light;
+    font-weight: $regular;
     @include rem(line-height, $h1-lh);
     margin-top: 20px;
     margin-bottom: 40px;
@@ -62,6 +66,7 @@ h3,
 .h3 {
     @include rem(font-size, $h3);
     text-transform: uppercase;
+    font-weight: $semi-bold;
     margin-top: 20px;
     margin-bottom: 0px;
 }
@@ -107,4 +112,48 @@ sup {
 
 sub {
     bottom: -0.25em;
+}
+
+/* Keyboard keys */
+kbd {
+    font-family: $primary-font-stack;
+    border: 0;
+    box-shadow: 0 0 0 1px $light-gray, 0 0.18em 0 0 #ffffff, 0 0.18em 0 1px $light-gray;
+    color: $text;
+    height: auto;
+    @include rem(margin, 0 $space-xs);
+    @include rem(font-size, 12px);
+    font-weight: $medium;
+    @include rem(line-height, 14px);
+    @include rem(min-width, 22px);
+    @include rem(padding, 3px 7px);
+    background: #FFFFFF;
+    border-radius: $border-radius - 2;
+    box-sizing: border-box;
+    cursor: default;
+    text-align: center;
+    text-transform: capitalize;
+    @include browser-prefix(user-select, none);
+}
+
+/* Code */
+code {
+    font-family: $code-font-stack;
+    white-space: nowrap;
+    color: $accent;
+    font-weight: $medium;
+}
+
+pre {
+    display: block;
+    border-radius: $border-radius;
+    box-shadow: 0 0 0 1px $faint-gray;
+    @include rem(padding, $inset-m);
+    background: $light-background;
+    font-family: $code-font-stack;
+    overflow: auto;
+}
+
+pre code {
+    color: $text;
 }

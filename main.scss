@@ -14,7 +14,9 @@ Rebilly 2017
 
 // 2. Vendors
 @import
-    'vendor/normalize';
+    'vendor/normalize',
+    'vendor/vue-multiselect',
+    'vendor/v-calendar';
 
 // 3. Base stuff
 @import
@@ -25,9 +27,13 @@ Rebilly 2017
 
 // 4. Layout-related sections
 @import
+    'layout/main',
     'layout/grid',
     'layout/header',
-    'layout/footer';
+    'layout/navigation',
+    'layout/loader',
+    'layout/footer',
+    'layout/forms';
 
 // 5. Components
 @import
@@ -44,11 +50,22 @@ Rebilly 2017
     'components/chip',
     'components/tab',
     'components/popover',
-    'components/notification';
+    'components/notification',
+    'components/image',
+    'components/divider',
+    'components/stat',
+    'components/dropdown',
+    'components/breadcrumb',
+    'components/title',
+    'components/avatar',
+    'components/blank',
+    'components/popper';
 
 // 6. Page-specific styles
 @import
-    'pages/home';
+    'pages/login',
+    'pages/dashboard',
+    'pages/settings';
 
 // 7. Themes
 @import

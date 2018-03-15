@@ -159,8 +159,35 @@
 /**
 * Variations
 */
+
+//Fluid
 .btn-fluid {
     width: 100%;
+}
+
+//Dropdown
+.btn.btn-dropdown {
+    position: relative;
+    text-align: left;
+}
+
+.btn.btn-dropdown .icon {
+    @include transition(transform .15s ease);
+    @include rem(margin-left, $space-s);
+}
+
+.btn.btn-dropdown .icon.is-up {
+    transform: rotate(180deg);
+}
+
+.btn.btn-dropdown.btn-fluid {
+    @include rem(padding-right, $space-l);
+}
+
+.btn.btn-dropdown.btn-fluid .icon {
+    position: absolute;
+    top: $space-s;
+    right: $space-s;
 }
 
 /**
@@ -168,6 +195,11 @@
 */
 .btn-group {
     @include display-flex;
+    @include media-query-breakpoint('tablet', $type: max) {
+        & > .btn {
+            @include flex(1 0);
+        }
+    }
 }
 
 .btn-group .btn {
@@ -187,7 +219,7 @@
 }
 
 .btn-group.btn-group-fluid > .btn {
-    @include flex(1 0 auto);
+    @include flex(1 0);
 }
 
 .btn-group .btn.is-active {

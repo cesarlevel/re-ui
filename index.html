@@ -2,10 +2,29 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>re-ui playground</title>
     <link rel="stylesheet" href="main.css" type="text/css">
 </head>
 <body class="inset-xl">
+    <h1>Typography</h1>
+    <div class="stack-l">
+        <h1 style="margin-bottom: 1rem">Heading 1</h1>
+        <h2 style="margin-bottom: 1rem">Headeding 2</h2>
+        <h3 style="margin-bottom: 1rem">Headeding 3</h3>
+        <p style="margin-bottom: 1rem">Paragraph text</p>
+        <div class="stack-m">
+            <strong>Bolded</strong>
+            <em>Italicized</em>
+            <a>Colored</a>
+            <u>Underlined</u>
+            <kbd>shift</kbd> + <kbd>s</kbd>
+            <code>&lt;code&gt;&lt;/code&gt;</code>
+        </div>
+        <pre><code>.some-class {
+            background-color: red;
+        }</code></pre>
+    </div>
     <h1>Buttons</h1>
     <div class="stack-l">
         <button class="btn inline-s">Default</button>
@@ -112,10 +131,118 @@
     <div class="stack-l">
         <h2>Icon Set</h2>
         <svg class="icon icon-20">
-            <use xlink:href="#icon-heart"></use>
+            <use xlink:href="#icon-dashboard"></use>
         </svg>
         <svg class="icon icon-20">
-            <use xlink:href="#icon-customer"></use>
+            <use xlink:href="#icon-orders"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-transactions"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-guides"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-settings"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-notifications"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-customers"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-stream"></use>
+        </svg><br /><br />
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-search"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-lock"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-caret-up"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-caret-down"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-caret-left"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-caret-right"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-arrow-up"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-arrow-down"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-arrow-left"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-arrow-right"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-arrow-up-l"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-arrow-down-l"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-arrow-left-l"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-arrow-right-l"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-close"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-close-s"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-actions"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-circle"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-eye"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-eye-closed"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-logout"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-burger"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-help"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-info"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-dash-l"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-company"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-website"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-email"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-external-link"></use>
+        </svg>
+        <svg class="icon icon-20">
+            <use xlink:href="#icon-heart"></use>
         </svg>
         <xmp>
             <svg class="icon icon-20">
@@ -253,7 +380,7 @@
         <h2>Tag Badges</h2>
         <span class="badge badge-tag inline-xs">Tag 1</span>
         <span class="badge badge-tag has-delete inline-xs">
-            Tag 2<button class="btn btn-link"><svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg></button>
+            Tag 2<button class="btn btn-link"><svg class="icon icon-20"><use xlink:href="#icon-close-s"></use></svg></button>
         </span>
 
         <xmp>
@@ -324,7 +451,7 @@
                     <option value="audi">Audi</option>
                 </select>
                 <svg class="icon icon-20">
-                    <use xlink:href="#icon-heart"></use>
+                    <use xlink:href="#icon-caret-down"></use>
                 </svg>
             </div>
             <span class="field-caption">This is a help text</span>
@@ -341,7 +468,7 @@
                     <option value="audi">Audi</option>
                 </select>
                 <svg class="icon icon-20">
-                    <use xlink:href="#icon-heart"></use>
+                    <use xlink:href="#icon-caret-down"></use>
                 </svg>
             </div>
             <span class="field-caption">This is a help text</span>
@@ -397,7 +524,7 @@
                 </svg>
                 <input class="field-input" placeholder="Placeholder"/>
                 <svg class="icon icon-20">
-                    <use xlink:href="#icon-customer"></use>
+                    <use xlink:href="#icon-customers"></use>
                 </svg>
             </div>
             <span class="field-caption">This is a help text</span>
@@ -428,7 +555,7 @@
                         <option value="audi">Audi</option>
                     </select>
                     <svg class="icon icon-20">
-                        <use xlink:href="#icon-heart"></use>
+                        <use xlink:href="#icon-caret-down"></use>
                     </svg>
                 </div>
                 <input class="field-input" placeholder="Placeholder"/>
@@ -709,10 +836,10 @@
                 <thead>
                     <tr>
                         <th class="is-sortable">
-                            Header<svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg>
+                            Header<svg class="icon icon-20"><use xlink:href="#icon-caret-down"></use></svg>
                         </th>
                         <th class="is-sortable">
-                            Header<svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg>
+                            Header<svg class="icon icon-20"><use xlink:href="#icon-caret-up"></use></svg>
                         </th>
                     </tr>
                 </thead>
@@ -746,7 +873,7 @@
                 </table>
             </div>
         </xmp>
-        <h2>Negative Row</h2>
+        <h2>Negative &amp; Positive Row</h2>
         <div class="table-control">
             <table class="table">
                 <thead>
@@ -760,7 +887,7 @@
                         <td>Text</td>
                         <td>Text</d>
                     </tr>
-                    <tr>
+                    <tr class="is-positive">
                         <td>Text</td>
                         <td>Text</td>
                     </tr>
@@ -858,6 +985,21 @@
         </xmp>
     </div>
     <div class="stack-l">
+        <h2>Hoverable List</h2>
+        <ul class="list list-divided list-hoverable">
+            <li class="list-item">item</li>
+            <li class="list-item">item</li>
+            <li class="list-item">item</li>
+        </ul>
+        <xmp>
+            <ul class="list list-divided">
+                <li class="list-item">item</li>
+                <li class="list-item">item</li>
+                <li class="list-item">item</li>
+            </ul>
+        </xmp>
+    </div>
+    <div class="stack-l">
         <h2>List Group</h2>
         <ul class="list list-group">
             <li class="list-item">
@@ -886,6 +1028,87 @@
                 <li class="list-item">
                     <svg class="icon icon-20 no-flex inline-s">...</svg>
                     <span class="list-item-content">item</span>
+                </li>
+            </ul>
+        </xmp>
+    </div>
+    <div class="stack-l">
+        <h2>List Group - Avatars</h2>
+        <ul class="list list-group">
+            <li class="list-item">
+                <div class="avatar avatar-description">
+                    <div class="avatar-image">
+                        <figure class="image image-avatar">
+                            <img src="test-image.png">
+                        </figure>
+                    </div>
+                    <div class="avatar-info">
+                        <p>Item</p>
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="avatar avatar-description">
+                    <div class="avatar-image">
+                        <figure class="image image-avatar">
+                            <img src="test-image.png">
+                        </figure>
+                    </div>
+                    <div class="avatar-info">
+                        <p>Item</p>
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="avatar avatar-description">
+                    <div class="avatar-image">
+                        <figure class="image image-avatar">
+                            <img src="test-image.png">
+                        </figure>
+                    </div>
+                    <div class="avatar-info">
+                        <p>Item</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <xmp>
+            <ul class="list list-group">
+                <li class="list-item">
+                    <div class="avatar">
+                        <div class="avatar-image">
+                            <figure class="image image-avatar">
+                                <img src="test-image.png">
+                            </figure>
+                        </div>
+                        <div class="avatar-info">
+                            <p>Item</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <div class="avatar">
+                        <div class="avatar-image">
+                            <figure class="image image-avatar">
+                                <img src="test-image.png">
+                            </figure>
+                        </div>
+                        <div class="avatar-info">
+                            <p>Item</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <div class="avatar">
+                        <div class="avatar-image">
+                            <figure class="image image-avatar">
+                                <img src="test-image.png">
+                            </figure>
+                        </div>
+                        <div class="avatar-info">
+                            <p>Item</p>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </xmp>
@@ -1037,6 +1260,60 @@
             </div>
         </xmp>
     </div>
+    <h2>Secondary</h2>
+    <div class="stack-l">
+        <div style="display:block;width:340px">
+            <div class="card card-secondary">
+                <div class="card-title">
+                    <h2>Title</h2>
+                    <button class="btn btn-link no-flex">
+                        <svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg>
+                    </button>
+                </div>
+                <div class="card-content">
+                    <p class="stack-m">Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats McSweeney's minim PBR vegan Tumblr irony. Kogi eu Thundercats, sed scenester before they sold out et aesthetic. Elit cred Vice ethical pickled sartorial. Stumptown roof party freegan High Life vero, ea sed minim meggings.</p>
+                    <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex.</p>
+                </div>
+            </div>
+        </div>
+        <xmp>
+            <div class="card card-secondary">
+                <div class="card-title">
+                    <h2>Title</h2>
+                    <button class="btn btn-link no-flex">
+                        <svg class="icon icon-20">...</svg>
+                    </button>
+                </div>
+                <div class="card-content">
+                    <p class="stack-m">...<p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex.</p>
+                </div>
+            </div>
+        </xmp>
+    </div>
+    <h2>Description</h2>
+    <div class="stack-l">
+        <div style="display:block;width:340px">
+            <div class="card card-description">
+                <div class="card-title">
+                    <h2>Title</h2>
+                </div>
+                <div class="card-content">
+                    <p class="stack-m">Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats McSweeney's minim PBR vegan Tumblr irony. Kogi eu Thundercats, sed scenester before they sold out et aesthetic. Elit cred Vice ethical pickled sartorial. Stumptown roof party freegan High Life vero, ea sed minim meggings.</p>
+                    <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex.</p>
+                </div>
+            </div>
+        </div>
+        <xmp>
+            <div class="card card-secondary">
+                <div class="card-title">
+                    <h2>Title</h2>
+                </div>
+                <div class="card-content">
+                    <p class="stack-m">...<p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex.</p>
+                </div>
+            </div>
+        </xmp>
+    </div>
     <h1>Grid</h1>
     <div class="stack-l">
         <h2>Container</h2>
@@ -1066,9 +1343,11 @@
     <div class="stack-l">
         <h2>Grid</h2>
         <p class="stack-xl">
-            Grid comes in three flavors .grid, .grid-content and .grid-no-padding.
+            Grid comes in three flavors .grid, .grid-content and .grid-fitted.
+            <br>.grid is used for laying put the page
             <br>.grid-content is used when using the grid inside other elements
-            <br>.grid-no-padding is used when the elements are not meant to be wrapped and most of the separations comes from the spatial helpers
+            <br>.grid-fitted is used when the elements are not meant to be wrapped and most of the separations comes from the spatial helpers
+            <br>.grid-unstackable will prevent the grid to stack
         </p>
         <div class="container">
             <div class="grid">
@@ -1084,12 +1363,12 @@
                                 <div class="grid-item">
                                     <div class="card card-secondary">
                                         <div class="card-content">
-                                            <div class="grid-no-padding">
+                                            <div class="grid-fitted">
                                                 <div class="grid-item">
-                                                    <span style="border: 1px solid #fff;display:inline-block;width:100%;height:36px;background:#eceff0;text-align:center;line-height:36px;">No padding grid</span>
+                                                    <span style="border: 1px solid #fff;display:inline-block;width:100%;height:36px;background:#eceff0;text-align:center;line-height:36px;">Grid Fitted</span>
                                                 </div>
                                                 <div class="grid-item">
-                                                    <span style="border: 1px solid #fff;display:inline-block;width:100%;height:36px;background:#eceff0;text-align:center;line-height:36px;">No padding grid</span>
+                                                    <span style="border: 1px solid #fff;display:inline-block;width:100%;height:36px;background:#eceff0;text-align:center;line-height:36px;">Grid Fitted</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1182,6 +1461,63 @@
                     </div>
                 </div>
                 <div class="grid-item">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-item grid-item-primary">
+                    <div class="card">
+                        <div class="card-content">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item grid-item-secondary">
+                    <div class="card">
+                        <div class="card-content">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-item grid-item-half">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-item grid-item-third">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-item grid-item-quarter">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-item grid-item-half grid-item-offset-half">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-item grid-item-third grid-item-offset-third">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-item grid-item-quarter grid-item-offset-quarter">
                     <div class="card">
                         <div class="card-content"></div>
                     </div>
@@ -1202,7 +1538,7 @@
                                 <div class="grid-item">
                                     <div class="card card-secondary">
                                         <div class="card-content">
-                                            <div class="grid-no-padding">
+                                            <div class="grid-fitted">
                                                 <div class="grid-item">
                                                     Element
                                                 </div>
@@ -1223,6 +1559,60 @@
                     </div>
                 </div>
             </div>
+            <div class="grid">
+                <div class="grid-item grid-item-primary">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+                <div class="grid-item grid-item-secondary">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-item grid-item-half">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-item grid-item-third">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-item grid-item-quarter">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-item grid-item-half grid-item-offset-half">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-item grid-item-third grid-item-offset-third">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-item grid-item-quarter grid-item-offset-quarter">
+                    <div class="card">
+                        <div class="card-content"></div>
+                    </div>
+                </div>
+            </div>
         </xmp>
     </div>
     <h1>Chips</h1>
@@ -1230,14 +1620,31 @@
         <div class="chip inline-s">
             <span>Hello</span>
         </div>
-        <div class="chip has-delete">
-            <span>Hello</span><button class="btn btn-link"><svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg></button>
+        <div class="chip is-selected has-delete">
+            <span>Hello</span><button class="btn btn-link"><svg class="icon icon-20"><use xlink:href="#icon-close-s"></use></svg></button>
         </div>
         <xmp>
             <div class="chip">
                 <span>Hello</span>
             </div>
             <div class="chip has-delete">
+                <span>Hello</span><button class="btn btn-link"><svg class="icon icon-20">...</svg></button>
+            </div>
+        </xmp>
+    </div>
+    <h2>Chip Secondary</h2>
+    <div class="stack-l">
+        <div class="chip chip-secondary inline-s">
+            <span>Hello</span>
+        </div>
+        <div class="chip chip-secondary has-delete">
+            <span>Hello</span><button class="btn btn-link"><svg class="icon icon-20"><use xlink:href="#icon-close-s"></use></svg></button>
+        </div>
+        <xmp>
+            <div class="chip chip-secondary">
+                <span>Hello</span>
+            </div>
+            <div class="chip chip-secondary has-delete">
                 <span>Hello</span><button class="btn btn-link"><svg class="icon icon-20">...</svg></button>
             </div>
         </xmp>
@@ -1291,9 +1698,9 @@
             <div class="tab-content" id="content-4">...</div>
         </xmp>
     </div>
-    <h1 id="test">Popover</h1>
+    <h1>Popover</h1>
     <div class="stack-l">
-        <div class="popover" style="width: 280px">
+        <div class="popover" style="position: relative; width: 280px; visibility: visible; opacity: 1;">
             <div class="popover-arrow"></div>
             <div class="popover-title">
                 <h2>Title</h2>
@@ -1302,6 +1709,26 @@
             <div class="popover-control">
                 <div class="popover-content">
                     <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats</p>
+                </div>
+                <div class="popover-content popover-menu">
+                    <div class="popover-menu-item">Something on a DIV</div>
+                    <a class="popover-menu-item" href="#">Something on a A</a>
+                    <a class="popover-menu-item" href="#">
+                        <svg class="icon icon-20 inline-s"><use xlink:href="#icon-heart"></use></svg>Something
+                    </a>
+                    <a class="popover-menu-item" href="#">
+                        <div class="avatar avatar-description">
+                            <div class="avatar-image">
+                                <div class="avatar-initials avatar-initials-green">
+                                    <span>cl</span>
+                                </div>
+                            </div>
+                            <div class="avatar-info">
+                                <p>Cesar Level</p>
+                                <p class="avatar-info-muted-text">Member since May 19th 2017</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="popover-content popover-content-secondary">
                     <div class="popover-subtitle">
@@ -1323,6 +1750,26 @@
                     <div class="popover-content">
                         <p>...</p>
                     </div>
+                    <div class="popover-content popover-menu">
+                        <div class="popover-menu-item">Something on a DIV</div>
+                        <a class="popover-menu-item" href="#">Something on a A</a>
+                        <a class="popover-menu-item" href="#">
+                            <svg class="icon icon-20 inline-s"><use xlink:href="#icon-heart"></use></svg>Something
+                        </a>
+                        <a class="popover-menu-item" href="#">
+                            <div class="avatar avatar-description">
+                                <div class="avatar-image">
+                                    <div class="avatar-initials avatar-initials-green">
+                                        <span>cl</span>
+                                    </div>
+                                </div>
+                                <div class="avatar-info">
+                                    <p>Cesar Level</p>
+                                    <p class="avatar-info-muted-text">Member since May 19th 2017</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                     <div class="popover-content popover-content-secondary">
                         <div class="popover-subtitle">
                             <h3>Sub Title</h3>
@@ -1334,7 +1781,53 @@
             </div>
         </xmp>
     </div>
-    <h1 id="test">Notifications</h1>
+    <h2>Dark Popover</h2>
+    <div class="stack-l">
+        <div class="popover popover-dark" style="position: relative; width: 280px; visibility: visible; opacity: 1;">
+            <div class="popover-arrow"></div>
+            <div class="popover-title">
+                <h2>Title</h2>
+                <button class="btn btn-link no-flex">Item</button>
+            </div>
+            <div class="popover-control">
+                <div class="popover-content">
+                    <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats</p>
+                </div>
+                <div class="popover-content popover-menu">
+                    <div class="popover-menu-item">Something on a DIV</div>
+                    <a class="popover-menu-item" href="#">Something on a A</a>
+                    <a class="popover-menu-item" href="#">
+                        <svg class="icon icon-20 inline-s"><use xlink:href="#icon-heart"></use></svg>Something
+                    </a>
+                    <a class="popover-menu-item" href="#">
+                        <div class="avatar avatar-description">
+                            <div class="avatar-image">
+                                <div class="avatar-initials avatar-initials-green">
+                                    <span>cl</span>
+                                </div>
+                            </div>
+                            <div class="avatar-info">
+                                <p>Cesar Level</p>
+                                <p class="avatar-info-muted-text">Member since May 19th 2017</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="popover-content popover-content-secondary">
+                    <div class="popover-subtitle">
+                        <h3>Sub Title</h3>
+                       <button class="btn btn-link no-flex">Item</button>
+                    </div>
+                    <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats</p>
+                </div>
+            </div>
+        </div>
+        <xmp>
+            <div class="popover popover-dark" style="width: 280px">
+            </div>
+        </xmp>
+    </div>
+    <h1>Notifications</h1>
     <div class="stack-l">
         <div class="notification has-delete stack-m">
             <div class="notification-title">
@@ -1348,7 +1841,7 @@
                    <li class="list-item">item</li>
                 </ul>
             </div>
-            <button class="btn btn-link"><svg class="icon icon-20"><use xlink:href="#icon-heart"></use></svg></button>
+            <button class="btn btn-link"><svg class="icon icon-20"><use xlink:href="#icon-close"></use></svg></button>
         </div>
         <div class="notification notification-positive stack-m">
             <div class="notification-content">
@@ -1407,40 +1900,830 @@
             </div>
         </xmp>
     </div>
-    <!-- <h1>Kitsch retro</h1>
-    <h2>Typewriter delectus cred</h2>
-    <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats McSweeney's minim PBR vegan Tumblr irony. Kogi eu Thundercats, sed scenester before they sold out et aesthetic. Elit cred Vice ethical pickled sartorial. Stumptown roof party freegan High Life vero, ea sed minim meggings.</p>
-    <h3>Typewriter delectus cred</h3>
-    <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats McSweeney's minim PBR vegan Tumblr irony.</p>
-    <h4>Typewriter delectus cred</h4>
-    <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats McSweeney's minim PBR vegan Tumblr irony.</p>
-    <h5>Typewriter delectus cred</h5>
-    <p>Bushwick Schlitz. Est Shoreditch small batch,<br /><br />dolor Schlitz sapiente twee stumptown ex.</p>
-    <ul>
-      <li>Est Shoreditch small batch.</li>
-      <li>Bushwick Schlitz.</li>
-      <li>Thundercats McSweeney's minim PBR vegan</li>
-      <li>Est Shoreditch small batch.</li>
-      <li>Bushwick Schlitzsomeht.</li>
-    </ul>
-    <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats McSweeney's minim PBR vegan Tumblr irony.</p>
-    <a href="#">Link</a> -->
-
+    <h1>Images</h1>
+    <div class="stack-l">
+        <figure class="image image-avatar">
+            <img src="test-image.png">
+        </figure>
+        <figure class="image">
+            <img src="test-image.png">
+        </figure>
+        <figure class="image image-32">
+            <img src="test-image.png">
+        </figure>
+        <figure class="image image-64">
+            <img src="test-image.png">
+        </figure>
+        <figure class="image image-128">
+            <img src="test-image.png">
+        </figure>
+        <figure class="image image-256">
+            <img src="test-image.png">
+        </figure>
+        <figure class="image image-256">
+            <img src="test-image.svg">
+        </figure>
+        <xmp>
+            <figure class="image image-avatar">
+                <img src="test-image.png">
+            </figure>
+            <figure class="image">
+                <img src="test-image.png">
+            </figure>
+            <figure class="image image-32">
+                <img src="test-image.png">
+            </figure>
+            <figure class="image image-64">
+                <img src="test-image.png">
+            </figure>
+            <figure class="image image-128">
+                <img src="test-image.png">
+            </figure>
+            <figure class="image image-256">
+                <img src="test-image.png">
+            </figure>
+            <figure class="image image-256">
+                <img src="test-image.svg">
+            </figure>
+        </xmp>
+    </div>
+    <h1>Dividers</h1>
+    <div class="stack-l">
+        <div class="divider"></div>
+        <xmp>
+            <div class="divider"></div>
+        </xmp>
+    </div>
+    <h2>Or Divider</h1>
+    <div class="stack-l">
+        <div class="divider has-or">&nbsp;&nbsp;or&nbsp;&nbsp;</div>
+        <xmp>
+            <div class="divider has-or">&nbsp;&nbsp;or&nbsp;&nbsp;</div>
+        </xmp>
+    </div>
+    <h1>Stats</h1>
+    <div class="stack-l">
+        <div class="stat inline-l">
+            <div class="stat-title">Lifetime Spent</div>
+            <div class="stat-value">$70.06</div>
+        </div>
+        <div class="stat inline-l">
+            <div class="stat-title stat-title-link">Lifetime Spent</div>
+            <div class="stat-value">$70.06</div>
+        </div>
+        <div class="stat">
+            <div class="stat-title">Lifetime Spent</div>
+            <div class="stat-value stat-value-link">$70.06</div>
+        </div>
+        <xmp>
+            <div class="stat inline-l">
+                <div class="stat-title">Lifetime Spent</div>
+                <div class="stat-value">$70.06</div>
+            </div>
+            <div class="stat inline-l">
+                <div class="stat-title stat-title-link">Lifetime Spent</div>
+                <div class="stat-value">$70.06</div>
+            </div>
+            <div class="stat">
+                <div class="stat-title">Lifetime Spent</div>
+                <div class="stat-value stat-value-link">$70.06</div>
+            </div>
+        </xmp>
+    </div>
+    <h2>Large</h1>
+    <div class="stack-l">
+        <div class="stat stat-l inline-l">
+            <div class="stat-title">Lifetime Spent</div>
+            <div class="stat-value">$70.06</div>
+        </div>
+        <xmp>
+            <div class="stat stat-l inline-l">
+                <div class="stat-title">Lifetime Spent</div>
+                <div class="stat-value">$70.06</div>
+            </div>
+        </xmp>
+    </div>
+    <h2>Group</h1>
+    <div class="stack-l">
+        <div class="stat-group">
+            <div class="stat">
+                <div class="stat-title">Title</div>
+                <div class="stat-value">Value</div>
+            </div>
+            <div class="stat">
+                <div class="stat-title">Title</div>
+                <div class="stat-value">Value</div>
+            </div>
+            <div class="stat">
+                <div class="stat-title">Title</div>
+                <div class="stat-value">Value</div>
+            </div>
+            <div class="stat">
+                <div class="stat-title">Title</div>
+                <div class="stat-value">Value</div>
+            </div>
+        </div>
+        <xmp>
+            <div class="stat-group">
+                <div class="stat">
+                    <div class="stat-title">Title</div>
+                    <div class="stat-value">Value</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-title">Title</div>
+                    <div class="stat-value">Value</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-title">Title</div>
+                    <div class="stat-value">Value</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-title">Title</div>
+                    <div class="stat-value">Value</div>
+                </div>
+            </div>
+        </xmp>
+    </div>
+    <div class="stack-l">
+        <div class="stat-group stat-group-fluid">
+            <div class="stat">
+                <div class="stat-title">Title</div>
+                <div class="stat-value">Value</div>
+            </div>
+            <div class="stat">
+                <div class="stat-title">Title</div>
+                <div class="stat-value">Value</div>
+            </div>
+            <div class="stat">
+                <div class="stat-title">Title</div>
+                <div class="stat-value">Value</div>
+            </div>
+            <div class="stat">
+                <div class="stat-title">Title</div>
+                <div class="stat-value">Value</div>
+            </div>
+        </div>
+        <xmp>
+            <div class="stat-group stat-group-fluid">
+                <div class="stat">
+                    <div class="stat-title">Title</div>
+                    <div class="stat-value">Value</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-title">Title</div>
+                    <div class="stat-value">Value</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-title">Title</div>
+                    <div class="stat-value">Value</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-title">Title</div>
+                    <div class="stat-value">Value</div>
+                </div>
+            </div>
+        </xmp>
+    </div>
+    <h1>Dropdowns</h1>
+    <div class="stack-l">
+        <div class="dropdown-trigger">
+            <div class="dropdown" style="position: relative; visibility: visible; opacity: 1;">
+                <div class="dropdown-content dropdown-content-help">
+                    Some help text
+                </div>
+                <div class="dropdown-content dropdown-content-padded">
+                    <div class="field">
+                        <div class="field-control has-icon-right">
+                            <select class="field-input">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                            <svg class="icon icon-20">
+                                <use xlink:href="#icon-caret-down"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-content">
+                    <a href="#" class="dropdown-item">Item is A</a>
+                    <div class="dropdown-item">Item is DIV</div>
+                </div>
+                <div class="dropdown-content">
+                    <h3 class="dropdown-title">Dropdown Title</h3>
+                    <a class="dropdown-item" href="#">
+                        <svg class="icon icon-20 inline-s"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use></svg><span>And then some text</span>
+                    </a>
+                    <div class="dropdown-item">
+                        <svg class="icon icon-20 inline-s"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use></svg><span>And then some text</span>
+                    </div>
+                </div>
+                <div class="dropdown-content">
+                    <div class="dropdown-item" href="#">
+                        <div class="avatar avatar-description">
+                            <div class="avatar-image">
+                                <figure class="image image-avatar">
+                                    <img src="test-image.png">
+                                </figure>
+                            </div>
+                            <div class="avatar-info">
+                                <p>Item</p>
+                                <p class="avatar-info-muted-text">Item Muted</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <div class="avatar avatar-description">
+                            <div class="avatar-image">
+                                <figure class="image image-avatar">
+                                    <img src="test-image.png">
+                                </figure>
+                            </div>
+                            <div class="avatar-info">
+                                <p>Item</p>
+                                <p class="avatar-info-muted-text">Item Muted</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-content dropdown-content-help">
+                    <button class="btn btn-link">Some help text</button>
+                </div>
+            </div>
+        </div>
+        <xmp>
+            <div class="dropdown-trigger">
+                <div class="dropdown">
+                    <div class="dropdown-content dropdown-content-help">
+                        Some help text
+                    </div>
+                    <div class="dropdown-content dropdown-content-padded">
+                        <div class="field">
+                            <div class="field-control has-icon-right">
+                                <select class="field-input">...</select>
+                                <svg class="icon icon-20">
+                                    <use xlink:href="#icon-caret-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-content">
+                        <div class="dropdown-item">Item</div>
+                        <div class="dropdown-item">Item</div>
+                    </div>
+                    <div class="dropdown-content">
+                        <h3 class="dropdown-title">Dropdown Title</h3>
+                        <div class="dropdown-item">
+                            <svg class="icon icon-20 inline-s">...</svg><span>And then some text</span>
+                        </div>
+                        <div class="dropdown-item">
+                            <svg class="icon icon-20 inline-s">...</svg><span>And then some text</span>
+                        </div>
+                    </div>
+                    <div class="dropdown-content">
+                        <div class="dropdown-item">
+                            <div class="avatar avatar-description">
+                                <div class="avatar-image">
+                                    <figure class="image image-avatar">
+                                        <img src="test-image.png">
+                                    </figure>
+                                </div>
+                                <div class="avatar-info">
+                                    <p>Item</p>
+                                    <p class="avatar-info-muted-text">Item Muted</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <div class="avatar avatar-description">
+                                <div class="avatar-image">
+                                    <figure class="image image-avatar">
+                                        <img src="test-image.png">
+                                    </figure>
+                                </div>
+                                <div class="avatar-info">
+                                    <p>Item</p>
+                                    <p class="avatar-info-muted-text">Item Muted</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-content dropdown-content-help">
+                        <button class="btn btn-link">Some help text</button>
+                    </div>
+                </div>
+            </div>
+        </xmp>
+    </div>
+    <h1>Breadcrumbs</h1>
+    <div class="stack-l">
+        <div class="breadcrumb">
+            <ul>
+                <li>
+                    <button class="btn has-icon-left">
+                        <svg class="icon icon-20">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-caret-left"></use>
+                        </svg><span>Button icon left</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="btn has-icon-left">
+                        <svg class="icon icon-20">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-caret-left"></use>
+                        </svg><span>Button icon left</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <xmp>
+            <div class="breadcrumb">
+                <ul>
+                    <li>
+                        <button class="btn has-icon-left">
+                            <svg class="icon icon-20">...</svg><span>Button icon left</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn has-icon-left">
+                            <svg class="icon icon-20">...</svg><span>Button icon left</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </xmp>
+    </div>
+    <h1>Titles</h1>
+    <div class="stack-l">
+        <div class="container">
+            <div class="title">
+                <div class="breadcrumb stack-s">
+                    <ul>
+                        <li>
+                            <button class="btn has-icon-left">
+                                <svg class="icon icon-20">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-caret-left"></use>
+                                </svg><span>Button icon left</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="title-control">
+                    <div class="title-heading">
+                        <h1>Title Name</h1>
+                    </div>
+                    <div class="title-actions">
+                        <button class="btn inline-s">Add Something</button><button class="btn btn-primary">Add Something</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            <div class="breadcrumb stack-s">
+                <ul>
+                    <li>
+                        <button class="btn has-icon-left">
+                            <svg class="icon icon-20">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-caret-left"></use>
+                            </svg><span>Button icon left</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="title-control">
+                <div class="title-heading">
+                    <h1>Title Name</h1>
+                </div>
+                <div class="title-actions">
+                    <button class="btn inline-s">Add Something</button><button class="btn btn-primary">Add Something</button>
+                </div>
+            </div>
+        </div>
+        <xmp>
+            <div class="title">
+                <div class="breadcrumb stack-s">
+                    <ul>
+                        <li>
+                            <button class="btn has-icon-left">
+                                <svg class="icon icon-20">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use>
+                                </svg><span>Button icon left</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="title-control">
+                    <div class="title-heading">
+                        <h1>Title Name</h1>
+                    </div>
+                    <div class="title-actions">
+                        <button class="btn inline-s">Add Something</button><button class="btn btn-primary">Add Something</button>
+                    </div>
+                </div>
+            </div>
+        </xmp>
+    </div>
+    <h1>Avatar</h1>
+    <div class="stack-l">
+        <h2>Avatar</h2>
+        <div class="avatar">
+            <div class="avatar-image">
+                <div class="avatar-initials avatar-initials-blue">
+                    <span>cl</span>
+                </div>
+            </div>
+        </div>
+        <xmp>
+            <div class="avatar">
+                <div class="avatar-image">
+                    <div class="avatar-initials avatar-initials-blue">
+                        <span>cl</span>
+                    </div>
+                </div>
+            </div>
+        </xmp>
+        <h2>Avatar Description</h2>
+        <div class="avatar avatar-description stack-m">
+            <div class="avatar-image">
+                <figure class="image image-avatar">
+                    <img src="test-image.png">
+                </figure>
+            </div>
+            <div class="avatar-info">
+                <p>Some Text</p>
+                <p class="avatar-info-muted-text">Some Text</p>
+            </div>
+        </div>
+        <xmp>
+            <div class="avatar avatar-description">
+                <div class="avatar-image">
+                    <figure class="image image-avatar">
+                        <img src="test-image.png">
+                    </figure>
+                </div>
+                <div class="avatar-info">
+                    <p>Some Text</p>
+                    <p class="avatar-info-muted-text">Some Text</p>
+                </div>
+            </div>
+        </xmp>
+        <h2>Icon Avatar</h2>
+        <div class="avatar">
+            <div class="avatar-image">
+                <div class="avatar-icon">
+                    <svg class="icon icon-20">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-transactions"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <xmp>
+            <div class="avatar">
+                <div class="avatar-image">
+                    <div class="avatar-icon">
+                        <svg class="icon icon-20">...</svg>
+                    </div>
+                </div>
+            </div>
+        </xmp>
+        <h2>Initials Avatar</h2>
+        <div class="avatar">
+            <div class="avatar-image">
+                <div class="avatar-initials avatar-initials-blue">
+                    <span>cl</span>
+                </div>
+            </div>
+        </div>
+        <xmp>
+            <div class="avatar">
+                <div class="avatar-image">
+                    <div class="avatar-initials avatar-initials-blue">
+                        <span>cl</span>
+                    </div>
+                </div>
+            </div>
+        </xmp>
+    </div>
+    <h1>Blank States</h1>
+    <div class="stack-l">
+        <div class="blank">
+            <div class="blank-image">
+                <figure class="image image-128">
+                    <img src="test-image.png">
+                </figure>
+            </div>
+            <div class="blank-content">
+                <h2 class="blank-title">Hey it seems that you don't have any customers</h2>
+                <p class="blank-description">This text is realted to the title and could have an <a>action</a> or not</p>
+                <div class="blank-actions">
+                    <button class="btn btn-primary">Create a Customer</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- SVG Sprite -->
     <div class="svg-sprites" style="display:none;">
-        <!-- Heart -->
+        <!-- Dashboard -->
         <svg xmlns="http://www.w3.org/2000/svg">
-            <symbol id="icon-heart">
+            <symbol id="icon-dashboard">
                 <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M18 7c0 5-8 10-8 10S2 12 2 7c0-2.21 1.79-4 4-4s4 1.79 4 4c0-2.21 1.79-4 4-4s4 1.79 4 4z"/>
+                    <path d="M15.606 5.808l-.899.9a1 1 0 0 1-1.414-1.415l.9-.9A6.969 6.969 0 0 0 10 3a6.969 6.969 0 0 0-4.192 1.394l.9.899a1 1 0 0 1-1.415 1.414l-.9-.9A6.964 6.964 0 0 0 3.072 9H4a1 1 0 1 1 0 2h-.93a7.002 7.002 0 0 0 13.86 0H16a1 1 0 0 1 0-2h.93a6.964 6.964 0 0 0-1.324-3.192zM9.031 8.25A1.002 1.002 0 0 1 9 8V6a1 1 0 1 1 2 0v2c0 .086-.01.17-.031.25a2 2 0 1 1-1.938 0zM10 19a9 9 0 1 1 0-18 9 9 0 0 1 0 18z"/>
                 </svg>
             </symbol>
         </svg>
         <!-- Customer -->
         <svg xmlns="http://www.w3.org/2000/svg">
-            <symbol id="icon-customer">
+            <symbol id="icon-customers">
                 <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M13.41 13.655c1.866.745 3.45 2.09 4.458 3.848.274.48.11 1.09-.37 1.365-.48.274-1.09.108-1.365-.37C14.906 16.357 12.563 15 10 15c-2.55 0-4.9 1.366-6.134 3.5-.276.478-.888.642-1.366.366-.478-.276-.642-.888-.366-1.366 1.01-1.75 2.598-3.095 4.46-3.842C5.614 12.745 5 11.443 5 10V6c0-2.76 2.24-5 5-5s5 2.243 5 5v4c0 1.442-.612 2.742-1.59 3.655zM7 6v4c0 1.65 1.343 3 3 3 1.654 0 3-1.343 3-3V6c0-1.65-1.343-3-3-3-1.653 0-3 1.343-3 3z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Order -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-orders">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M16 9v8.993c0 .556-.313.695-.71.296l-.58-.578a1 1 0 0 0-1.42 0l-.58.578a1 1 0 0 1-1.42 0l-.58-.578a1 1 0 0 0-1.42 0l-.58.578a1 1 0 0 1-1.421 0l-.58-.578a1 1 0 0 0-1.42 0l-.579.578c-.392.393-.71.261-.71-.296V9H1.99A1.99 1.99 0 0 1 0 7.002V1.997C0 1.447.455 1 .992 1h18.016c.548 0 .992.453.992.997v5.005A1.999 1.999 0 0 1 18.01 9H16zm0-2h2V3H2v4h2V5h12v2zm-9 3c0 .556.444 1 .99 1h4.02a1 1 0 0 0 .99-1c0-.556-.444-1-.99-1H7.99A1 1 0 0 0 7 10zm0 4c0 .556.444 1 .99 1h4.02a1 1 0 0 0 .99-1c0-.556-.444-1-.99-1H7.99A1 1 0 0 0 7 14z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Transaction -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-transactions">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 15H9a1 1 0 0 1 0-2h7.002c.549 0 .998-.45.998-1 0-.557-.444-1-.998-1h-2.004A3.001 3.001 0 0 1 11 8c0-1.662 1.34-3 2.998-3H14V3.01a1 1 0 1 1 2 0V5h2a1 1 0 0 1 0 2h-4.002A.994.994 0 0 0 13 8c0 .55.45 1 .998 1h2.004A2.994 2.994 0 0 1 19 12c0 1.656-1.345 3-2.998 3H16v1.99a1 1 0 1 1-2 0V15h-2zm-7 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM9 5a1 1 0 1 1 0 2H5a1 1 0 1 1 0-2h4zm0 4a1 1 0 1 1 0 2H7a1 1 0 0 1 0-2h2zM3 9a1 1 0 1 1 0 2H2a1 1 0 0 1 0-2h1z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Guide -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-guides">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M1 5.018a.995.995 0 0 1 .129-.51C1.976 3.007 4.079 2 6 2c1.435 0 2.964.556 4.002 1.462C11.04 2.557 12.57 2 14 2c1.928 0 4.027 1.003 4.872 2.511.09.16.131.335.128.507V16.98a1 1 0 0 1-1.872.509C16.672 16.676 15.258 16 14 16c-1.246 0-2.658.673-3.123 1.48A.994.994 0 0 1 10 18a.994.994 0 0 1-.877-.522C8.659 16.67 7.252 16 6 16c-1.252 0-2.671.679-3.129 1.491A1 1 0 0 1 1 16.981V5.017zm2 .28v9.477A6.443 6.443 0 0 1 6 14c1.023 0 2.094.282 3 .773V5.296C8.446 4.572 7.157 4 6 4c-1.151 0-2.443.574-3 1.298zm14-.002C16.446 4.572 15.157 4 14 4c-1.151 0-2.443.574-3 1.298v9.477A6.443 6.443 0 0 1 14 14c1.023 0 2.094.282 3 .773V5.296z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Setting -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-settings">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M6.67 16.159l-.906.905c-.394.395-1.027.4-1.427 0l-1.401-1.4a1.004 1.004 0 0 1 0-1.428l.905-.906A6.957 6.957 0 0 1 3.29 12H2.01C1.451 12 1 11.557 1 10.99V9.01C1 8.451 1.443 8 2.01 8h1.28c.138-.466.324-.91.551-1.33l-.905-.906a1.004 1.004 0 0 1 0-1.427l1.4-1.401a1.004 1.004 0 0 1 1.428 0l.906.905c.42-.227.864-.413 1.33-.551V2.01C8 1.451 8.443 1 9.01 1h1.98c.558 0 1.01.443 1.01 1.01v1.28c.466.138.91.324 1.33.551l.906-.905a1.004 1.004 0 0 1 1.427 0l1.401 1.4c.395.395.4 1.028 0 1.428l-.905.906c.227.42.413.864.551 1.33h1.28c.558 0 1.01.443 1.01 1.01v1.98c0 .558-.443 1.01-1.01 1.01h-1.28c-.138.466-.324.91-.551 1.33l.905.906c.395.394.4 1.027 0 1.427l-1.4 1.401c-.395.395-1.028.4-1.428 0l-.906-.905c-.42.227-.864.413-1.33.551v1.28c0 .558-.443 1.01-1.01 1.01H9.01C8.451 19 8 18.557 8 17.99v-1.28a6.957 6.957 0 0 1-1.33-.551zM10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Notification -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-notifications">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M14.293 14.707A1 1 0 0 1 14 14V8.001a4 4 0 1 0-8 0V14a1 1 0 0 1-.293.707L5.414 15h9.172l-.293-.293zM10.997 2.082A6.003 6.003 0 0 1 16 8.002v5.584l1.707 1.707c.63.63.184 1.707-.707 1.707h-5a2 2 0 1 1-4 0H3c-.89 0-1.337-1.077-.707-1.707L4 13.586V8a6.007 6.007 0 0 1 5.003-5.918 1 1 0 1 1 1.993 0z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Stream -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-stream">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M2.636 3.293A1 1 0 0 1 4.05 4.707a7 7 0 0 0 0 9.9 1 1 0 0 1-1.414 1.414 9 9 0 0 1 0-12.728zM5.464 6.12A1 1 0 0 1 6.88 7.536a3 3 0 0 0 0 4.242 1 1 0 0 1-1.415 1.414 5 5 0 0 1 0-7.07zM10 11.657a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm7.364 4.364a1 1 0 1 1-1.414-1.414 7 7 0 0 0 0-9.9 1 1 0 0 1 1.414-1.414 9 9 0 0 1 0 12.728zm-2.828-2.829a1 1 0 0 1-1.415-1.414 3 3 0 0 0 0-4.242 1 1 0 0 1 1.415-1.415 5 5 0 0 1 0 7.071z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Search -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-search">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M15.427 14.096a.998.998 0 0 1 .28.197l2 2a1 1 0 0 1-1.414 1.414l-2-2a.998.998 0 0 1-.197-.28 7.5 7.5 0 1 1 1.332-1.332zM9.5 15a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zm0-9a1 1 0 0 1 0 2A1.5 1.5 0 0 0 8 9.5a1 1 0 0 1-2 0A3.5 3.5 0 0 1 9.5 6z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- lock -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-lock">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M3 10.997A2 2 0 0 1 5.006 9h9.988C16.102 9 17 9.896 17 10.997v5.006A2.001 2.001 0 0 1 14.994 18H5.006A2.003 2.003 0 0 1 3 16.003v-5.006zm2 5.006c0-.005 9.994-.003 9.994-.003C15 16 15 10.997 15 10.997c0 .005-9.994.003-9.994.003C5 11 5 16.003 5 16.003zM10 2a5 5 0 0 1 5 5v2h-2V7a3 3 0 0 0-6 0v2H5V7a5 5 0 0 1 5-5z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Caret Up -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-caret-up">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M5.707 13.707a1 1 0 0 1-1.414-1.414l5-5a1 1 0 0 1 1.414 0l5 5a1 1 0 1 1-1.414 1.414L10 9.414l-4.293 4.293z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Caret Down -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-caret-down">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M5.707 7.293a1 1 0 0 0-1.414 1.414l5 5a1 1 0 0 0 1.414 0l5-5a1 1 0 1 0-1.414-1.414L10 11.586 5.707 7.293z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Caret Left -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-caret-left">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12.707 5.707a1 1 0 1 0-1.414-1.414l-5 5a1 1 0 0 0 0 1.414l5 5a1 1 0 0 0 1.414-1.414L8.414 10l4.293-4.293z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Caret Right -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-caret-right">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M7.293 14.293a1 1 0 0 0 1.414 1.414l5-5a1 1 0 0 0 0-1.414l-5-5a1 1 0 0 0-1.414 1.414L11.586 10l-4.293 4.293z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Arrow Up -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-arrow-up">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M9 7.414V15a1 1 0 0 0 2 0V7.414l2.293 2.293a1 1 0 0 0 1.414-1.414l-4-4a.997.997 0 0 0-1.414 0l-4 4a1 1 0 0 0 1.414 1.414L9 7.414z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Arrow Down -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-arrow-down">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M11 12.586V5a1 1 0 0 0-2 0v7.586l-2.293-2.293a1 1 0 0 0-1.414 1.414l4 4a.997.997 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L11 12.586z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Arrow Left -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-arrow-left">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M7.414 11H15a1 1 0 0 0 0-2H7.414l2.293-2.293a1 1 0 0 0-1.414-1.414l-4 4a.997.997 0 0 0 0 1.414l4 4a1 1 0 0 0 1.414-1.414L7.414 11z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Arrow Right -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-arrow-right">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12.586 11H5a1 1 0 0 1 0-2h7.586l-2.293-2.293a1 1 0 0 1 1.414-1.414l4 4a.997.997 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L12.586 11z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Arrow Up Large -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-arrow-up-l">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M9.44 2.17a.998.998 0 0 1 1.267.123l7 7a1 1 0 1 1-1.414 1.414L11 5.414V17a1 1 0 0 1-2 0V5.414l-5.293 5.293a1 1 0 1 1-1.414-1.414l7-7c.047-.047.098-.089.15-.124z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Arrow Down Large -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-arrow-down-l">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M9.44 17.83a.998.998 0 0 0 1.267-.123l7-7a1 1 0 1 0-1.414-1.414L11 14.586V3a1 1 0 0 0-2 0v11.586L3.707 9.293a1 1 0 1 0-1.414 1.414l7 7c.047.047.098.089.15.124z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Arrow Left Large -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-arrow-left-l">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M2.17 9.44a.998.998 0 0 0 .123 1.267l7 7a1 1 0 1 0 1.414-1.414L5.414 11H17a1 1 0 0 0 0-2H5.414l5.293-5.293a1 1 0 1 0-1.414-1.414l-7 7a1.005 1.005 0 0 0-.124.15z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Arrow Right Large -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-arrow-right-l">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M17.83 10.56a.998.998 0 0 0-.123-1.267l-7-7a1 1 0 1 0-1.414 1.414L14.586 9H3a1 1 0 0 0 0 2h11.586l-5.293 5.293a1 1 0 1 0 1.414 1.414l7-7c.047-.047.089-.098.124-.15z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Close -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-close">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M10 11.414l4.293 4.293a1 1 0 0 0 1.414-1.414L11.414 10l4.293-4.293a1 1 0 1 0-1.414-1.414L10 8.586 5.707 4.293a1 1 0 0 0-1.414 1.414L8.586 10l-4.293 4.293a1 1 0 0 0 1.414 1.414L10 11.414z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Close Small -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-close-s">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M10 11.414l3.293 3.293a1 1 0 0 0 1.414-1.414L11.414 10l3.293-3.293a1 1 0 1 0-1.414-1.414L10 8.586 6.707 5.293a1 1 0 0 0-1.414 1.414L8.586 10l-3.293 3.293a1 1 0 0 0 1.414 1.414L10 11.414z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- logout -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-logout">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M11.586 11H7a1 1 0 0 1 0-2h4.586l-1.293-1.293a1 1 0 0 1 1.414-1.414l3 3a.997.997 0 0 1 0 1.414l-3 3a1 1 0 0 1-1.414-1.414L11.586 11zM16 13a1 1 0 0 1 2 0v1.992C18 16.652 16.66 18 15.006 18H4.994A2.995 2.995 0 0 1 2 15.006V4.994A2.995 2.995 0 0 1 4.994 2h10.012A3 3 0 0 1 18 4.995V7a1 1 0 0 1-2 0V4.995A1 1 0 0 0 15.006 4H4.994A.995.995 0 0 0 4 4.994v10.012c0 .548.446.994.994.994h10.012c.546 0 .994-.45.994-1.008V13z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Actions -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-actions">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Circle -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-circle">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="10" cy="10" r="4"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Eye -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-eye">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M10 16c-4.418 0-8-6-8-6s3.582-6 8-6 8 6 8 6-3.582 6-8 6zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm1.912-4.589A2 2 0 0 1 10 12a2 2 0 1 1 .589-3.912 1 1 0 1 0 1.323 1.323z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Eye Closed -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-eye-closed">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M7.184 15.23l1.464-1.464a4 4 0 0 0 5.118-5.118l1.771-1.77A18.553 18.553 0 0 1 18 10s-3.582 6-8 6c-.991 0-1.94-.302-2.816-.77zm-2.721-2.107C2.945 11.583 2 10 2 10s3.582-6 8-6c.991 0 1.94.302 2.816.77l-1.464 1.464a4 4 0 0 0-5.118 5.118l-1.771 1.77zM15 4l1 1L5 16l-1-1L15 4z">
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Burger -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-burger">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M3 7a1 1 0 1 1 0-2h14a1 1 0 0 1 0 2H3zm0 4a1 1 0 0 1 0-2h14a1 1 0 0 1 0 2H3zm0 4a1 1 0 0 1 0-2h14a1 1 0 0 1 0 2H3z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Help -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-help">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M4.083 11A6.005 6.005 0 0 0 9 15.917v-2.043A4.007 4.007 0 0 1 6.126 11H4.083zm0-2h2.043A4.007 4.007 0 0 1 9 6.126V4.083A6.005 6.005 0 0 0 4.083 9zM11 15.917A6.005 6.005 0 0 0 15.917 11h-2.043A4.007 4.007 0 0 1 11 13.874v2.043zM15.917 9A6.005 6.005 0 0 0 11 4.083v2.043A4.007 4.007 0 0 1 13.874 9h2.043zM10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm0-6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Info -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-info">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M9.002 10l-.001 3H9a1 1 0 0 0 0 2h2s1-.003 1-1-1-.997-1-.997V9s-.003-1-1-1c-.03 0-.058 0-.086.003L9 8a1 1 0 1 0 0 2h.002zM2 3.994C2 2.893 2.895 2 3.994 2h12.012C17.107 2 18 2.895 18 3.994v12.012A1.995 1.995 0 0 1 16.006 18H3.994A1.995 1.995 0 0 1 2 16.006V3.994zM10 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Long Dash -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-dash-l">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 10c0-.552.456-1 1.002-1h9.996A.999.999 0 0 1 16 10c0 .552-.456 1-1.002 1H5.002A.999.999 0 0 1 4 10z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Company -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-company">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 8h6v10H2V2h10v6zM4 4v12h6V4H4zm2 2h2v2H6V6zm0 4h2v2H6v-2zm6 0v6h4v-6h-4z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Website -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-website">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M18 3.994v12.012c0 1.1-.893 1.994-1.994 1.994H3.994C2.894 18 2 17.107 2 16.006V3.994C2 2.894 2.893 2 3.994 2h12.012C17.106 2 18 2.893 18 3.994zM16 8H4v8h12V8zM5 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm2-1c0 .556.447 1 .998 1h7.004A.999.999 0 0 0 16 5c0-.556-.447-1-.998-1H7.998A.999.999 0 0 0 7 5z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Email -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-email">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M16 6.25V7l-5.288 5.29a1.01 1.01 0 0 1-1.424 0L4 7V6h2l4 4 4-4h2v.25V6H4v8h12V6.25zM2 5.002A1 1 0 0 1 3 4h14c.552 0 1 .456 1 1.002v9.996A1 1 0 0 1 17 16H3c-.552 0-1-.456-1-1.002V5.002z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- External Link -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-external-link">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M14.586 4H13a1 1 0 0 1 0-2h4a.997.997 0 0 1 1 1v3.996a1 1 0 0 1-2 0V5.414l-5.293 5.293a1 1 0 1 1-1.414-1.414L14.586 4zM9 2a1 1 0 1 1 0 2H4.998C4.448 4 4 4.449 4 5.006v9.988C4 15.55 4.45 16 5.006 16h9.988c.555 0 1.006-.45 1.006-.998V11a1 1 0 0 1 2 0v4.002A3.004 3.004 0 0 1 14.994 18H5.006A3.005 3.005 0 0 1 2 14.994V5.006A3.001 3.001 0 0 1 4.998 2H9z"/>
+                </svg>
+            </symbol>
+        </svg>
+        <!-- Heart -->
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icon-heart">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M18 7c0 5-8 10-8 10S2 12 2 7c0-2.21 1.79-4 4-4s4 1.79 4 4c0-2.21 1.79-4 4-4s4 1.79 4 4z"/>
                 </svg>
             </symbol>
         </svg>
@@ -1461,7 +2744,5 @@
         </svg>
     </div>
 </body>
-<script src="https://unpkg.com/popper.js"></script>
-
 <script src="main.js"></script>
 </html>

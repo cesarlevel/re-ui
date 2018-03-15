@@ -78,6 +78,18 @@
 .text-justify { text-align: justify!important; }
 
 /**
+* Text color
+*/
+.text-muted { color: $muted!important; }
+
+/**
+* Text truncated
+*/
+.text-truncate {
+    @include truncate(100px!important);
+}
+
+/**
 * Spatial Helpers
 */
 .inset-default { @include rem(padding, $inset-default!important) };
@@ -114,6 +126,107 @@
 .no-flex {
     width: auto;
     @include flex(0 0 auto!important);
+}
+
+.align-items-center {
+    @include align-items(center, $important: true);
+}
+
+.justify-content-end {
+    @include justify-content(flex-end, $important: true);
+}
+
+/**
+* Media queries
+*/
+.hide-on-phone {
+    @include media-query-breakpoint('phone', $type: max) {
+        display: none;
+    }
+}
+
+.hide-on-tablet {
+    @include media-query-breakpoint('tablet', $type: max) {
+        display: none;
+    }
+}
+
+.hide-on-small-desktop {
+    @include media-query-breakpoint('small-desktop', $type: max) {
+        display: none;
+    }
+}
+
+.hide-on-desktop {
+    @include media-query-breakpoint('desktop', $type: max) {
+        display: none;
+    }
+}
+
+.hide-on-large-desktop {
+    @include media-query-breakpoint('large-desktop', $type: max) {
+        display: none;
+    }
+}
+
+.show-on-phone {
+    @include media-query-breakpoint('phone', $type: max) {
+        display: block;
+    }
+}
+
+.show-on-tablet {
+    @include media-query-breakpoint('large-desktop', $type: min) {
+        display: none;
+    }
+    @include media-query-breakpoint('large-desktop', $type: max) {
+        display: none;
+    }
+    @include media-query-breakpoint('tablet', $type: max) {
+        display: block;
+    }
+}
+
+.show-on-small-desktop {
+    @include media-query-breakpoint('large-desktop', $type: min) {
+        display: none;
+    }
+    @include media-query-breakpoint('large-desktop', $type: max) {
+        display: none;
+    }
+    @include media-query-breakpoint('small-desktop', $type: max) {
+        display: block;
+    }
+}
+
+.show-on-desktop {
+    @include media-query-breakpoint('large-desktop', $type: min) {
+        display: none;
+    }
+    @include media-query-breakpoint('large-desktop', $type: max) {
+        display: none;
+    }
+    @include media-query-breakpoint('desktop', $type: max) {
+        display: block;
+    }
+}
+
+.show-on-large-desktop {
+    @include media-query-breakpoint('large-desktop', $type: max) {
+        display: block;
+    }
+}
+
+.equal-widths-elements-mobile {
+    @include media-query-breakpoint('tablet', $type: max) {
+        @include display-flex;
+        @include flex-wrap(nowrap);
+        @include justify-content(flex-start);
+    }
+
+    & > * {
+        @include flex(1 0);
+    }
 }
 
 /**

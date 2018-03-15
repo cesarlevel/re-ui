@@ -124,10 +124,22 @@
         -ms-flex-pack: $arg!important;
         justify-content: $arg!important;
     } @else {
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
+        -webkit-box-pack: $arg;
+        -webkit-justify-content: $arg;
+        -ms-flex-pack: $arg;
+        justify-content: $arg;
+    }
+}
+
+@mixin align-items($arg, $important: false) {
+    @if $important == true {
+        -webkit-align-items: $arg!important;
+        -ms-align-items: $arg!important;
+        align-items: $arg!important;
+    } @else {
+        -webkit-align-items: $arg;
+        -ms-align-items: $arg;
+        align-items: $arg;
     }
 }
 
@@ -161,6 +173,23 @@
             #{$property}: #{nth($value, 2)};
         }
     }
+}
+
+// Center
+// From CSS Tricks https://css-tricks.com/snippets/sass/centering-mixin/
+@mixin center($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
 }
 
 // Transitions

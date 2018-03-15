@@ -26,12 +26,14 @@
 /* Show the entire tooltip on hover and focus */
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after,
-[data-tooltip]:focus:before,
-[data-tooltip]:focus:after,
 .has-tooltip:hover:before,
-.has-tooltip:hover:after,
-.has-tooltip:focus:before,
-.has-tooltip:focus:after {
+.has-tooltip:hover:after {
+    visibility: visible;
+    @include opacity(1);
+}
+
+.has-tooltip.on-focus:focus:before,
+.has-tooltip.on-focus:focus:after, {
     visibility: visible;
     @include opacity(1);
 }
@@ -53,6 +55,7 @@
     width: 160px;
     background-color: $dark-background;
     color: #fff;
+    box-shadow: 0 3px 6px 0 rgba($muted, 0.2), 0 7px 14px 0 rgba($muted, 0.35);
     content: attr(data-tooltip);
     border-radius: $border-radius;
     font-size: 14px;
@@ -174,6 +177,11 @@
 .has-tooltip-right:before {
     top: 3px;
 }
+
+.has-tooltip-left:before {
+    left: 0;
+}
+
 
 /* Vertically center tooltip content for left/right tooltips */
 .has-tooltip-left:after,

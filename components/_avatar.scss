@@ -1,0 +1,57 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the avatar component.
+// -----------------------------------------------------------------------------
+
+.avatar {
+    max-width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.avatar.avatar-description {
+    @include display-flex;
+    @include align-items(center);
+}
+
+.avatar-image {
+    width: 36px;
+    height: 36px;
+    margin-right: 0;
+    text-align: center;
+    @include flex(0 0 auto);
+}
+
+.avatar.avatar-description > .avatar-image {
+    margin-right: 0;
+    @include rem(margin-right, $space-s);
+}
+
+.avatar-info > * {
+    margin: 0;
+    @include rem(line-height, 18px);
+}
+
+.avatar-info .avatar-info-muted-text {
+    color: $muted;
+}
+
+.avatar-icon,
+.avatar-initials {
+    border-radius: $border-radius;
+    @include rem(padding, $space-s);
+    background: $background;
+}
+
+.avatar-initials {
+    width: 36px;
+    height: 36px;
+}
+
+@include all-colours(avatar-initials, background);
+
+.avatar-initials span {
+    color: #FFFFFF;
+    font-weight: $medium;
+    font-family: $secondary-font-stack;
+    text-transform: uppercase;
+}

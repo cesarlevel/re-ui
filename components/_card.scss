@@ -21,6 +21,7 @@
 
 .card-title:first-child {
     border-top: none;
+    border-radius: $border-radius $border-radius 0 0;
 }
 
 .card-title > *,
@@ -39,6 +40,10 @@
     @include rem(padding, $space-default);
 }
 
+.card-content.card-content-fitted {
+    padding: 0;
+}
+
 .card-content > *:not(.grid-content) {
     margin: 0;
 }
@@ -49,6 +54,11 @@
 
 .card-content:last-child {
     border: none;
+    border-radius: 0 0 $border-radius $border-radius;
+}
+
+.card-content.card-content-secondary {
+    background: $light-background;
 }
 
 /**
@@ -61,6 +71,17 @@
     box-shadow: 0 0 0 1px $faint-gray inset;
 }
 
+//Description
+.card.card-description {
+    background: transparent;
+    box-shadow: none;
+}
+
 .card-content.card-content-secondary {
     background: $light-background;
+}
+
+.card.card-description .card-title,
+.card.card-description .card-content {
+    padding-left: 0;
 }

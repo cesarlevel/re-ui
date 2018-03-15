@@ -19,6 +19,7 @@ $code-font-stack: 'Roboto Mono', monospace !default;
 $light: 300;
 $regular: 400;
 $medium: 500;
+$semi-bold: 600;
 $bold: 700;
 
 // Sizes
@@ -35,6 +36,7 @@ $baseFontSize: 10; // Based on HTML reset html { font-size: 62.5%; }
 // Line-height
 $h1-lh: 40px;
 $line-height: 20px;
+$line-height-s: 16px;
 
 
 // Colors
@@ -129,6 +131,7 @@ $z-10: 10;
 $breakpoints: (
     'phone': 576px,
     'tablet': 768px,
+    'small-desktop': 994px,
     'desktop': 1100px,
     'large-desktop': 1200px,
 ) !default;

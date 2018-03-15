@@ -22,7 +22,28 @@
     @include rem(line-height, $line-height);
 }
 
+.chip.chip-secondary {
+    background: #FFFFFF;
+    box-shadow: inset 0 0 0 1px $light-gray;
+}
+
+.chip.has-delete {
+    cursor: pointer;
+}
+
 .chip.has-delete .btn.btn-link .icon {
     fill: $muted;
     margin-left: $space-s;
+}
+
+.chip.is-disabled {
+    opacity: 0.6;
+}
+
+.chip.is-selected {
+    background: $light-gray;
+}
+
+.chip.chip-secondary.is-selected {
+    background: $faint-gray;
 }
