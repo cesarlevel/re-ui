@@ -3743,7 +3743,7 @@ ul, ol {
   .popover.popover-dark .popover-menu-item:hover .avatar-info .avatar-info-muted-text {
     color: #C4CED8; }
 
-.notification {
+.message {
   box-sizing: border-box;
   position: relative;
   height: auto;
@@ -3752,47 +3752,47 @@ ul, ol {
   background: #E1E7EA;
   border-left: 4px solid #6B7384; }
 
-.notification .notification-title h2 {
+.message .message-title h2 {
   margin: 0; }
 
-.notification .notification-title {
+.message .message-title {
   padding: 20px 20px 0 20px;
   padding: 2rem 2rem 0 2rem; }
 
-.notification .notification-content > * {
+.message .message-content > * {
   margin: 0; }
 
-.notification .notification-content {
+.message .message-content {
   padding: 20px;
   padding: 2rem; }
 
-.notification.has-delete .btn.btn-link {
+.message.has-delete .btn.btn-link {
   position: absolute;
   top: 20px;
   right: 20px; }
 
-.notification.has-delete .btn.btn-link .icon {
+.message.has-delete .btn.btn-link .icon {
   fill: #6B7384; }
 
 /**
 * Types
 */
-.notification.notification-positive {
+.message.message-positive {
   background: #C4F7CA;
   border-left-color: #00AA13;
   box-shadow: 0 0 0 1px rgba(0, 170, 19, 0.09), 0 7px 14px 0 rgba(107, 115, 132, 0.15), 0 3px 6px 0 rgba(107, 115, 132, 0.07); }
 
-.notification.notification-negative {
+.message.message-negative {
   background: #FFD4D3;
   border-left-color: #E53935;
   box-shadow: 0 0 0 1px rgba(229, 57, 53, 0.09), 0 7px 14px 0 rgba(107, 115, 132, 0.15), 0 3px 6px 0 rgba(107, 115, 132, 0.07); }
 
-.notification.notification-warning {
+.message.message-warning {
   background: #FFF0AD;
   border-left-color: #F1C400;
   box-shadow: 0 0 0 1px rgba(241, 196, 0, 0.09), 0 7px 14px 0 rgba(107, 115, 132, 0.15), 0 3px 6px 0 rgba(107, 115, 132, 0.07); }
 
-.notification.notification-info {
+.message.message-info {
   background: #DCE7FE;
   border-left-color: #0044D4;
   box-shadow: 0 0 0 1px rgba(0, 68, 212, 0.09), 0 7px 14px 0 rgba(107, 115, 132, 0.15), 0 3px 6px 0 rgba(107, 115, 132, 0.07); }
